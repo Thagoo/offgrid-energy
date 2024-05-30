@@ -6,6 +6,7 @@ import DrawDemo from "@/components/landing-page/draw-demo";
 import OurApproach from "@/components/landing-page/our-approach";
 
 import Pills from "@/components/landing-page/pills";
+import SolarAdviceSection from "@/components/landing-page/solar-advice-section";
 import Ticker from "@/components/landing-page/ticker";
 
 import Navbar from "@/components/navbar";
@@ -17,21 +18,35 @@ export default function Home() {
       <Navbar />
       <div className="flex flex-col items-center pt-10 mt-20">
         <div className="flex flex-col items-center justify-center gap-4">
-          <span className="bg-[#D9D8D6] px-4 py-2 rounded-3xl text-sm">
+          <span className="flex items-center gap-2 bg-secondary px-4 py-2 rounded-3xl text-sm">
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.99968 1.33398H6.16264C6.04298 1.33398 5.98316 1.33398 5.93034 1.3522C5.88363 1.36831 5.84109 1.39461 5.80579 1.42918C5.76587 1.46827 5.73912 1.52178 5.68561 1.6288L2.88561 7.2288C2.75782 7.48438 2.69393 7.61216 2.70927 7.71604C2.72268 7.80674 2.77285 7.88792 2.84798 7.94047C2.93403 8.00065 3.0769 8.00065 3.36264 8.00065H7.49968L5.49968 14.6673L13.6284 6.23752C13.9027 5.95312 14.0398 5.81092 14.0478 5.68924C14.0548 5.58362 14.0112 5.48097 13.9303 5.41267C13.8371 5.33398 13.6396 5.33398 13.2445 5.33398H8.49968L9.99968 1.33398Z"
+                stroke="#212121"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
             Start Saving today!
           </span>
-          <h1 className="text-7xl font-medium text-center">
+          <h1 className="text-2xl md:text-7xl font-medium text-center">
             Don't overpay <br className="my-2" /> for Solar
           </h1>
-          <p className=" text-[#868687] text-lg text-center font-light leading-6">
+          <p className=" text-[#868687] text-xs md:text-lg text-center font-light leading-6">
             Get fixed price for your solar panels all online. <br /> Offgrid
             install solar in all new way.
           </p>
         </div>
 
-        <Button className="text-1xl font-normal"> Get your proposal now</Button>
+        <Button className="text-1xl font-normal"> Get your quote now</Button>
 
-        <div className="relative">
+        <div className="relative px-5 md:w-auto w-screen">
           <CardOverlay />
           <Image
             alt="hero"
@@ -40,40 +55,40 @@ export default function Home() {
             height={477}
           />
         </div>
-        <p className="text-lg text-gray-600 font-normal text-center mt-[108px]">
+        <p className="md:text-lg text-gray-600 font-normal text-center mt-[108px]">
           Brands we work with
         </p>
         <div className="flex">
           <Ticker />
         </div>
-        <div className="text-center h-screen w-full flex flex-col items-center justify-center gap-4 bg-[#f0f0f0] bg-[url('/assets/lander/banner/bg-lines.svg')]">
-          <p className="text-5xl leading-none">
-            We're an <span className="text-[#636363]">all inclusive</span>{" "}
+        <div className="text-center md:h-screen h-[50vh] w-full flex flex-col items-center justify-center gap-4 bg-[#f0f0f0] bg-[url('/assets/lander/banner/bg-lines.svg')]">
+          <p className="text-lg md:text-5xl leading-none">
+            We're an <span className="text-[#1D7739]">all inclusive</span>{" "}
             <br />
             solar platform
           </p>
-          <p className="text-[#868687] font-normal text-xl ">
+          <p className="text-[#868687] font-normal text-xs md:text-xl ">
             Get solar panels, plus a lot more, for a lot less
           </p>
           <Pills />
         </div>
-        <div className="h-1/2 flex py-16 px-20 gap-4 w-full justify-between">
+        <div className="hidden md:flex h-1/2 flex-col md:flex-row py-16 px-20 gap-4 w-full md:justify-between ">
           <div className="flex flex-col gap-4 justify-start items-start px-10 border-r-[1px] h-1/2">
-            <h1 className="font-medium text-5xl">
-              India's first solar <br /> marketplace.
+            <h1 className="font-medium md:text-5xl text-lg">
+              India's first solar <br /> platform.
             </h1>
             <p className="font-normal">
               Get assured quality at the right price. Get everything covered
               from quotation to installation to maintenance all on Offgrid.
             </p>
-            <button className="rounded-full bg-primary px-10 py-4 font-medium text-lg">
+            <button className="rounded-full bg-primary px-10 py-4 font-medium md:text-lg">
               Get Quote
             </button>
           </div>
-          <div className="  "></div>
+          {/* desktop */}
           <div className="flex flex-col items-center gap-8 px-12">
             <div className="flex gap-6">
-              <h1 className="font-medium text-6xl">100%</h1>
+              <h1 className="font-medium text-6xl text-[#1D7739]">100%</h1>
               <div className="flex flex-col gap-2">
                 <p className="text-3xl">Guaranteed quality and price.</p>
                 <p>
@@ -91,9 +106,9 @@ export default function Home() {
                     height={71}
                     alt="icon"
                   />
+                  <h1>Verified Products </h1>
                   <p className="font-normal">
-                    Offgrid vets all products and ensures you get certified
-                    products to ensure optimum electricity production.
+                    To ensure optimum electricity production.
                   </p>
                 </IconCard>
                 <IconCard className="flex gap-2 w-[22rem] h-auto px-5 py-5 text-center">
@@ -103,9 +118,9 @@ export default function Home() {
                     height={77}
                     alt="icon"
                   />
-                  <p>
-                    Offgrid means solar without salesmen. Save time and get the
-                    best quote without negotiating.
+                  <h1>Solar without salesmen</h1>
+                  <p className="font-normal">
+                    Save time and get the best quote without negotiating.
                   </p>
                 </IconCard>
               </div>
@@ -127,29 +142,97 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative h-screen flex items-center bg-[#F4F4F4] w-full justify-center">
+        {/* mobile */}
+        <div className="md:hidden h-1/2 flex flex-col items-center py-16 px-5 gap-4 w-screen">
+          <div className="flex flex-col gap-4 items-center text-center">
+            <h1 className="font-medium md:text-5xl text-lg text-center">
+              India's first solar <br /> platform.
+            </h1>
+            <p className="font-normal text-xs text-center text-[#868687]">
+              Get assured quality at the right price. Get everything covered
+              from quotation to installation to maintenance all on Offgrid.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center gap-8 px-5">
+            <div className="flex flex-col gap-4">
+              <IconCard className="flex flex-col items-center justify-center px-5 py-5 gap-2 text-center">
+                <Image
+                  src={"/assets/lander/icons/price-guarantee/icon-1.svg"}
+                  width={48}
+                  height={71}
+                  alt="icon"
+                />
+                <h1>Verified Products </h1>
+                <p className="font-normal text-xs">
+                  To ensure optimum electricity production.
+                </p>
+              </IconCard>
+              <IconCard className="flex flex-col items-center gap-2 px-5 py-5 text-center">
+                <Image
+                  src={"/assets/lander/icons/price-guarantee/icon-2.svg"}
+                  width={79}
+                  height={77}
+                  alt="icon"
+                />
+                <h1>Solar without salesmen</h1>
+                <p className="font-normal text-xs">
+                  Save time and get the best quote without negotiating.
+                </p>
+              </IconCard>
+
+              <IconCard className="flex flex-col items-center px-5 py-5 gap-2 text-center">
+                <Image
+                  src={"/assets/lander/icons/price-guarantee/icon-3.svg"}
+                  width={79}
+                  height={79}
+                  alt="icon"
+                />
+                <h1>Guaranteed Prices</h1>
+                <p className="font-normal text-xs">
+                  Our technology provides transparency on how much will solar
+                  cost and how much you would actually save.
+                </p>
+              </IconCard>
+            </div>
+          </div>
+          <div className="flex gap-2 px-5 items-center">
+            <h1 className="font-medium text-2xl text-[#1D7739]">100%</h1>
+            <div className="flex flex-col gap-2">
+              <h1 className="text-sm">Guaranteed quality and price.</h1>
+              <p className="font-normal text-xs text-[#868687]">
+                Get assured price and quality with all installation on Offgrid.
+                We ensure your solar works from day 1.
+              </p>
+            </div>
+          </div>
+          <button className="rounded-full bg-primary px-10 py-4 font-medium md:text-lg">
+            Get Quote
+          </button>
+        </div>
+        <div className="relative md:h-screen h-[50vh] flex items-center bg-[#F4F4F4] md:w-full w-screen justify-center px-5">
           <DrawDemo />
         </div>
-        <div className="h-screen px-[5.13rem] py-[6.25rem] justify-center space-y-[122px]">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-[3rem] font-medium text-center leading-none">
+        <div className="h-auto md:h-screen px-[5.13rem] py-[6.25rem] space-y-[16px] md:space-y-[122px]">
+          <div className="flex flex-col gap-2 md:gap-3">
+            <h1 className="text-lg md:text-[3rem] font-medium text-center leading-none">
               Solar installations <br />
               without salesmen.
             </h1>
-            <p className="text-[#868687] font-light text-[1.1rem] text-center">
+            <p className="text-[#868687] font-light text-xs md:text-[1.1rem] text-center">
               Get a fixed price online with fast installation service.
             </p>
           </div>
-          <div className="flex justify-between gap-7">
-            <IconCard className="text-normal flex justify-center items-center flex-col gap-5 px-12 py-12">
+          <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-7 md:w-full w-screen px-5 md:px-0">
+            <IconCard className="text-normal flex justify-center items-center flex-col gap-2 md:gap-5 px-12 py-12">
               <Image
                 src={"/assets/lander/icons/solar-installation/icon-1.svg"}
                 width={125}
                 height={120}
                 alt="icon"
               />
-              <h5 className="text-2xl">You Provide</h5>
-              <p className="font-light">
+              <h5 className="text-sm md:text-2xl">You Provide</h5>
+              <p className="font-light text-xs md:text-base">
                 Some details about your home and it’s current set up. It’s super
                 straight forward, nothing complex.
               </p>
@@ -161,8 +244,8 @@ export default function Home() {
                 height={115}
                 alt="icon"
               />
-              <h5 className="text-2xl">You Pick</h5>
-              <p className="font-light">
+              <h5 className="text-sm md:text-2xl">You Pick</h5>
+              <p className="font-light text-xs md:text-base">
                 The package that you want from a range of fixed price options
                 and an installation date that suits you.
               </p>
@@ -174,71 +257,111 @@ export default function Home() {
                 height={115}
                 alt="icon"
               />
-              <h5 className="text-2xl">We fit</h5>
-              <p className="font-light">
+              <h5 className="text-sm md:text-2xl">We fit</h5>
+              <p className="font-light text-xs md:text-base">
                 Your chosen products, on your chosen date, using verified
                 installers close to you.
               </p>
             </IconCard>
           </div>
         </div>
-        <div className="bg-[#F4F4F4] w-full h-auto px-20 py-20 flex flex-col gap-16">
-          <h1 className="text-[3rem] font-medium text-center leading-none">
+        <div className="bg-[#F4F4F4] h-auto px-5 md:px-20 py-20 flex flex-col gap-16  w-screen md:w-full">
+          <h1 className="text-[3rem] text-lg font-medium text-center leading-none">
             Seamless Paperwork and <br />
             Unmatched Guarantees
           </h1>
 
-          <div className="flex justify-between gap-10">
-            <IconCard className="py-12 px-20 gap-20 flex flex-col rounded-3xl">
-              <div className="text-center">
-                <h5 className="text-[1.44rem]">
+          <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10">
+            <IconCard className="py-12 px-5 md:px-20 gap-3 md:gap-20 flex flex-col rounded-3xl">
+              <div className="text-center space-y-3">
+                <h5 className="text-sm md:text-[1.44rem]">
                   We take care of all paperwork
                 </h5>
-                <p className="font-normal">
+                <p className="md:text-sm text-xs font-normal">
                   Complete paperwork management done by us for easy coordination
                   with your local discom and a smooth application for subsidy.
                 </p>
               </div>
               <div className="flex flex-col gap-4">
                 <div className="rounded-full px-6 py-2 border-[1px] border-[#212121] flex items-center gap-2 bg-[#F4F4F4]">
-                  <Image
-                    className="invert"
-                    src={"/assets/lander/icons/demo-bullet/icon.svg"}
-                    alt="bullet"
-                    width={20}
-                    height={20}
-                  />
-                  <p className="font-light">Sanctioned load verification</p>
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 5L5 6.5L10 1.5M7 1H2.9C2.05992 1 1.63988 1 1.31901 1.16349C1.03677 1.3073 0.8073 1.53677 0.66349 1.81901C0.5 2.13988 0.5 2.55992 0.5 3.4V7.6C0.5 8.44008 0.5 8.86012 0.66349 9.18099C0.8073 9.46323 1.03677 9.6927 1.31901 9.83651C1.63988 10 2.05992 10 2.9 10H7.1C7.94008 10 8.36012 10 8.68099 9.83651C8.96323 9.6927 9.1927 9.46323 9.33651 9.18099C9.5 8.86012 9.5 8.44008 9.5 7.6V5.5"
+                      stroke="#1D7739"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <p className="font-light text-base md:text-sm ">
+                    Sanctioned load verification
+                  </p>
                 </div>
                 <div className="rounded-full px-6 py-2 border-[1px] border-[#212121] flex items-center gap-2 bg-[#F4F4F4]">
-                  <Image
-                    className="invert"
-                    src={"/assets/lander/icons/demo-bullet/icon.svg"}
-                    alt="bullet"
-                    width={20}
-                    height={20}
-                  />
-                  <p className="font-light">DISCOM Approval </p>
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 5L5 6.5L10 1.5M7 1H2.9C2.05992 1 1.63988 1 1.31901 1.16349C1.03677 1.3073 0.8073 1.53677 0.66349 1.81901C0.5 2.13988 0.5 2.55992 0.5 3.4V7.6C0.5 8.44008 0.5 8.86012 0.66349 9.18099C0.8073 9.46323 1.03677 9.6927 1.31901 9.83651C1.63988 10 2.05992 10 2.9 10H7.1C7.94008 10 8.36012 10 8.68099 9.83651C8.96323 9.6927 9.1927 9.46323 9.33651 9.18099C9.5 8.86012 9.5 8.44008 9.5 7.6V5.5"
+                      stroke="#1D7739"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <p className="font-light text-base md:text-sm ">
+                    DISCOM Approval{" "}
+                  </p>
                 </div>
                 <div className="rounded-full px-6 py-2 border-[1px] border-[#212121] flex items-center gap-2 bg-[#F4F4F4]">
-                  <Image
-                    className="invert"
-                    src={"/assets/lander/icons/demo-bullet/icon.svg"}
-                    alt="bullet"
-                    width={20}
-                    height={20}
-                  />
-                  <p className="font-light">Subsidy Application </p>
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 5L5 6.5L10 1.5M7 1H2.9C2.05992 1 1.63988 1 1.31901 1.16349C1.03677 1.3073 0.8073 1.53677 0.66349 1.81901C0.5 2.13988 0.5 2.55992 0.5 3.4V7.6C0.5 8.44008 0.5 8.86012 0.66349 9.18099C0.8073 9.46323 1.03677 9.6927 1.31901 9.83651C1.63988 10 2.05992 10 2.9 10H7.1C7.94008 10 8.36012 10 8.68099 9.83651C8.96323 9.6927 9.1927 9.46323 9.33651 9.18099C9.5 8.86012 9.5 8.44008 9.5 7.6V5.5"
+                      stroke="#1D7739"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <p className="font-light text-base md:text-sm ">
+                    Subsidy Application{" "}
+                  </p>
                 </div>
                 <div className="rounded-full px-6 py-2 border-[1px] border-[#212121] flex items-center gap-2 bg-[#F4F4F4]">
-                  <Image
-                    className="invert"
-                    src={"/assets/lander/icons/demo-bullet/icon.svg"}
-                    alt="bullet"
-                    width={20}
-                    height={20}
-                  />
-                  <p className="font-light">Financing / Loan Documentation</p>
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 5L5 6.5L10 1.5M7 1H2.9C2.05992 1 1.63988 1 1.31901 1.16349C1.03677 1.3073 0.8073 1.53677 0.66349 1.81901C0.5 2.13988 0.5 2.55992 0.5 3.4V7.6C0.5 8.44008 0.5 8.86012 0.66349 9.18099C0.8073 9.46323 1.03677 9.6927 1.31901 9.83651C1.63988 10 2.05992 10 2.9 10H7.1C7.94008 10 8.36012 10 8.68099 9.83651C8.96323 9.6927 9.1927 9.46323 9.33651 9.18099C9.5 8.86012 9.5 8.44008 9.5 7.6V5.5"
+                      stroke="#1D7739"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <p className="font-light text-base md:text-sm ">
+                    Financing / Loan Documentation
+                  </p>
                 </div>
               </div>
             </IconCard>
@@ -384,6 +507,332 @@ export default function Home() {
           </div>
         </div>
         <OurApproach />
+        <div className="w-full py-24 md:space-y-16 bg-[#f0f0f0]">
+          <h1 className="text-[3rem] font-medium text-center leading-none">
+            Why choose Offgrid for your <br /> solar installation
+          </h1>
+          <div className="flex flex-col gap-5">
+            <div className="flex gap-5 py-25 px-20 text-center">
+              <div className="py-9 px-28 bg-secondary rounded-3xl flex flex-col gap-5 items-center">
+                <Image
+                  src={"/assets/lander/solar-panel.svg"}
+                  width={312}
+                  height={382}
+                  alt="solar panel image"
+                />
+                <h1 className="text-3xl">
+                  Fixed price solar, with <br /> everything included
+                </h1>
+                <p className="font-normal text-center">
+                  Our solar installations come with everything you need, plus
+                  more. From panels to inverters, and mounting structure to
+                  paperwork - we’ve got it covered.
+                </p>
+              </div>
+              <div className="flex flex-col gap-5 rounded-2xl">
+                <div className="py-9 px-28 bg-secondary rounded-3xl flex flex-col gap-10">
+                  <h1 className="text-3xl">Up-to 36 months 0% interest rate</h1>
+                  <p className="font-normal text-center">
+                    from our NBFC partner
+                  </p>
+                </div>
+                <div className="py-9 px-9 bg-secondary rounded-3xl flex flex-col gap-5 items-center">
+                  <h1 className="text-3xl">
+                    Solar installation in <br /> 1 day
+                  </h1>
+                  <p className="font-normal text-center">
+                    Book now, and we'll verify your details for DISCOM approval.
+                    Once approved, your solar installation will be completed in
+                    just one day.
+                  </p>
+                  <svg
+                    width="140"
+                    height="149"
+                    viewBox="0 0 140 149"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M51.7061 19.809C51.9096 16.008 52.1101 12.2689 52.3419 7.9404C50.3161 7.9404 48.5243 8.00882 46.7395 7.92444C43.9166 7.79141 42.8686 7.02138 42.7301 5.16806C42.5832 3.20147 43.8232 1.96685 46.5261 1.57687C47.9552 1.39745 49.393 1.29601 50.8332 1.27288C61.5543 0.905961 72.2762 0.551286 82.9988 0.208697C83.649 0.184436 84.3001 0.239445 84.9366 0.37276C87.2317 0.86992 88.5322 2.34934 88.5123 4.35926C88.5031 5.34756 88.1321 6.29871 87.4688 7.03474C86.8048 7.77073 85.8936 8.24098 84.906 8.35767C83.1242 8.65186 81.2935 8.64957 79.2149 8.79857V19.1988C90.6307 20.3215 100.264 25.7112 109.98 32.1894C112.329 30.2798 114.819 28.4388 117.094 26.3681C123.69 20.3741 127.33 20.8025 132.15 27.4891C133.386 29.0064 134.724 30.438 136.156 31.7737C139.856 35.64 139.95 38.642 136.316 42.6512C133.872 45.3468 131.28 47.9106 128.683 50.6085C130.395 53.7032 132.126 56.7296 133.762 59.8068C143.09 77.3461 141.754 103.441 126.653 120.435C114.078 134.587 98.6474 143.128 80.1536 146.586C62.6177 149.864 45.7956 147.291 29.5647 140.307C18.2584 135.442 10.4834 126.842 6.21531 115.682C-2.37289 93.2255 -0.955322 71.1306 10.478 49.8098C14.8593 41.6401 21.7078 35.8223 29.2212 30.7481C33.5642 27.8622 38.0835 25.2473 42.753 22.9184C45.4948 21.5288 48.5978 20.8588 51.7061 19.809ZM12.5467 87.7446C12.5361 94.8591 13.6743 101.93 15.9182 108.686C19.9154 120.469 27.2841 129.032 39.4649 132.929C66.8253 141.683 91.7055 137.451 113.264 118.167C129.294 103.828 132.578 82.583 122.076 63.9036C113.678 48.9645 101.011 38.9155 84.8585 33.2483C77.4171 30.6791 69.5284 29.6373 61.6699 30.1857C52.2952 30.7695 43.9212 34.3667 35.9856 39.0548C27.667 43.8755 21.2002 51.3106 17.6051 60.1876C14.0148 68.7769 12.9376 77.7049 12.5467 87.7446ZM60.7824 8.56291C60.9859 11.9837 61.181 15.2611 61.3753 18.5299H70.0691C70.5725 15.1752 71.0483 12.0073 71.5655 8.56291H60.7824ZM131.249 37.1298L125.23 30.4548L117.947 38.1379L122.807 43.4926L131.249 37.1298Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M72.9994 80.4545C78.3446 80.5959 83.4191 80.7039 88.4912 80.881C90.0541 80.878 91.6133 81.046 93.1395 81.382C94.0545 81.5538 94.8807 82.035 95.4782 82.7435C96.0764 83.4527 96.4085 84.3451 96.4184 85.2703C96.4436 86.2585 96.1269 87.2247 95.5218 88.0092C94.9174 88.7937 94.0598 89.3487 93.0936 89.582C91.7188 90.0017 90.2844 90.194 88.8469 90.1522C81.7918 89.8063 74.743 89.3312 67.6917 88.9078C64.5903 88.7215 63.0907 87.4786 62.7473 84.4919C62.6299 83.0665 62.6655 81.6336 62.8536 80.2166C63.7416 71.5547 64.6596 62.8966 65.6078 54.2417C65.7807 52.8237 66.0428 51.4182 66.3927 50.0329C66.7966 48.3491 67.8355 47.2626 69.6723 47.2201C71.7379 47.1729 72.7859 48.4097 73.1348 50.2608C73.432 51.6579 73.5858 53.0813 73.5938 54.5093C73.4408 62.0465 73.2029 69.583 73.0017 77.1196C72.978 78.022 72.9994 78.9243 72.9994 80.4545Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className="w-full h-auto flex flex-col justify-center items-center px-20 gap-16">
+              <div className="relative">
+                <img
+                  src={"/assets/lander/hero-image.png"}
+                  alt="hero image"
+                  width={"100%"}
+                  height={"auto"}
+                  className="rounded-3xl"
+                />
+                <div className="space-y-5 absolute left-1/3 top-1/2 text-center text-white font-extralight">
+                  <h1 className="text-2xl font-normal">
+                    Expert, local installers.
+                  </h1>
+                  <p>
+                    All of our installations are carried out by trained
+                    engineers. <br />
+                    You're in safe hands.
+                  </p>
+                </div>
+                <div className="absolute bottom-6 left-28 text-white font-light">
+                  <p>
+                    Are you a Solar Installer? <br />
+                    Join Offgrid
+                  </p>
+                </div>
+              </div>
+
+              <Button> Get your quotation</Button>
+            </div>
+          </div>
+        </div>
+        <div className="w-full py-24 md:px-40">
+          <h1 className="text-[3rem] font-medium text-center leading-none mb-20">
+            Here&rsquo;s how your switch <br /> to solar would look like
+          </h1>
+          {/* step one */}
+          <section className="flex gap-5 relative pb-40">
+            <span
+              className="absolute top-8 md:left-8 h-full w-0.5 bg-primary z-0"
+              aria-hidden="true"
+            />
+            <div className="z-40">
+              <span className="h-16 w-16 rounded-full flex items-center justify-center bg-primary ">
+                <h1
+                  className=" text-4xl text-black self-center flex"
+                  aria-hidden="true"
+                >
+                  1
+                </h1>
+              </span>
+            </div>
+            <div className="flex flex-1 flex-col md:flex-row justify-between md:space-x-4 lg:mb-32 ">
+              <div className="max-w-lg">
+                <p className="md:text-4xl text-[32px]leading-none">
+                  Personalised quote.
+                </p>
+                <div className="flex flex-col">
+                  <div className="flex mt-4">
+                    <dt className=" text-base font-light leading-7 text-gray-900 flex-row ">
+                      <div className=" flex flex-col">
+                        <p>
+                          Every Offgrid installation starts with an easy to use
+                          and free online tool to help better understand whether
+                          solar is right for you
+                        </p>
+                        <p className="mt-4 font-bold">Here’s what we need:</p>
+                        <ul className="mt-4  list-disc ml-6">
+                          <li>Where is your home? </li>
+                          <li>Your roof marking.</li>
+                          <li>What is your electricity use?</li>
+                        </ul>
+                        <p className="mt-4">
+                          <b className="font-bold">Estimated time:</b> 5 minutes
+                        </p>
+                        <p className="mt-4">
+                          You get an instant quote with prices and products.
+                        </p>
+                      </div>
+                    </dt>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <Image
+                  src={"/assets/lander/process-section/image-1.png"}
+                  alt="image 1"
+                  width={504}
+                  height={289}
+                />
+              </div>
+            </div>
+          </section>
+          {/* step two */}
+          <section className="flex gap-5 relative pb-40">
+            <span
+              className="absolute top-8 md:left-8 h-full w-0.5 bg-primary z-0"
+              aria-hidden="true"
+            />
+            <div className="z-40">
+              <span className="h-16 w-16 rounded-full flex items-center justify-center bg-primary ">
+                <h1
+                  className=" text-4xl text-black self-center flex"
+                  aria-hidden="true"
+                >
+                  2
+                </h1>
+              </span>
+            </div>
+            <div className="flex flex-1 flex-col md:flex-row justify-between md:space-x-4 lg:mb-32 ">
+              <div className="max-w-lg">
+                <p className="md:text-4xl text-[32px]leading-none">
+                  Choose a package
+                </p>
+                <div className="flex flex-col">
+                  <div className="flex mt-4">
+                    <dt className=" text-base font-light leading-7 text-gray-900 flex-row ">
+                      <div className=" flex flex-col">
+                        <p>
+                          Offgrid now has a digital sketch of your roof along
+                          with all parameters including sunshine hours and
+                          temperature. We use this data to give the best product
+                          recommendations at different price points to suit your
+                          affordability.
+                        </p>
+                        <p className="mt-4 font-bold">
+                          Here’s what’s included in the package:{" "}
+                        </p>
+                        <ul className="mt-4  list-disc ml-6">
+                          <li>Panel + Inverter + Cabling </li>
+                          <li>Meters + Mounts</li>
+                          <li>Installation</li>
+                          <li>1 Year free service</li>
+                        </ul>
+                      </div>
+                    </dt>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <Image
+                  src={"/assets/lander/process-section/image-2.png"}
+                  alt="image 1"
+                  width={504}
+                  height={289}
+                />
+              </div>
+            </div>
+          </section>
+          {/* step three */}
+          <section className="flex gap-5 relative pb-40">
+            <span
+              className="absolute top-8 md:left-8 h-full w-0.5 bg-primary z-0"
+              aria-hidden="true"
+            />
+            <div className="z-40">
+              <span className="h-16 w-16 rounded-full flex items-center justify-center bg-primary ">
+                <h1
+                  className=" text-4xl text-black self-center flex"
+                  aria-hidden="true"
+                >
+                  3
+                </h1>
+              </span>
+            </div>
+            <div className="flex flex-1 flex-col md:flex-row justify-between md:space-x-4 lg:mb-32 ">
+              <div className="max-w-lg">
+                <p className="md:text-4xl text-[32px]leading-none">
+                  Approval and Installation
+                </p>
+                <div className="flex flex-col">
+                  <div className="flex mt-4">
+                    <dt className=" text-base font-light leading-1 text-gray-900 flex-row ">
+                      <div className=" flex flex-col">
+                        <p>
+                          We work with energy experts to make sure your solar is
+                          installed perfectly and efficiently. And we stay in
+                          close contact with you at every step so you're always
+                          in the loop.
+                        </p>
+                        <p className="mt-4 font-bold">
+                          Let us do the heavy lifting:
+                        </p>
+                        <ul className="mt-4  list-disc ml-6">
+                          <li>System Design and Planning: 1 week </li>
+                          <li>DISCOM Approval: 3 to 4 weeks</li>
+                          <li>Installation: 1 Day</li>
+                        </ul>
+                        <p className="mt-4 font-bold">
+                          Extra guarantees on your installation:
+                        </p>
+                        <ul className="mt-4  list-disc ml-6">
+                          <li>
+                            Wind / Rain storm proofing and sturdy structure that
+                            take winds up to 170km/h.
+                          </li>
+                          <li>
+                            ₹ 1 Lakhs guarantee on water leakage with chemical
+                            anchoring.
+                          </li>
+                        </ul>
+                      </div>
+                    </dt>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <Image
+                  src={"/assets/lander/process-section/image-3.png"}
+                  alt="image 1"
+                  width={504}
+                  height={289}
+                />
+              </div>
+            </div>
+          </section>
+          {/* step four */}
+          <section className="flex gap-5 relative">
+            <span
+              className="absolute top-8 md:left-8 h-full w-0.5 bg-primary z-0"
+              aria-hidden="true"
+            />
+            <div className="z-40">
+              <span className="h-16 w-16 rounded-full flex items-center justify-center bg-primary ">
+                <h1
+                  className=" text-4xl text-black self-center flex"
+                  aria-hidden="true"
+                >
+                  4
+                </h1>
+              </span>
+            </div>
+            <div className="flex flex-1 flex-col md:flex-row justify-between md:space-x-4 lg:mb-32 ">
+              <div className="max-w-lg">
+                <p className="md:text-4xl text-[32px]leading-none">
+                  Your power visualised
+                </p>
+                <div className="flex flex-col">
+                  <div className="flex mt-4">
+                    <dt className=" text-base font-light leading-1 text-gray-900 flex-row ">
+                      <div className=" flex flex-col">
+                        <p>
+                          Once your solar is installed, we'll make sure your
+                          home is powered, protected, and fully optimised.
+                        </p>
+                        <p className="mt-4 font-bold">
+                          Here’s everything we take care of:
+                        </p>
+                        <ul className="mt-4  list-disc ml-6">
+                          <li>Electricity production / consumption</li>
+                          <li>Bill payments </li>
+                          <li>Auto-scheduled maintenance.</li>
+                        </ul>
+                      </div>
+                    </dt>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <Image
+                  src={"/assets/lander/process-section/image-4.png"}
+                  alt="image 1"
+                  width={504}
+                  height={289}
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+        <SolarAdviceSection />
       </div>
     </main>
   );

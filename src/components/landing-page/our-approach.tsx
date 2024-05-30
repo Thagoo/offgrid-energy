@@ -7,7 +7,7 @@ export default function OurApproach() {
 
   return (
     <>
-      <div className="w-full bg-[#F4F4F4] py-24 space-y-16">
+      <div className="w-full py-24 space-y-16">
         {" "}
         <h1 className="text-center text-5xl tracking-[-2px]">Our approach</h1>
         <div className="px-20 py-12 h-screen flex gap-5">
@@ -109,6 +109,7 @@ export default function OurApproach() {
                 width={619}
                 height={288}
                 src={"/assets/lander/approach/image-1.png"}
+                className="rounded-3xl"
               />
               <p>
                 At Offgrid, we pride ourselves on delivering a perfect solar

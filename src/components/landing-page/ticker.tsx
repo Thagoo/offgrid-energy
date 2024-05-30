@@ -13,23 +13,22 @@ export default function Ticker() {
   ];
 
   return (
-    <div className="ticker-container py-6">
-    <div className="ticker">
-      {brands.concat(brands).map((brand, index) => (
-        <Image
-          key={index}
-          alt="brands"
-          src={`/assets/lander/brands/${brand}.svg`}
-          width={100}
-          height={100}
-          className="ticker-item"
-        />
-      ))}
-     
+    <div className="ticker-container py-2 md:py-6">
+      <div className="ticker">
+        {brands.concat(brands).map((brand, index) => (
+          <Image
+            key={index}
+            alt="brands"
+            src={`/assets/lander/brands/${brand}.svg`}
+            width={100}
+            height={100}
+            className="inline-block md:mr-20 mr-10"
+            objectFit="fill"
+            style={{ width: "5%", height: "auto" }}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-  
-
   );
   // const renderItem = (item) => {
   //   return (

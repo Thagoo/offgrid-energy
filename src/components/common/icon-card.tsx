@@ -5,7 +5,7 @@ export default function IconCard({ children, className, ...rest }) {
     <div
       {...rest}
       className={clsx(
-        "bg-[#F0F0F0] rounded-3xl border-[1px] border-primary",
+        "bg-secondary rounded-3xl border-[1px] border-primary",
         className
       )}
     >
