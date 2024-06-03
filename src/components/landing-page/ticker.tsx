@@ -22,9 +22,8 @@ export default function Ticker() {
             src={`/assets/lander/brands/${brand}.svg`}
             width={100}
             height={100}
-            className="inline-block md:mr-20 mr-10"
+            className="inline-block md:mr-20 mr-8 h-auto w-[15%] md:w-[5%]"
             objectFit="fill"
-            style={{ width: "5%", height: "auto" }}
           />
         ))}
       </div>

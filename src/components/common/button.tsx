@@ -8,10 +8,7 @@ export default function Button({ children, className, ...rest }: ButtonProps) {
   return (
     <button
       {...rest}
-      className={clsx(
-        "bg-primary font-medium px-10 py-3 rounded-3xl",
-        className
-      )}
+      className={clsx("bg-primary font-medium rounded-full", className)}
     >
       {children}
     </button>
