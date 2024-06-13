@@ -1,21 +1,19 @@
 import Button from "@/components/common/button";
-import Card from "@/components/common/card";
 import IconCard from "@/components/common/icon-card";
-import Accordion from "@/components/landing-page/accordion";
-import AccordionSection from "@/components/landing-page/accordion";
-import CardOverlay from "@/components/landing-page/card-overlay";
+import AccordionSection from "@/components/landing-page/accordion-section";
 import DrawDemo from "@/components/landing-page/draw-demo";
 import FlippingCardSection from "@/components/landing-page/flipping-card-section";
-import OurApproach from "@/components/landing-page/our-approach";
 
 import Pills from "@/components/landing-page/pills";
 import ScrollerBanner from "@/components/landing-page/scroller-banner";
 import SolarAdviceSection from "@/components/landing-page/solar-advice-section";
+import SolarOnYourFingertips from "@/components/landing-page/solar-on-your-fingertips";
 import Ticker from "@/components/landing-page/ticker";
 
 import Navbar from "@/components/navbar";
-import { accordionData } from "@/lib/utils";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -23,7 +21,7 @@ export default function Home() {
       <Navbar />
 
       <div className="flex flex-col items-center pt-24 md:pt-36">
-        <div className="flex flex-col items-center justify-center gap-6 md:gap-16 md:px-20 px-6">
+        <div className="flex flex-col items-center justify-center gap-6 md:gap-16 md:px-20 px-5">
           <span className="flex items-center gap-2 bg-secondary px-4 py-2 md:py-3 md:px-4 rounded-3xl md:text-base text-sm">
             <svg
               width="24"
@@ -40,7 +38,7 @@ export default function Home() {
                 stroke-linejoin="round"
               />
             </svg>
-            India’s Solar Platform
+            India&apos;s Solar Platform
           </span>
           <div className="relative md:py-0">
             <img
@@ -69,23 +67,22 @@ export default function Home() {
             Get your quote now
           </Button>
 
-          <div className="flex md:flex-row flex-col justify-between w-full text-center gap-16">
+          <div className="flex md:flex-row flex-col justify-between w-full text-center gap-16 md:px-20 px-5">
             <ScrollerBanner />
           </div>
         </div>
 
-        <div className="py-16">
+        <div className="py-16 w-full overflow-hidden">
           <p className="md:text-lg text-sm text-gray-600 font-normal text-center">
             Brands we work with
           </p>
-          <div className="flex">
-            <Ticker />
-          </div>
+
+          <Ticker />
         </div>
 
-        <div className="text-center md:h-screen h-[50vh] w-screen  md:w-full flex flex-col items-center justify-center gap-3 md:gap-4 bg-[#f0f0f0] bg-[url('/assets/lander/banner/bg-lines.svg')]">
+        <div className="text-center md:h-screen h-[50vh] w-screen  md:w-full flex flex-col items-center justify-center gap-3 md:gap-4 bg-[#f0f0f0] bg-[url('/assets/lander/banner/bg-lines.svg')] md:px-20 px-5">
           <h1 className="text-3xl md:text-5xl leading-none font-medium">
-            We're an <span className="text-[#1D7739]">all inclusive</span>{" "}
+            We&apos;re an <span className="text-gray-600">all inclusive</span>{" "}
             <br />
             solar platform
           </h1>
@@ -94,21 +91,21 @@ export default function Home() {
           </p>
           <Pills />
         </div>
-        <div className="hidden md:flex h-1/2 flex-col md:flex-row py-36 px-20 gap-4 w-full md:justify-between ">
-          <div className="flex flex-col gap-4 justify-between items-start px-10 border-r-[1px] w-2/5">
+        <div className="hidden md:flex h-1/2 flex-col md:flex-row py-36 gap-4 md:px-20 px-5 w-full md:justify-between ">
+          <div className="flex flex-col gap-14 items-start border-r-[1px] w-2/5">
             <h1 className="font-medium md:text-5xl text-3xl">
-              India's first solar platform.
+              India&apos;s first solar platform.
             </h1>
             <p>
-              Get assured quality at the right price. Get everything covered
-              from quotation to installation to maintenance all on Offgrid.
+              Don&apos;t waste time with salesmen. Get all you need for solar
+              all online. Just mark your roof and leave the rest to us.
             </p>
             <button className="rounded-full bg-primary px-10 py-4 md:text-lg">
               Get Quote
             </button>
           </div>
           {/* desktop */}
-          <div className="flex flex-col items-center gap-8 px-12 w-3/5">
+          <div className="flex flex-col items-center gap-8 w-3/5">
             <div className="flex gap-6 items-center">
               <h1 className="font-medium text-6xl">100%</h1>
               <div className="flex flex-col gap-2">
@@ -122,26 +119,15 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full flex flex-col gap-4">
-              <Accordion
-                title="Know before you buy "
-                content="This is the content of the first accordion."
-              />
-              <Accordion
-                title="Guaranteed Subsidy"
-                content="This is the content of the second accordion."
-              />
-              <Accordion
-                title="No cost EMI"
-                content="This is the content of the third accordion."
-              />
+              <AccordionSection />
             </div>
           </div>
         </div>
         {/* mobile */}
-        <div className="md:hidden h-1/2 flex flex-col items-center py-16 px-5 gap-6 w-screen">
+        <div className="md:hidden h-1/2 flex flex-col items-center py-16 md:px-20 px-5 gap-6">
           <div className="flex flex-col gap-4 items-center text-center px-8">
             <h1 className="text-2xl md:text-5xl text-center">
-              India's first <br /> solar platform.
+              India&apos;s first <br /> solar platform.
             </h1>
             <p className="text-sm text-start">
               Get assured quality at the right price. <br />
@@ -151,19 +137,8 @@ export default function Home() {
               </span>
             </p>
           </div>
-          <div className="w-full flex flex-col gap-6 px-3">
-            <Accordion
-              title="Know before you buy "
-              content="This is the content of the first accordion."
-            />
-            <Accordion
-              title="Guaranteed Subsidy"
-              content="This is the content of the second accordion."
-            />
-            <Accordion
-              title="No cost EMI"
-              content="This is the content of the third accordion."
-            />
+          <div>
+            <AccordionSection />
           </div>
 
           <div className="flex flex-col gap-2 px-8 items-center">
@@ -187,7 +162,7 @@ export default function Home() {
           <DrawDemo />
         </div>
         <FlippingCardSection />
-        <div className="bg-[#F4F4F4] h-auto px-5 md:px-20 py-20 flex flex-col gap-5 md:gap-28 w-screen md:w-full">
+        <div className="bg-[#F4F4F4] h-auto md:px-20 px-5 py-20 flex flex-col gap-5 md:gap-28 w-screen md:w-full">
           <h1 className="md:text-[3rem] text-2xl font-medium text-center leading-none">
             Seamless Paperwork and <br className="md:block hidden" />
             Unmatched Guarantees
@@ -324,7 +299,7 @@ export default function Home() {
           </div>
         </div>
         {/* yellow banner */}
-        <div className="bg-[#FFCB00] md:h-screen h-auto w-full flex md:flex-row flex-col items-center px-10 md:px-28 md:py-0 py-16 justify-center gap-6 md:gap-28">
+        <div className="bg-[#FFCB00] md:h-screen h-auto w-full flex md:flex-row flex-col items-center md:px-20 px-5 md:py-0 py-16 justify-center gap-6 md:gap-28">
           <Image
             src={"/assets/lander/icons/group-card.svg"}
             width={324}
@@ -432,140 +407,95 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <OurApproach />
-        <div className="w-screen md:w-full py-16 md:space-y-16 space-y-4 bg-[#f0f0f0]">
+        <SolarOnYourFingertips />
+        <div className="flex flex-col md:px-20 px-5 py-16 md:gap-16 gap-4 bg-[#f0f0f0]">
           <h1 className="text-2xl md:text-[3rem] font-medium text-center leading-none">
             Why choose Offgrid for your <br /> solar installation
           </h1>
-          <div className="flex flex-col gap-5">
-            <div className="flex md:flex-row flex-col gap-5 py-25 px-5 md:px-20 text-center">
-              <div className="md:py-9 md:px-28 py-6 px-5 bg-secondary rounded-3xl flex flex-col gap-4 md:gap-5 items-center">
-                <div className="px-20">
+          <div className="flex flex-col gap-10 md:gap-16 py-6 border-t border-t-black">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-12">
+              <div className="flex flex-col gap-2 md:gap-4">
+                <div className="md:self-center">
                   <Image
-                    src={"/assets/lander/solar-panel.svg"}
-                    width={312}
-                    height={382}
-                    alt="solar panel image"
-                  />
+                    src="/assets/lander/icons/why-choose-offgrid/rupee-symbol.svg"
+                    alt="fixed price"
+                    width={40}
+                    height={40}
+                  ></Image>
                 </div>
-                <h1 className="text-sm md:text-3xl font-medium">
-                  Fixed price solar, with <br className="md:block hidden" />{" "}
-                  everything included
+                <h1 className="text-sm md:text-[1.44rem] font-medium md:text-center">
+                  Fixed price guarantee
                 </h1>
-                <p className="font-normal text-center text-xs md:text-base">
-                  Our solar installations come with everything you need, plus
-                  more. From panels to inverters, and mounting structure to
-                  paperwork - we’ve got it covered.
+                <p className="font-normal md:text-base text-xs md:text-center">
+                  Get a assured price quote for your solar. All included and
+                  nothing extra.
                 </p>
               </div>
-              <div className="flex flex-col gap-5 rounded-2xl">
-                <div className="py-6 md:py-9 md:px-28 px-5 bg-secondary rounded-3xl flex flex-col gap-3 md:gap-5 items-center">
-                  <div>
-                    <h1 className="text-sm md:text-3xl font-medium">
-                      Up-to 36 months
-                    </h1>
-                    <h1 className="text-sm md:text-3xl font-medium">
-                      0% interest rate
-                    </h1>
-                  </div>
-                  <p className="font-normal text-center text-xs md:text-base">
-                    from our NBFC partner
-                  </p>
+              <div className="flex flex-col gap-2 md:gap-4">
+                <div className="md:self-center">
+                  <Image
+                    src="/assets/lander/icons/why-choose-offgrid/document.svg"
+                    alt="no cost emi"
+                    width={40}
+                    height={40}
+                  ></Image>
                 </div>
-                <div className="py-6 md:py-9 md:px-9 px-5 bg-secondary rounded-3xl flex flex-col gap-3 md:gap-5 items-center">
-                  <h1 className="text-sm md:text-3xl font-medium">
-                    Solar installation in <br className="hidden md:block" /> 1
-                    day
-                  </h1>
-                  <p className="font-normal text-center text-xs md:text-base">
-                    Book now, and we'll verify your details for DISCOM approval.
-                    Once approved, your solar installation will be completed in
-                    just one day.
-                  </p>
-                  <svg
-                    width="140"
-                    height="149"
-                    viewBox="0 0 140 149"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="md:block hidden"
-                  >
-                    <path
-                      d="M51.7061 19.809C51.9096 16.008 52.1101 12.2689 52.3419 7.9404C50.3161 7.9404 48.5243 8.00882 46.7395 7.92444C43.9166 7.79141 42.8686 7.02138 42.7301 5.16806C42.5832 3.20147 43.8232 1.96685 46.5261 1.57687C47.9552 1.39745 49.393 1.29601 50.8332 1.27288C61.5543 0.905961 72.2762 0.551286 82.9988 0.208697C83.649 0.184436 84.3001 0.239445 84.9366 0.37276C87.2317 0.86992 88.5322 2.34934 88.5123 4.35926C88.5031 5.34756 88.1321 6.29871 87.4688 7.03474C86.8048 7.77073 85.8936 8.24098 84.906 8.35767C83.1242 8.65186 81.2935 8.64957 79.2149 8.79857V19.1988C90.6307 20.3215 100.264 25.7112 109.98 32.1894C112.329 30.2798 114.819 28.4388 117.094 26.3681C123.69 20.3741 127.33 20.8025 132.15 27.4891C133.386 29.0064 134.724 30.438 136.156 31.7737C139.856 35.64 139.95 38.642 136.316 42.6512C133.872 45.3468 131.28 47.9106 128.683 50.6085C130.395 53.7032 132.126 56.7296 133.762 59.8068C143.09 77.3461 141.754 103.441 126.653 120.435C114.078 134.587 98.6474 143.128 80.1536 146.586C62.6177 149.864 45.7956 147.291 29.5647 140.307C18.2584 135.442 10.4834 126.842 6.21531 115.682C-2.37289 93.2255 -0.955322 71.1306 10.478 49.8098C14.8593 41.6401 21.7078 35.8223 29.2212 30.7481C33.5642 27.8622 38.0835 25.2473 42.753 22.9184C45.4948 21.5288 48.5978 20.8588 51.7061 19.809ZM12.5467 87.7446C12.5361 94.8591 13.6743 101.93 15.9182 108.686C19.9154 120.469 27.2841 129.032 39.4649 132.929C66.8253 141.683 91.7055 137.451 113.264 118.167C129.294 103.828 132.578 82.583 122.076 63.9036C113.678 48.9645 101.011 38.9155 84.8585 33.2483C77.4171 30.6791 69.5284 29.6373 61.6699 30.1857C52.2952 30.7695 43.9212 34.3667 35.9856 39.0548C27.667 43.8755 21.2002 51.3106 17.6051 60.1876C14.0148 68.7769 12.9376 77.7049 12.5467 87.7446ZM60.7824 8.56291C60.9859 11.9837 61.181 15.2611 61.3753 18.5299H70.0691C70.5725 15.1752 71.0483 12.0073 71.5655 8.56291H60.7824ZM131.249 37.1298L125.23 30.4548L117.947 38.1379L122.807 43.4926L131.249 37.1298Z"
-                      fill="black"
-                    />
-                    <path
-                      d="M72.9994 80.4545C78.3446 80.5959 83.4191 80.7039 88.4912 80.881C90.0541 80.878 91.6133 81.046 93.1395 81.382C94.0545 81.5538 94.8807 82.035 95.4782 82.7435C96.0764 83.4527 96.4085 84.3451 96.4184 85.2703C96.4436 86.2585 96.1269 87.2247 95.5218 88.0092C94.9174 88.7937 94.0598 89.3487 93.0936 89.582C91.7188 90.0017 90.2844 90.194 88.8469 90.1522C81.7918 89.8063 74.743 89.3312 67.6917 88.9078C64.5903 88.7215 63.0907 87.4786 62.7473 84.4919C62.6299 83.0665 62.6655 81.6336 62.8536 80.2166C63.7416 71.5547 64.6596 62.8966 65.6078 54.2417C65.7807 52.8237 66.0428 51.4182 66.3927 50.0329C66.7966 48.3491 67.8355 47.2626 69.6723 47.2201C71.7379 47.1729 72.7859 48.4097 73.1348 50.2608C73.432 51.6579 73.5858 53.0813 73.5938 54.5093C73.4408 62.0465 73.2029 69.583 73.0017 77.1196C72.978 78.022 72.9994 78.9243 72.9994 80.4545Z"
-                      fill="black"
-                    />
-                  </svg>
-                  <svg
-                    width="70"
-                    height="75"
-                    viewBox="0 0 70 75"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="md:hidden"
-                  >
-                    <g clip-path="url(#clip0_1864_1580)">
-                      <path
-                        d="M25.8672 10.8381C25.9688 8.9407 26.0689 7.07408 26.1846 4.91328C25.1733 4.91328 24.2789 4.94743 23.3879 4.90531C21.9787 4.8389 21.4555 4.4545 21.3864 3.52931C21.313 2.54757 21.9321 1.93124 23.2813 1.73657C23.9947 1.64699 24.7125 1.59636 25.4315 1.58481C30.7835 1.40164 36.136 1.22459 41.4887 1.05356C41.8134 1.04145 42.1384 1.06891 42.4561 1.13546C43.6018 1.38365 44.2511 2.12218 44.2411 3.12555C44.2366 3.61892 44.0513 4.09374 43.7202 4.46117C43.3887 4.82858 42.9339 5.06333 42.4408 5.12158C41.5514 5.26844 40.6375 5.2673 39.5998 5.34168V10.5335C45.2986 11.094 50.1076 13.7845 54.9578 17.0185C56.1307 16.0653 57.3738 15.1462 58.5095 14.1125C61.802 11.1202 63.6191 11.3341 66.0255 14.6721C66.6422 15.4296 67.3102 16.1442 68.0251 16.811C69.872 18.7411 69.9194 20.2397 68.1049 22.2411C66.8851 23.5868 65.5912 24.8667 64.2947 26.2135C65.1494 27.7584 66.0132 29.2691 66.8301 30.8053C71.4867 39.561 70.8199 52.5877 63.2811 61.0715C57.0037 68.136 49.3006 72.3996 40.0684 74.1259C31.3144 75.7622 22.9167 74.478 14.8141 70.9917C9.16994 68.563 5.28862 64.2698 3.15796 58.6986C-1.12933 47.4881 -0.42167 36.4582 5.28591 25.8147C7.47309 21.7364 10.8919 18.8321 14.6426 16.299C16.8107 14.8583 19.0668 13.553 21.3978 12.3904C22.7665 11.6967 24.3155 11.3622 25.8672 10.8381ZM6.31863 44.752C6.31332 48.3037 6.88156 51.8333 8.00169 55.2061C9.99715 61.0882 13.6756 65.3627 19.7563 67.3084C33.4149 71.6785 45.8352 69.5659 56.5973 59.9391C64.5998 52.7808 66.239 42.1753 60.9965 32.8504C56.804 25.3928 50.4807 20.3762 42.4172 17.5472C38.7024 16.2646 34.7642 15.7445 30.8412 16.0183C26.1613 16.3097 21.981 18.1055 18.0195 20.4458C13.8668 22.8523 10.6385 26.5639 8.84379 30.9954C7.0515 35.2833 6.51378 39.7401 6.31863 44.752ZM30.3982 5.22404C30.4998 6.93173 30.5972 8.56782 30.6942 10.1996H35.0342C35.2855 8.52493 35.523 6.9435 35.7812 5.22404H30.3982ZM65.5756 19.4848L62.5707 16.1526L58.935 19.9881L61.3612 22.6612L65.5756 19.4848Z"
-                        fill="black"
-                      />
-                      <path
-                        d="M36.4954 41.1111C39.1638 41.1816 41.697 41.2355 44.229 41.3239C45.0092 41.3224 45.7876 41.4063 46.5495 41.574C47.0062 41.6598 47.4187 41.9 47.717 42.2537C48.0156 42.6077 48.1814 43.0533 48.1863 43.5151C48.1989 44.0084 48.0408 44.4908 47.7387 44.8824C47.437 45.274 47.0089 45.551 46.5266 45.6676C45.8403 45.877 45.1242 45.973 44.4066 45.9522C40.8847 45.7795 37.3658 45.5423 33.8458 45.3309C32.2975 45.238 31.549 44.6175 31.3775 43.1265C31.3189 42.415 31.3367 41.6996 31.4306 40.9923C31.8738 36.6682 32.3321 32.346 32.8055 28.0254C32.8918 27.3176 33.0227 26.6159 33.1973 25.9244C33.3989 25.0838 33.9175 24.5414 34.8345 24.5202C35.8656 24.4967 36.3889 25.1141 36.563 26.0381C36.7114 26.7356 36.7881 27.4461 36.7921 28.159C36.7158 31.9216 36.597 35.6839 36.4966 39.4462C36.4847 39.8967 36.4954 40.3471 36.4954 41.1111Z"
-                        fill="black"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1864_1580">
-                        <rect
-                          width="69.8889"
-                          height="74"
-                          fill="white"
-                          transform="translate(0.0546875 0.949219)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
+                <h1 className="text-sm md:text-[1.44rem] font-medium md:text-center">
+                  No cost EMI
+                </h1>
+                <p className="font-normal md:text-base text-xs md:text-center">
+                  Get solar loans and interest free financing from Offgrid
+                  partner banks and NBFC&apos;s
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 md:gap-4">
+                <div className="md:self-center">
+                  <Image
+                    src="/assets/lander/icons/why-choose-offgrid/maintenance.svg"
+                    alt="24 hour installation"
+                    width={40}
+                    height={40}
+                  ></Image>
                 </div>
+                <h1 className="text-sm md:text-[1.44rem] font-medium md:text-center">
+                  24 Hour Installation
+                </h1>
+                <p className="font-normal md:text-base text-xs md:text-center">
+                  We spend only a day in your house. We set up your panels and
+                  switch you up fast.
+                </p>
               </div>
             </div>
-            <div className="w-full h-auto flex flex-col justify-center items-center py-16 px-5 md:px-20 gap-5 md:gap-16">
-              <div className="relative">
-                <img
-                  src={"/assets/lander/hero-image.png"}
-                  alt="hero image"
-                  width={"100%"}
-                  height={"auto"}
-                  className="rounded-3xl"
-                />
-                <div className="space-y-2 md:space-y-5 absolute left-0 md:left-1/3 top-1/3 md:top-1/2 text-center text-white font-extralight">
-                  <h1 className="text-sm md:text-2xl font-normal">
+            <div className="space-y-4 flex flex-col">
+              <div className="flex relative bg-[url('/assets/lander/hero-image.png')] rounded-3xl bg-cover bg-center bg-no-repeat h-[30vh] md:h-[60vh]">
+                <div className="flex flex-col justify-center items-center text-center text-white gap-2 w-full px-3 py-3 md:px-4 md:py-4">
+                  <h1 className="text-sm md:text-3xl font-medium">
                     Expert, local installers.
                   </h1>
                   <p className="text-xs md:text-base">
                     All of our installations are carried out by trained
-                    engineers. <br />
-                    You're in safe hands.
+                    engineers. You&apos;re in safe hands.
                   </p>
                 </div>
-                <div className="absolute bottom-2 left-2 md:bottom-6 md:left-28 text-white font-light">
-                  <p className="md:text-base text-[10px] font-light">
-                    Are you a Solar Installer? <br />
-                    Join Offgrid
+                <div className="absolute bottom-[5%] left-[5%] md:bottom-[5%] md:left-[2%] text-white">
+                  <p className="text-xs md:text-base">
+                    Are you a Solar Installer?
                   </p>
+                  <Link className="text-xs md:text-base font-medium" href="#">
+                    Join Offgrid
+                  </Link>
                 </div>
               </div>
-
-              <Button className="text-sm md:text-xl font-normal py-2 px-4 md:px-10 md:py-4">
-                Get your Quotation
-              </Button>
+              <div className="flex justify-center items-center">
+                <Button className="text-sm md:text-xl font-normal py-2 px-4 md:px-10 md:py-4">
+                  Get your Quotation
+                </Button>
+              </div>
             </div>
           </div>
         </div>
         <div
-          className="w-auto py-16 md:py-20 md:px-40 px-5"
+          className="w-full py-16 md:py-20 md:px-20 px-5"
           id="installation-steps"
         >
           <h1 className="md:text-[3rem] text-lg font-medium text-center leading-none mb-4 md:mb-20">
@@ -597,8 +527,8 @@ export default function Home() {
                     <dt className=" text-base font-light leading-1 text-gray-900 flex-row ">
                       <div className=" flex flex-col">
                         <p>
-                          Once your solar is installed, we'll make sure your
-                          home is powered, protected, and fully optimised.
+                          Once your solar is installed, we&apos;ll make sure
+                          your home is powered, protected, and fully optimised.
                         </p>
                         <p className="mt-4 font-bold">
                           Here’s everything we take care of:
@@ -764,8 +694,8 @@ export default function Home() {
                         <p>
                           We work with energy experts to make sure your solar is
                           installed perfectly and efficiently. And we stay in
-                          close contact with you at every step so you're always
-                          in the loop.
+                          close contact with you at every step so you&apos;re
+                          always in the loop.
                         </p>
                         <p className="mt-4 font-bold">
                           Let us do the heavy lifting:
@@ -807,7 +737,7 @@ export default function Home() {
         {/* Blog section */}
         <SolarAdviceSection />
 
-        <div className="w-full bg-cover bg-center h-[50dvh] md:h-[100dvh] bg-[url('/assets/lander/banner/last-bg-mobile.png')] md:bg-[url('/assets/lander/banner/last-bg.jpg')] flex justify-center items-center flex-col gap-4 md:gap-10">
+        <div className="w-screen md:w-full bg-cover bg-center h-[50dvh] md:h-[100dvh] bg-[url('/assets/lander/banner/last-bg-mobile.png')] md:bg-[url('/assets/lander/banner/last-bg.jpg')] flex justify-center items-center flex-col gap-4 md:gap-10 md:px-20 px-5">
           <h1 className="text-2xl md:text-5xl">Get a quote now</h1>
           <p className="text-sm md:text-2xl text-center font-light">
             Assured Prices | 30% Government <br className="md:hidden" /> Subsidy

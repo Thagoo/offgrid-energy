@@ -5,36 +5,82 @@ const pillsOptions = [
     text: "Rail System",
     icon: (
       <svg
-        width="16"
-        height="12"
-        viewBox="0 0 16 12"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1864_944)">
-          <path
-            d="M0.667969 2.54777C1.69426 1.71674 2.72056 0.884145 3.79528 0.0140588C4.43574 0.548295 5.06838 1.07784 5.74946 1.64645C6.44303 1.10128 7.12879 0.563916 7.84579 0C8.48468 0.552981 9.08921 1.07628 9.73748 1.63707C10.3795 1.09503 11.009 0.565478 11.6807 0C12.8304 0.965373 13.9583 1.91044 15.0798 2.85082C14.6503 3.29758 14.2754 3.6881 13.8567 4.12393C13.1553 3.52564 12.4727 2.94142 11.7666 2.34002C11.109 2.82739 10.4888 3.28821 9.83277 3.77245C9.16107 3.18823 8.51905 2.63056 7.84891 2.0479C7.12566 2.66805 6.4399 3.25384 5.71665 3.87399C5.06682 3.25853 4.44823 2.67587 3.71717 1.98386C3.13764 2.66805 2.58622 3.31945 2.02543 3.98178C1.47557 3.46472 1.07099 3.08357 0.667969 2.70398C0.667969 2.65243 0.667969 2.59932 0.667969 2.54777Z"
-            fill="#212121"
-          />
-          <path
-            d="M0.667969 6.45208C1.69739 5.62573 2.72525 4.79938 3.80153 3.93554C4.42949 4.46353 5.06057 4.99308 5.74165 5.56637C6.4399 5.02276 7.12879 4.48852 7.84579 3.93086C8.47062 4.46978 9.07672 4.99308 9.73592 5.56168C10.3764 5.01807 11.0043 4.48696 11.6729 3.91992C12.8226 4.88217 13.952 5.82724 15.1189 6.80355C14.6862 7.24249 14.3066 7.62677 13.8723 8.06728C13.16 7.45181 12.4821 6.86447 11.7745 6.25369C11.1277 6.73638 10.5076 7.19876 9.84527 7.69394C9.1845 7.12534 8.54092 6.57236 7.84891 5.9772C7.1569 6.56923 6.47114 7.15502 5.71509 7.80329C5.09182 7.20657 4.47791 6.62078 3.80153 5.97251C3.16576 6.58017 2.53779 7.18157 1.81142 7.87514C1.41465 7.43619 1.04131 7.02224 0.667969 6.60828C0.667969 6.55674 0.667969 6.50362 0.667969 6.45208Z"
-            fill="#212121"
-          />
-          <path
-            d="M0.667969 10.3583C1.69895 9.53979 2.72993 8.72126 3.80934 7.86523C4.4248 8.38072 5.05433 8.91027 5.73696 9.48356C6.44146 8.93995 7.13035 8.40728 7.85047 7.85117C8.46437 8.38072 9.0689 8.90402 9.7406 9.48356C10.3686 8.95088 10.995 8.41977 11.6682 7.84961C12.8039 8.79624 13.9317 9.73662 15.0986 10.7098C14.6706 11.1581 14.2847 11.5611 13.8661 11.9985C13.1444 11.3659 12.4836 10.7863 11.7869 10.1756C11.1309 10.6598 10.4888 11.1347 9.83745 11.6174C9.16732 11.0378 8.52217 10.4802 7.84735 9.89751C7.13972 10.5052 6.45396 11.0941 5.71665 11.7267C5.09182 11.1316 4.47791 10.5458 3.80309 9.9022C3.15482 10.5114 2.52061 11.1081 1.85516 11.7345C1.44589 11.3159 1.05693 10.916 0.667969 10.5145C0.667969 10.463 0.667969 10.4099 0.667969 10.3583Z"
-            fill="#212121"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_1864_944">
-            <rect
-              width="14.4509"
-              height="12"
-              fill="white"
-              transform="translate(0.667969)"
-            />
-          </clipPath>
-        </defs>
+        <path
+          d="M5 13H7"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M8.22266 5.2207L9.63766 6.6357"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M16 2V4"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M23.7783 5.2207L22.3633 6.6357"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M27 13H25"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M11 13C11 11.6739 11.5268 10.4021 12.4645 9.46447C13.4021 8.52678 14.6739 8 16 8C17.3261 8 18.5979 8.52678 19.5355 9.46447C20.4732 10.4021 21 11.6739 21 13"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M3 27L8.0875 18H23.9125L29 27H3Z"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M5.82812 22H26.1756"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M19.043 18L20.9992 27"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M11 27L12.9563 18"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <rect width="32" height="14" fill="#FBF4D8" />
       </svg>
     ),
   },
@@ -42,60 +88,53 @@ const pillsOptions = [
     text: "Solar Panels",
     icon: (
       <svg
-        width="13"
-        height="12"
-        viewBox="0 0 13 12"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1864_951)">
-          <path
-            d="M7.0147 6.06367C8.72358 5.9796 10.4304 5.89342 12.3326 5.79883C12.2275 6.58496 12.135 7.27019 12.0278 8.08154C10.2244 7.43414 8.59746 6.8498 6.97266 6.26546C6.98737 6.1982 7.00208 6.13094 7.0168 6.06157L7.0147 6.06367Z"
-            fill="#212121"
-          />
-          <path
-            d="M11.9145 3.68678C10.1216 4.41406 8.5241 5.05935 6.92872 5.70675C6.89719 5.65 6.86356 5.59535 6.83203 5.5386C8.10791 4.38463 9.38379 3.22856 10.79 1.95898C11.1599 2.52651 11.5004 3.04989 11.9166 3.68678H11.9145Z"
-            fill="#212121"
-          />
-          <path
-            d="M5.86791 6.63977C5.00401 8.17419 4.14012 9.70651 3.21106 11.3523C2.65194 10.9088 2.179 10.5326 1.60938 10.0786C3.04921 8.82789 4.39445 7.65711 5.7397 6.48633C5.78173 6.53677 5.82377 6.58932 5.86791 6.63977Z"
-            fill="#212121"
-          />
-          <path
-            d="M0.445312 4.04294C0.796337 3.38293 1.06749 2.87426 1.41431 2.22266C2.87306 3.38503 4.24142 4.47384 5.60979 5.56475C5.58667 5.6257 5.56565 5.68666 5.54253 5.74552C3.90091 5.19691 2.26139 4.6483 0.445312 4.04294Z"
-            fill="#212121"
-          />
-          <path
-            d="M6.78685 6.51953C8.1342 7.64197 9.47944 8.76651 10.9277 9.97303C10.3833 10.4397 9.94397 10.8159 9.37014 11.3057C8.42006 9.69347 7.52253 8.16746 6.625 6.64355C6.67755 6.60151 6.7322 6.56157 6.78475 6.51953H6.78685Z"
-            fill="#212121"
-          />
-          <path
-            d="M0.512353 8.19262C0.377829 7.5221 0.264324 6.95458 0.117188 6.2168H5.65581C3.88808 6.89572 2.25907 7.5221 0.512353 8.19262Z"
-            fill="#212121"
-          />
-          <path
-            d="M3.05469 0.804766C3.69788 0.542022 4.2591 0.312911 4.94644 0.03125C5.3395 1.89778 5.70104 3.62137 6.06467 5.34497C6.01212 5.37229 5.96168 5.39962 5.90913 5.42484C4.98217 3.92405 4.05732 2.42326 3.05679 0.802664L3.05469 0.804766Z"
-            fill="#212121"
-          />
-          <path
-            d="M6.37109 5.2969C6.62123 3.58592 6.87136 1.87493 7.14671 0C7.83615 0.218602 8.4268 0.407777 9.09521 0.620074C8.19979 2.28481 7.36952 3.82764 6.54135 5.37257C6.4846 5.34735 6.42995 5.32212 6.3732 5.2969H6.37109Z"
-            fill="#212121"
-          />
-          <path
-            d="M6.35655 6.86523C6.65923 8.52787 6.95981 10.1884 7.28982 12.0003H5.29297C5.58304 10.2536 5.8647 8.5615 6.14426 6.87154C6.21572 6.87154 6.28509 6.86734 6.35655 6.86523Z"
-            fill="#212121"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_1864_951">
-            <rect
-              width="12.2144"
-              height="12"
-              fill="white"
-              transform="translate(0.117188)"
-            />
-          </clipPath>
-        </defs>
+        <path
+          d="M30 16H12L7 6"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M18 16L13 6"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M19 6L24 16"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12 16V24"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M30 16V23C30 23.2652 29.8946 23.5196 29.7071 23.7071C29.5196 23.8946 29.2652 24 29 24H3C2.73478 24 2.48043 23.8946 2.29289 23.7071C2.10536 23.5196 2 23.2652 2 23V16L7 6H25L30 16Z"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M9.5 11H27.5"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     ),
   },
@@ -103,48 +142,32 @@ const pillsOptions = [
     text: "Inverter",
     icon: (
       <svg
-        width="13"
-        height="12"
-        viewBox="0 0 13 12"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1864_965)">
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M8.83874 -0.000793332C6.6139 -0.000793527 4.8103 1.8028 4.8103 4.02765C4.8103 4.03667 4.81033 4.04568 4.81039 4.05469L12.8671 4.05469C12.8672 4.04568 12.8672 4.03667 12.8672 4.02765C12.8672 1.8028 11.0636 -0.000793138 8.83874 -0.000793332Z"
-            fill="#212121"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M0.86205 4.02844C0.86205 6.25329 2.66565 8.05689 4.89049 8.05689C5.12082 8.05689 5.34664 8.03756 5.56641 8.00043L5.56641 0.0564575C5.34664 0.0193304 5.12082 5.31352e-09 4.89049 8.06018e-09C2.66565 3.45912e-08 0.86205 1.8036 0.86205 4.02844Z"
-            fill="#212121"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M4.89172 11.7879C7.11657 11.7879 8.92017 9.98431 8.92017 7.75946C8.92017 7.75044 8.92014 7.74143 8.92008 7.73242L0.86337 7.73242C0.863311 7.74143 0.863281 7.75044 0.863281 7.75946C0.863281 9.98431 2.66688 11.7879 4.89172 11.7879Z"
-            fill="#212121"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M12.868 7.75867C12.868 5.53382 11.0644 3.73022 8.83954 3.73022C8.83052 3.73022 8.8215 3.73025 8.8125 3.73031L8.8125 11.787C8.82151 11.7871 8.83052 11.7871 8.83954 11.7871C11.0644 11.7871 12.868 9.98351 12.868 7.75867Z"
-            fill="#212121"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_1864_965">
-            <rect
-              width="12.0042"
-              height="12"
-              fill="white"
-              transform="translate(0.863281)"
-            />
-          </clipPath>
-        </defs>
+        <path
+          d="M27 6H5C4.44772 6 4 6.44772 4 7V25C4 25.5523 4.44772 26 5 26H27C27.5523 26 28 25.5523 28 25V7C28 6.44772 27.5523 6 27 6Z"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M21.5 12.75L20.75 16.5L23.75 17.625L18.5 23.25L19.25 19.5L16.25 18.375L21.5 12.75Z"
+          stroke="#343330"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M14.5938 9.9375H8.40625C8.25092 9.9375 8.125 10.0075 8.125 10.0938V12.9062C8.125 12.9925 8.25092 13.0625 8.40625 13.0625H14.5938C14.7491 13.0625 14.875 12.9925 14.875 12.9062V10.0938C14.875 10.0075 14.7491 9.9375 14.5938 9.9375Z"
+          stroke="#343330"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     ),
   },
@@ -152,40 +175,53 @@ const pillsOptions = [
     text: "Battery",
     icon: (
       <svg
-        width="13"
-        height="12"
-        viewBox="0 0 13 12"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1864_981)">
-          <path
-            d="M6.68616 6.27592C6.68616 7.41253 6.76407 8.45746 6.66782 9.4856C6.53033 10.9461 5.34637 11.9559 3.8691 11.9895C2.9311 12.0109 1.99157 11.9941 0.867188 11.9941C0.946627 10.6864 0.900797 9.41074 1.13301 8.19012C1.34994 7.04588 2.5064 6.30495 3.69341 6.28051C4.65739 6.26218 5.62289 6.27745 6.68616 6.27745V6.27592Z"
-            fill="#212121"
-          />
-          <path
-            d="M12.7985 0.0444625C12.7985 1.22078 12.8734 2.36349 12.7772 3.49093C12.687 4.53892 11.6528 5.57164 10.6063 5.66178C9.47887 5.75955 8.33463 5.68316 7.18734 5.68316C7.18734 4.49615 7.09262 3.32594 7.21484 2.17864C7.32941 1.10315 8.35297 0.157511 9.44068 0.0627947C10.5437 -0.0334497 11.6604 0.0414071 12.8001 0.0414071L12.7985 0.0444625Z"
-            fill="#212121"
-          />
-          <path
-            d="M6.65548 5.67974C5.415 5.67974 4.24326 5.78515 3.0975 5.65224C1.7791 5.49794 0.798323 4.0558 0.893039 2.68088C0.993867 1.23569 2.11672 0.106725 3.55275 0.00742478C4.99489 -0.091875 6.25676 0.814045 6.55007 2.17369C6.61424 2.47006 6.64632 2.77713 6.6509 3.07961C6.66465 3.93817 6.65548 4.7952 6.65548 5.67974Z"
-            fill="#212121"
-          />
-          <path
-            d="M7.19018 6.28038C8.24886 6.28038 9.21436 6.26205 10.1768 6.28496C11.6938 6.3201 12.8793 7.54683 12.919 9.0898C12.9572 10.5472 11.7778 11.8717 10.3387 11.9878C8.75606 12.1146 7.35822 11.1216 7.21004 9.62907C7.1031 8.55358 7.18865 7.45976 7.18865 6.28191L7.19018 6.28038Z"
-            fill="#212121"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_1864_981">
-            <rect
-              width="12.0519"
-              height="12"
-              fill="white"
-              transform="translate(0.867188)"
-            />
-          </clipPath>
-        </defs>
+        <path
+          d="M19 17H23"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M21 15V19"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M9 17H13"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M28 10H4C3.44772 10 3 10.4477 3 11V23C3 23.5523 3.44772 24 4 24H28C28.5523 24 29 23.5523 29 23V11C29 10.4477 28.5523 10 28 10Z"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M7 10V7C7 6.73478 7.10536 6.48043 7.29289 6.29289C7.48043 6.10536 7.73478 6 8 6H12C12.2652 6 12.5196 6.10536 12.7071 6.29289C12.8946 6.48043 13 6.73478 13 7V10"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M19 10V7C19 6.73478 19.1054 6.48043 19.2929 6.29289C19.4804 6.10536 19.7348 6 20 6H24C24.2652 6 24.5196 6.10536 24.7071 6.29289C24.8946 6.48043 25 6.73478 25 7V10"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     ),
   },
@@ -193,70 +229,46 @@ const pillsOptions = [
     text: "Scaffolding",
     icon: (
       <svg
-        width="14"
-        height="12"
-        viewBox="0 0 14 12"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 33 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1864_989)">
-          <g clip-path="url(#clip1_1864_989)">
-            <path
-              d="M6.36848 11.3342V9.58079C6.92233 9.55362 7.46841 9.52644 8.01449 9.50056L7.99508 9.48633C8.0132 10.1023 8.03132 10.7183 8.04943 11.3342H6.36719H6.36848Z"
-              fill="#212121"
-            />
-            <path
-              d="M8.0155 9.50048C8.05303 8.95052 8.08926 8.39926 8.12938 7.79883H13.299V9.48754C11.5146 9.48754 9.75598 9.48754 7.99609 9.48754L8.01421 9.50178L8.0155 9.50048Z"
-              fill="#212121"
-            />
-            <path
-              d="M6.1702 7.65625C6.21808 8.24633 6.26467 8.83641 6.31643 9.47308H1.08594V7.74942C2.49385 7.74942 3.86294 7.7546 5.23203 7.74554C5.54648 7.74295 5.86093 7.68989 6.17538 7.66013L6.1702 7.65625Z"
-              fill="#212121"
-            />
-            <path
-              d="M13.2922 2.2696H8.14062V0.605469H13.2922V2.2696Z"
-              fill="#212121"
-            />
-            <path
-              d="M8.03765 5.87695C8.06741 5.32698 8.09717 4.77572 8.12823 4.20117H13.294V5.85624C11.5225 5.85624 9.77036 5.85624 8.01953 5.85624L8.03765 5.87695Z"
-              fill="#212121"
-            />
-            <path
-              d="M6.24535 0.611328V2.26122H1.10156V0.611328H6.24535Z"
-              fill="#212121"
-            />
-            <path
-              d="M1.09766 4.20703H6.23368V5.8621H1.09766V4.20703Z"
-              fill="#212121"
-            />
-            <path
-              d="M6.17576 7.66065C6.24822 7.1068 6.32069 6.55295 6.39574 5.96934C6.93536 5.93958 7.48661 5.90852 8.03658 5.87617C8.03658 5.87617 8.01846 5.85547 8.01717 5.85547C8.01717 6.45072 8.01717 7.04598 8.01717 7.65806C7.39862 7.65806 6.78525 7.65806 6.17188 7.65806L6.17576 7.66194V7.66065Z"
-              fill="#212121"
-            />
-            <path
-              d="M6.35547 2.36914H8.01572V4.05656H6.35547V2.36914Z"
-              fill="#212121"
-            />
-          </g>
-        </g>
-        <defs>
-          <clipPath id="clip0_1864_989">
-            <rect
-              width="12.2144"
-              height="12"
-              fill="white"
-              transform="translate(0.921875)"
-            />
-          </clipPath>
-          <clipPath id="clip1_1864_989">
-            <rect
-              width="12.2144"
-              height="10.7288"
-              fill="white"
-              transform="translate(1.08594 0.605469)"
-            />
-          </clipPath>
-        </defs>
+        <path
+          d="M3.5 27H16.5"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M3.5 11H30.5"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M6.5 19H13.5"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M27.5 11V23C27.5 23.2652 27.3946 23.5196 27.2071 23.7071C27.0196 23.8946 26.7652 24 26.5 24H24.5C24.2348 24 23.9804 23.8946 23.7929 23.7071C23.6054 23.5196 23.5 23.2652 23.5 23V22"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M6.5 27V5H10.5L13.5 11V27"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     ),
   },
@@ -264,44 +276,25 @@ const pillsOptions = [
     text: "Monitoring",
     icon: (
       <svg
-        width="13"
-        height="12"
-        viewBox="0 0 13 12"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 33 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1864_1005)">
-          <path
-            d="M9.40215 3.96029C10.4354 4.6632 11.3954 5.3173 12.4481 6.03324C11.4068 6.71825 10.4468 7.34957 9.39401 8.0411C10.4289 8.7554 11.3905 9.4209 12.4481 10.1498C11.4637 10.7926 10.572 11.3913 9.65923 11.9511C9.52418 12.034 9.23292 12.0031 9.09299 11.9088C8.26642 11.3507 7.46425 10.7568 6.55631 10.1059C7.51143 9.41439 8.39659 8.7733 9.39076 8.05412C8.43889 7.35771 7.53909 6.70035 6.55469 5.97954C7.53584 5.28313 8.45191 4.63229 9.40377 3.95703L9.40215 3.96029Z"
-            fill="#212121"
-          />
-          <path
-            d="M6.45332 10.1512C5.46077 10.7972 4.61467 11.3683 3.74254 11.8988C3.58145 11.9964 3.25765 12.0175 3.11121 11.9199C2.26186 11.3537 1.44342 10.7419 0.546875 10.0959C1.44016 9.45971 2.26186 8.85767 3.10796 8.28981C3.24464 8.19869 3.53915 8.19056 3.67582 8.27842C4.57725 8.85767 5.45589 9.47273 6.45332 10.1496V10.1512Z"
-            fill="#212121"
-          />
-          <path
-            d="M6.53516 1.88093C7.45773 1.23171 8.27943 0.634556 9.12553 0.074827C9.26058 -0.0146645 9.55021 -0.021173 9.68526 0.0650643C10.5883 0.642691 11.4686 1.25774 12.4595 1.92974C11.4507 2.58547 10.5395 3.18751 9.61367 3.76676C9.50953 3.83184 9.28499 3.82045 9.18085 3.74886C8.32011 3.16147 7.47563 2.54967 6.53678 1.88256L6.53516 1.88093Z"
-            fill="#212121"
-          />
-          <path
-            d="M0.539062 1.87993C1.45676 1.23071 2.27845 0.630307 3.12455 0.0673234C3.25798 -0.0221681 3.54923 -0.0221681 3.68591 0.0656963C4.59222 0.646578 5.47574 1.26163 6.46015 1.92875C5.47411 2.5682 4.58245 3.15885 3.67615 3.72183C3.55086 3.79993 3.29377 3.81621 3.17988 3.7381C2.31262 3.15559 1.46815 2.54054 0.539062 1.87993Z"
-            fill="#212121"
-          />
-          <path
-            d="M0.542969 5.99028C1.529 5.29062 2.44507 4.63977 3.39856 3.96289C4.38622 4.63489 5.36087 5.29713 6.44453 6.03421C5.45199 6.68343 4.54568 7.28872 3.61985 7.86309C3.49944 7.93794 3.23422 7.9054 3.10731 7.81916C2.26934 7.24479 1.44927 6.64276 0.542969 5.99191V5.99028Z"
-            fill="#212121"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_1864_1005">
-            <rect
-              width="11.9203"
-              height="12"
-              fill="white"
-              transform="translate(0.539062)"
-            />
-          </clipPath>
-        </defs>
+        <path
+          d="M24.5 27V5C24.5 3.89543 23.6046 3 22.5 3L10.5 3C9.39543 3 8.5 3.89543 8.5 5L8.5 27C8.5 28.1046 9.39543 29 10.5 29H22.5C23.6046 29 24.5 28.1046 24.5 27Z"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12.5 7H20.5"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     ),
   },
@@ -309,15 +302,36 @@ const pillsOptions = [
     text: "After Care",
     icon: (
       <svg
-        width="12"
-        height="12"
-        viewBox="0 0 12 12"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 33 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M5.02907 4.56814L2.9254 2.46448M2.9254 9.53555L5.04492 7.41603M7.89147 7.43188L9.99514 9.53555M9.99514 2.46448L7.8753 4.58431M11.4609 6C11.4609 8.76142 9.22236 11 6.46094 11C3.69951 11 1.46094 8.76142 1.46094 6C1.46094 3.23858 3.69951 1 6.46094 1C9.22236 1 11.4609 3.23858 11.4609 6ZM8.46094 6C8.46094 7.10457 7.56551 8 6.46094 8C5.35637 8 4.46094 7.10457 4.46094 6C4.46094 4.89543 5.35637 4 6.46094 4C7.56551 4 8.46094 4.89543 8.46094 6Z"
-          stroke="#212121"
+          d="M26.5 5H6.5C5.94772 5 5.5 5.44772 5.5 6V26C5.5 26.5523 5.94772 27 6.5 27H26.5C27.0523 27 27.5 26.5523 27.5 26V6C27.5 5.44772 27.0523 5 26.5 5Z"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M22.5 3V7"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M10.5 3V7"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M16.5 15C16.5 14.2044 16.8161 13.4413 17.3787 12.8787C17.9413 12.3161 18.7044 12 19.5 12C20.2956 12 21.0587 12.3161 21.6213 12.8787C22.1839 13.4413 22.5 14.2044 22.5 15C22.5 19 16.5 22 16.5 22C16.5 22 10.5 19 10.5 15C10.5 14.2044 10.8161 13.4413 11.3787 12.8787C11.9413 12.3161 12.7044 12 13.5 12C14.2956 12 15.0587 12.3161 15.6213 12.8787C16.1839 13.4413 16.5 14.2044 16.5 15Z"
+          stroke="#343330"
+          stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -328,21 +342,29 @@ const pillsOptions = [
     text: "Financing",
     icon: (
       <svg
-        width="13"
-        height="12"
-        viewBox="0 0 13 12"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 33 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M1.96094 6.00195C1.96094 6.5929 2.07733 7.17806 2.30348 7.72403C2.52963 8.26999 2.86109 8.76607 3.27896 9.18393C3.69682 9.6018 4.1929 9.93327 4.73886 10.1594C5.28483 10.3856 5.86999 10.502 6.46094 10.502C7.05189 10.502 7.63705 10.3856 8.18301 10.1594C8.72898 9.93327 9.22505 9.6018 9.64292 9.18393C10.0608 8.76607 10.3922 8.26999 10.6184 7.72403C10.8445 7.17806 10.9609 6.5929 10.9609 6.00195C10.9609 5.411 10.8445 4.82584 10.6184 4.27988C10.3922 3.73391 10.0608 3.23784 9.64292 2.81997C9.22505 2.40211 8.72898 2.07064 8.18301 1.8445C7.63705 1.61835 7.05189 1.50195 6.46094 1.50195C5.86999 1.50195 5.28483 1.61835 4.73886 1.8445C4.1929 2.07064 3.69682 2.40211 3.27896 2.81997C2.86109 3.23784 2.52963 3.73391 2.30348 4.27988C2.07733 4.82584 1.96094 5.411 1.96094 6.00195Z"
-          stroke="#212121"
+          d="M9.5 10H25.5"
+          stroke="#343330"
+          stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
         <path
-          d="M7.96094 4.00195H4.96094H5.46094C5.85876 4.00195 6.24029 4.15999 6.5216 4.44129C6.8029 4.7226 6.96094 5.10413 6.96094 5.50195C6.96094 5.89978 6.8029 6.28131 6.5216 6.56261C6.24029 6.84392 5.85876 7.00195 5.46094 7.00195H4.96094L6.46094 8.50195M4.96094 5.50195H7.96094"
-          stroke="#212121"
+          d="M9.5 5H25.5"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M14 5C15.7239 5 17.3772 5.68482 18.5962 6.90381C19.8152 8.12279 20.5 9.77609 20.5 11.5C20.5 13.2239 19.8152 14.8772 18.5962 16.0962C17.3772 17.3152 15.7239 18 14 18H9.5L20.5 28"
+          stroke="#343330"
+          stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -353,56 +375,55 @@ const pillsOptions = [
     text: "Net Metering",
     icon: (
       <svg
-        width="14"
-        height="14"
-        viewBox="0 0 14 14"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 33 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M7 1L7 13"
+          d="M16 2V30"
           stroke="#212121"
           stroke-width="1.6"
           stroke-linecap="round"
         />
         <path
-          d="M1 2.80078H13"
+          d="M2 6H30"
           stroke="#212121"
           stroke-width="1.6"
           stroke-linecap="round"
         />
         <path
-          d="M2.19922 1.59961V2.49961"
+          d="M5 3V5"
           stroke="#212121"
           stroke-width="0.8"
           stroke-linecap="round"
         />
         <path
-          d="M3.69922 1.59961V2.49961"
+          d="M8 3V5"
           stroke="#212121"
           stroke-width="0.8"
           stroke-linecap="round"
         />
         <path
-          d="M2.27734 2.6582L6.92492 5.34148"
+          d="M5.17188 5.41602L15.9334 11.6292"
           stroke="#212121"
           stroke-width="0.8"
           stroke-linecap="round"
         />
         <path
-          d="M11.7031 2.72461L7.09698 5.38397"
+          d="M26.9922 5.57031L16.3266 11.7281"
           stroke="#212121"
           stroke-width="0.8"
           stroke-linecap="round"
         />
         <path
-          d="M10.3008 1.59961V2.49961"
+          d="M24 3V5"
           stroke="#212121"
           stroke-width="0.8"
           stroke-linecap="round"
         />
         <path
-          d="M11.8008 1.59961V2.49961"
+          d="M27 3V5"
           stroke="#212121"
           stroke-width="0.8"
           stroke-linecap="round"
@@ -414,19 +435,45 @@ const pillsOptions = [
     text: "Govt, Subsidy",
     icon: (
       <svg
-        width="12"
-        height="12"
-        viewBox="0 0 12 12"
+        className="md:w-8 md:h-8 w-4 h-4"
+        viewBox="0 0 33 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M8.25 10.1925L7.27875 9.22125L6.75 9.75L8.25 11.25L11.25 8.25L10.7213 7.72125L8.25 10.1925ZM3.375 6.375H6V7.125H3.375V6.375ZM3.375 4.5H7.875V5.25H3.375V4.5ZM3.375 2.625H7.875V3.375H3.375V2.625Z"
-          fill="#212121"
+          d="M12.5 12H20.5"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
         <path
-          d="M6 11.25H2.25C1.83637 11.25 1.5 10.9136 1.5 10.5V1.5C1.5 1.08637 1.83637 0.75 2.25 0.75H9C9.41363 0.75 9.75 1.08637 9.75 1.5V7.125H9V1.5H2.25V10.5H6V11.25Z"
-          fill="#212121"
+          d="M12.5 16H20.5"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12.5 20H16.5"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M20.0863 27H6.5C6.23478 27 5.98043 26.8946 5.79289 26.7071C5.60536 26.5196 5.5 26.2652 5.5 26V6C5.5 5.73478 5.60536 5.48043 5.79289 5.29289C5.98043 5.10536 6.23478 5 6.5 5H26.5C26.7652 5 27.0196 5.10536 27.2071 5.29289C27.3946 5.48043 27.5 5.73478 27.5 6V19.5863C27.4999 19.8511 27.3947 20.1051 27.2075 20.2925L20.7925 26.7075C20.6051 26.8947 20.3511 26.9999 20.0863 27Z"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M27.41 19.998H20.5V26.908"
+          stroke="#343330"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
       </svg>
     ),
@@ -440,14 +487,20 @@ export default function Pills() {
       <div className="hidden md:flex flex-col gap-2 md:gap-8">
         <div className="flex gap-3 md:gap-10 flex-wrap">
           {pillsOptions.slice(0, 4).map((pill, i) => (
-            <div className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg">
+            <div
+              key={i}
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+            >
               {pill.icon} {pill.text}
             </div>
           ))}
         </div>
         <div className="flex justify-center gap-3 md:gap-10">
           {pillsOptions.slice(4, 8).map((pill, i) => (
-            <div className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg">
+            <div
+              key={i}
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+            >
               {pill.icon} {pill.text}
             </div>
           ))}
@@ -456,7 +509,10 @@ export default function Pills() {
           {pillsOptions
             .slice(pillsOptions.length - 2, pillsOptions.length)
             .map((pill, i) => (
-              <div className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg">
+              <div
+                key={i}
+                className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+              >
                 {pill.icon} {pill.text}
               </div>
             ))}
@@ -467,28 +523,40 @@ export default function Pills() {
       <div className="flex md:hidden flex-col gap-2 md:gap-8">
         <div className="flex gap-2 md:gap-16 flex-wrap justify-center">
           {pillsOptions.slice(0, 2).map((pill, i) => (
-            <div className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg">
+            <div
+              key={i}
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+            >
               {pill.icon} {pill.text}
             </div>
           ))}
         </div>
         <div className="flex gap-2 md:gap-16 flex-wrap justify-center">
           {pillsOptions.slice(2, 5).map((pill, i) => (
-            <div className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg">
+            <div
+              key={i}
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+            >
               {pill.icon} {pill.text}
             </div>
           ))}
         </div>
         <div className="flex gap-2 md:gap-16 flex-wrap justify-center">
           {pillsOptions.slice(5, 8).map((pill, i) => (
-            <div className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg">
+            <div
+              key={i}
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+            >
               {pill.icon} {pill.text}
             </div>
           ))}
         </div>
         <div className="flex gap-2 md:gap-16 flex-wrap justify-center">
           {pillsOptions.slice(8, 10).map((pill, i) => (
-            <div className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg">
+            <div
+              key={i}
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+            >
               {pill.icon} {pill.text}
             </div>
           ))}

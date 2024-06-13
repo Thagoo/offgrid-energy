@@ -1,6 +1,13 @@
 import clsx from "clsx";
 
-export default function IconCard({ children, className, ...rest }) {
+export default function IconCard({
+  children,
+  className,
+  ...rest
+}: {
+  children: any;
+  className: string;
+}) {
   return (
     <div
       {...rest}

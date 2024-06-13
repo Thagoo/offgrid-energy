@@ -18,6 +18,7 @@ export default function DrawDemo() {
         alt="draw demo"
         width={800}
         height={800}
+        loading="eager"
       />
       <div className="flex flex-col justify-start items-start absolute top-1 left-2 md:top-10 md:left-20 gap-1.5 md:gap-8">
         <span className="text-primary text-[10px] md:text-lg bg-[#222323] rounded-full md:px-5 px-3 py-1">

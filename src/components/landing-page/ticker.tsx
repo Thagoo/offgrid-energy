@@ -13,7 +13,7 @@ export default function Ticker() {
   ];
 
   return (
-    <div className="ticker-container py-2 md:py-6">
+    <div className="md:w-full w-screen overflow-hidden py-2">
       <div className="ticker">
         {brands.concat(brands).map((brand, index) => (
           <Image

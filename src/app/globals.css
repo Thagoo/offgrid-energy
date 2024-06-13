@@ -84,7 +84,7 @@
 }
 .ticker-container {
   overflow: hidden;
-  max-width: 100vw;
+  max-width: 100dvw;
 }
 
 .ticker {

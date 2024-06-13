@@ -4,7 +4,7 @@ import { Link as LinkScroll } from "react-scroll";
 
 export default function ScrollerBanner() {
   return (
-    <div className="flex md:flex-row flex-col justify-between w-full text-center md:gap-16 gap-14 border-b-2 py-10 md:mx-12">
+    <div className="flex md:flex-row flex-col justify-between w-full text-center md:gap-16 gap-14 border-b-2 py-10">
       <div className="md:px-16 px-7 flex flex-col gap-4 items-center">
         <h1 className="text-2xl">Solar at the right price</h1>
         <p className="text-sm">
@@ -33,7 +33,7 @@ export default function ScrollerBanner() {
           </svg>
         </LinkScroll>
       </div>
-      <div className="md:px-14 px-7 flex flex-col gap-4 items-center">
+      <div className="md:px-2 px-7 flex flex-col gap-4 items-center">
         <h1 className="text-2xl">Full service installation and paperwork</h1>
         <p className="text-sm">
           We take care of all paperwork and installation. All you have to count

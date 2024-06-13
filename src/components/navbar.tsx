@@ -24,12 +24,12 @@ export default function Navbar() {
   return (
     <>
       {" "}
-      <div className="px-6 py-2 md:py-5 flex justify-between items-center rounded-full shadow-xl fixed w-[60vw] md:w-[80vw] z-50 backdrop-blur-md backdrop-filter bg-opacity-20 blur-safari">
+      <div className="px-2 md:px-4 py-1 md:py-2 flex justify-between items-center rounded-full shadow-xl fixed gap-8 z-50 backdrop-blur-md backdrop-filter bg-opacity-20 blur-safari">
         <div className="flex gap-2 items-center">
           <svg
-            width="141"
-            height="40"
-            viewBox="0 0 141 40"
+            width="100"
+            height="28"
+            viewBox="0 0 145 40"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="hidden md:block"
@@ -121,7 +121,7 @@ export default function Navbar() {
           </svg>
         </button>
 
-        <div className="hidden md:flex gap-8 text-[1.25rem]">
+        <div className="hidden md:flex gap-6 text-sm font-medium">
           <Link href={"/features"} className="hover:underline">
             Features
           </Link>
@@ -129,15 +129,13 @@ export default function Navbar() {
             Resources
           </Link>
           <Link href={"/financing"} className="hover:underline">
-            Financing
+            Contact Us
           </Link>
         </div>
-        <div>
-          <div className="hidden md:flex gap-4">
-            <button className="border border-gray-400 px-4 py-2 rounded-3xl text-sm">
-              Contact Us
-            </button>
-            <button className="border border-[#ffcb00] px-4 py-2 rounded-3xl text-sm">
+        <div className="hidden md:flex">
+          <div className=" md:flex gap-8">
+            {/* <button className="text-sm font-medium">Contact Us</button> */}
+            <button className="border border-[#ffcb00] px-4 py-2 rounded-3xl text-sm font-medium">
               Calculate Savings
             </button>
           </div>

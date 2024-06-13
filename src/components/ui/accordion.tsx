@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const Accordion = ({ title, content }: { title: string; content: string }) => {
+const Accordion = ({ header, content }: { header: any; content: any }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -10,10 +10,29 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
         className="flex justify-between items-center w-full px-3 md:py-1 md:px-2 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="md:text-lg font-medium">{title}</span>
+        <div className="flex items-center gap-2 ">
+          <span> {isOpen ? header?.iconAfter : header?.iconBefore}</span>
+
+          <span className="md:text-lg font-medium">{header?.title}</span>
+        </div>
         <span className="text-4xl">
           {isOpen ? (
-            <span className="animate-in fade-in duration-1000">-</span>
+            <svg
+              width="32"
+              height="32"
+              className="animate-in fade-in duration-1000"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 16H24"
+                stroke="#212121"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           ) : (
             <svg
               width="41"

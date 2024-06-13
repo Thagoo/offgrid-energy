@@ -4,7 +4,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <div className="bg-primary h-1/2 px-7 py-16  md:px-40 md:py-28 flex flex-col gap-20">
+      <div className="bg-primary h-1/2 px-7 py-16 md:px-20 md:py-28 flex flex-col gap-20">
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
             <button className="md:py-4 md:px-10 px-3 py-1 border border-black rounded-full mb-4 text-[10px] md:text-base text-nowrap">

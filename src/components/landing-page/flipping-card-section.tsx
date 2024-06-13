@@ -4,7 +4,7 @@ import React from "react";
 export default function FlippingCardSection() {
   return (
     <div
-      className="h-auto w-screen md:w-auto md:px-[5.13rem] flex flex-col gap-4 md:gap-28 py-16 md:py-28"
+      className="h-auto w-full flex flex-col gap-4 md:gap-28 py-16 md:py-28 md:px-20 px-5 cursor-pointer"
       id="solar-installation"
     >
       <div className="flex flex-col gap-2 md:gap-3">
@@ -16,7 +16,7 @@ export default function FlippingCardSection() {
           Get a fixed price online with fast installation service.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 md:w-full w-screen px-5 md:px-0">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full gap-4">
         {/* Card One */}
         <FlipCard
           frontContent={
