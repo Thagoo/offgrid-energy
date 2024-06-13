@@ -1,15 +1,20 @@
 import Button from "@/components/common/button";
 import Card from "@/components/common/card";
 import IconCard from "@/components/common/icon-card";
+import Accordion from "@/components/landing-page/accordion";
+import AccordionSection from "@/components/landing-page/accordion";
 import CardOverlay from "@/components/landing-page/card-overlay";
 import DrawDemo from "@/components/landing-page/draw-demo";
+import FlippingCardSection from "@/components/landing-page/flipping-card-section";
 import OurApproach from "@/components/landing-page/our-approach";
 
 import Pills from "@/components/landing-page/pills";
+import ScrollerBanner from "@/components/landing-page/scroller-banner";
 import SolarAdviceSection from "@/components/landing-page/solar-advice-section";
 import Ticker from "@/components/landing-page/ticker";
 
 import Navbar from "@/components/navbar";
+import { accordionData } from "@/lib/utils";
 import Image from "next/image";
 
 export default function Home() {
@@ -18,46 +23,57 @@ export default function Home() {
       <Navbar />
 
       <div className="flex flex-col items-center pt-24 md:pt-36">
-        <div className="flex flex-col items-center justify-center gap-4">
-          <span className="flex items-center gap-2 bg-secondary px-4 py-2 md:py-3 md:px-4 rounded-3xl text-sm">
+        <div className="flex flex-col items-center justify-center gap-6 md:gap-16 md:px-20 px-6">
+          <span className="flex items-center gap-2 bg-secondary px-4 py-2 md:py-3 md:px-4 rounded-3xl md:text-base text-sm">
             <svg
-              width="17"
-              height="16"
-              viewBox="0 0 17 16"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9.99968 1.33398H6.16264C6.04298 1.33398 5.98316 1.33398 5.93034 1.3522C5.88363 1.36831 5.84109 1.39461 5.80579 1.42918C5.76587 1.46827 5.73912 1.52178 5.68561 1.6288L2.88561 7.2288C2.75782 7.48438 2.69393 7.61216 2.70927 7.71604C2.72268 7.80674 2.77285 7.88792 2.84798 7.94047C2.93403 8.00065 3.0769 8.00065 3.36264 8.00065H7.49968L5.49968 14.6673L13.6284 6.23752C13.9027 5.95312 14.0398 5.81092 14.0478 5.68924C14.0548 5.58362 14.0112 5.48097 13.9303 5.41267C13.8371 5.33398 13.6396 5.33398 13.2445 5.33398H8.49968L9.99968 1.33398Z"
+                d="M14.2515 2H8.49591C8.31643 2 8.22669 2 8.14746 2.02733C8.0774 2.05149 8.01358 2.09093 7.96064 2.14279C7.90076 2.20143 7.86063 2.2817 7.78036 2.44223L3.58036 10.8422C3.38868 11.2256 3.29284 11.4173 3.31587 11.5731C3.33597 11.7091 3.41122 11.8309 3.52393 11.9097C3.65299 12 3.8673 12 4.29591 12H10.5015L7.50148 22L19.6946 9.35531C20.1059 8.9287 20.3116 8.7154 20.3237 8.53288C20.3341 8.37446 20.2687 8.22049 20.1474 8.11803C20.0077 8 19.7113 8 19.1187 8H12.0015L14.2515 2Z"
                 stroke="#212121"
+                stroke-width="1.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
             </svg>
-            Start Saving today!
+            India’s Solar Platform
           </span>
-          <h1 className="text-4xl md:text-7xl font-medium text-center">
-            Don't overpay <br className="my-2" /> for Solar
-          </h1>
-          <p className=" text-[#868687] text-sm md:text-lg text-center font-light md:leading-6">
-            Get fixed price for your solar panels all online. <br /> Offgrid
-            install solar in all new way.
-          </p>
+          <div className="relative md:py-0">
+            <img
+              src={"/assets/lander/banner/hero.png"}
+              alt="draw demo"
+              className="md:w-[1072px] md:h-auto hidden md:block"
+            />
+            <img
+              src={"/assets/lander/banner/hero-mobile.png"}
+              alt="draw demo"
+              className="md:w-[341px] md:h-auto md:hidden"
+            />
+            <div className="flex flex-col md:justify-start justify-center items-center md:items-start absolute top-10 left-20 md:top-10 md:left-20 gap-4 md:gap-7">
+              <h1 className="md:text-start text-center text-2xl md:text-5xl text-white">
+                Switch to <br className="md:block hidden" /> solar{" "}
+                <br className="md:hidden" /> easily.
+              </h1>
+              <h2 className="md:text-start text-center text-white text-xs md:text-2xl">
+                Get a fixed price all online. <br /> Offgrid installs solar in
+                an all new way.
+              </h2>
+            </div>
+          </div>
           <Button className="text-sm md:text-lg font-normal py-2 px-4 md:px-10 md:py-4">
             {" "}
             Get your quote now
           </Button>
+
+          <div className="flex md:flex-row flex-col justify-between w-full text-center gap-16">
+            <ScrollerBanner />
+          </div>
         </div>
 
-        <div className="relative px-5 md:w-auto w-screen">
-          <CardOverlay />
-          <Image
-            alt="hero"
-            src={"/assets/lander/banner/hero.svg"}
-            width={780}
-            height={477}
-          />
-        </div>
         <div className="py-16">
           <p className="md:text-lg text-sm text-gray-600 font-normal text-center">
             Brands we work with
@@ -78,278 +94,99 @@ export default function Home() {
           </p>
           <Pills />
         </div>
-        <div className="hidden md:flex h-1/2 flex-col md:flex-row py-16 px-20 gap-4 w-full md:justify-between ">
-          <div className="flex flex-col gap-4 justify-start items-start px-10 border-r-[1px] h-1/2">
+        <div className="hidden md:flex h-1/2 flex-col md:flex-row py-36 px-20 gap-4 w-full md:justify-between ">
+          <div className="flex flex-col gap-4 justify-between items-start px-10 border-r-[1px] w-2/5">
             <h1 className="font-medium md:text-5xl text-3xl">
-              India's first <br /> solar platform.
+              India's first solar platform.
             </h1>
-            <p className="font-normal">
+            <p>
               Get assured quality at the right price. Get everything covered
               from quotation to installation to maintenance all on Offgrid.
             </p>
-            <button className="rounded-full bg-primary px-10 py-4 font-medium md:text-lg">
+            <button className="rounded-full bg-primary px-10 py-4 md:text-lg">
               Get Quote
             </button>
           </div>
           {/* desktop */}
-          <div className="flex flex-col items-center gap-8 px-12">
-            <div className="flex gap-6">
-              <h1 className="font-medium text-6xl text-[#1D7739]">100%</h1>
+          <div className="flex flex-col items-center gap-8 px-12 w-3/5">
+            <div className="flex gap-6 items-center">
+              <h1 className="font-medium text-6xl">100%</h1>
               <div className="flex flex-col gap-2">
-                <p className="text-3xl">Guaranteed quality and price.</p>
+                <p className="text-2xl text-nowrap">
+                  Guaranteed quality and price.
+                </p>
                 <p>
-                  Get assured price and quality with all installation on
-                  Offgrid. We ensure your solar works from day 1.
+                  Don’t waste time with salesmen. Get all you need for solar all
+                  online. Just mark your roof and leave the rest to us.
                 </p>
               </div>
             </div>
-            <div className="flex gap-4">
-              <div className="flex flex-col gap-5">
-                <IconCard className="flex flex-col items-center justify-center w-[22rem] h-[14rem] px-5 py-5 gap-3">
-                  <Image
-                    src={"/assets/lander/icons/price-guarantee/icon-1.svg"}
-                    width={48}
-                    height={71}
-                    alt="icon"
-                  />
-                  <h1 className="font-medium">Verified Products </h1>
-                  <p className="font-normal text-sm text-center">
-                    To ensure optimum electricity production.
-                  </p>
-                </IconCard>
-                <IconCard className="flex gap-3 w-[22rem] h-auto px-5 py-5 text-center">
-                  <Image
-                    src={"/assets/lander/icons/price-guarantee/icon-2.svg"}
-                    width={79}
-                    height={77}
-                    alt="icon"
-                  />
-                  <div>
-                    <h1 className="font-medium">Solar without salesmen</h1>
-                    <p className="font-normal text-sm">
-                      Save time and get the best quote without negotiating.
-                    </p>
-                  </div>
-                </IconCard>
-              </div>
-              <div>
-                <IconCard className="h-full w-[16.5rem] flex flex-col items-center px-8 py-5 gap-3">
-                  <Image
-                    src={"/assets/lander/icons/price-guarantee/icon-3.svg"}
-                    width={79}
-                    height={79}
-                    alt="icon"
-                  />
-                  <p className="text-center text-sm">
-                    Offgrid gives you a price guarantee. <br /> <br /> Our
-                    technology provides transparency on the how which will solar
-                    cost you and how much money you would actually save.
-                  </p>
-                </IconCard>
-              </div>
+            <div className="w-full flex flex-col gap-4">
+              <Accordion
+                title="Know before you buy "
+                content="This is the content of the first accordion."
+              />
+              <Accordion
+                title="Guaranteed Subsidy"
+                content="This is the content of the second accordion."
+              />
+              <Accordion
+                title="No cost EMI"
+                content="This is the content of the third accordion."
+              />
             </div>
           </div>
         </div>
         {/* mobile */}
-        <div className="md:hidden h-1/2 flex flex-col items-center py-16 px-5 gap-4 w-screen">
-          <div className="flex flex-col gap-4 items-center text-center">
-            <h1 className="font-medium text-3xl md:text-5xl text-center">
-              India's first solar <br /> platform.
+        <div className="md:hidden h-1/2 flex flex-col items-center py-16 px-5 gap-6 w-screen">
+          <div className="flex flex-col gap-4 items-center text-center px-8">
+            <h1 className="text-2xl md:text-5xl text-center">
+              India's first <br /> solar platform.
             </h1>
-            <p className="font-normal text-sm text-center text-[#868687]">
-              Get assured quality at the right price. Get everything covered
-              from quotation to installation to maintenance all on Offgrid.
+            <p className="text-sm text-start">
+              Get assured quality at the right price. <br />
+              <span>
+                Get everything covered from quotation to installation to
+                maintenance all on Offgrid.
+              </span>
             </p>
           </div>
-
-          <div className="flex flex-col items-center gap-8 px-5">
-            <div className="flex flex-col gap-4">
-              <IconCard className="flex flex-col items-center justify-center px-5 py-5 gap-2 text-center">
-                <Image
-                  src={"/assets/lander/icons/price-guarantee/icon-1.svg"}
-                  width={48}
-                  height={71}
-                  alt="icon"
-                />
-                <h1 className="font-medium text-sm">Verified Products </h1>
-                <p className="font-normal text-xs">
-                  To ensure optimum electricity production.
-                </p>
-              </IconCard>
-              <IconCard className="flex flex-col items-center gap-2 px-5 py-5 text-center">
-                <Image
-                  src={"/assets/lander/icons/price-guarantee/icon-2.svg"}
-                  width={79}
-                  height={77}
-                  alt="icon"
-                />
-                <h1 className="font-medium text-sm">Solar without salesmen</h1>
-                <p className="font-normal text-xs">
-                  Save time and get the best quote without negotiating.
-                </p>
-              </IconCard>
-
-              <IconCard className="flex flex-col items-center px-5 py-5 gap-2 text-center">
-                <Image
-                  src={"/assets/lander/icons/price-guarantee/icon-3.svg"}
-                  width={79}
-                  height={79}
-                  alt="icon"
-                />
-                <h1 className="font-medium text-sm">Guaranteed Prices</h1>
-                <p className="font-normal text-xs">
-                  Our technology provides transparency on how much will solar
-                  cost and how much you would actually save.
-                </p>
-              </IconCard>
-            </div>
+          <div className="w-full flex flex-col gap-6 px-3">
+            <Accordion
+              title="Know before you buy "
+              content="This is the content of the first accordion."
+            />
+            <Accordion
+              title="Guaranteed Subsidy"
+              content="This is the content of the second accordion."
+            />
+            <Accordion
+              title="No cost EMI"
+              content="This is the content of the third accordion."
+            />
           </div>
-          <div className="flex gap-2 px-5 items-center">
-            <h1 className="font-medium text-2xl text-[#1D7739]">100%</h1>
-            <div className="flex flex-col gap-2">
-              <h1 className="text-sm">Guaranteed quality and price.</h1>
-              <p className="font-normal text-xs text-[#868687]">
-                Get assured price and quality with all installation on Offgrid.
-                We ensure your solar works from day 1.
-              </p>
+
+          <div className="flex flex-col gap-2 px-8 items-center">
+            <div className="flex items-center gap-2">
+              <h1 className="font-medium text-5xl">100%</h1>
+              <h1 className="text-lg">Guaranteed quality and price.</h1>
             </div>
+            <p className="text-sm">
+              Get assured price and quality with all installation on Offgrid. We
+              ensure your solar works from day one.
+            </p>
           </div>
           <button className="rounded-full bg-primary px-4 py-2 text-sm ">
             Get Quote
           </button>
         </div>
-        <div className="md:h-screen h-[50vh] flex items-center bg-[#F4F4F4] md:w-full w-screen justify-center px-5">
+        <div
+          className="md:h-screen h-[50vh] flex items-center bg-[#F4F4F4] md:w-full w-screen justify-center px-5"
+          id="draw-demo"
+        >
           <DrawDemo />
         </div>
-        <div className="h-auto w-screen md:w-auto md:px-[5.13rem] py-16 space-y-[16px] md:space-y-[122px]">
-          <div className="flex flex-col gap-2 md:gap-3">
-            <h1 className="text-3xl md:text-[3rem] font-medium text-center leading-none">
-              Solar installations <br />
-              without salesmen.
-            </h1>
-            <p className="text-[#868687] text-sm md:text-[1.1rem] text-center">
-              Get a fixed price online with fast installation service.
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-7 md:w-full w-screen px-5 md:px-0">
-            <IconCard className="text-normal flex justify-center items-center flex-col gap-2 md:gap-5 px-12 md:py-12 py-6 text-center">
-              <Image
-                src={"/assets/lander/icons/solar-installation/icon-1.svg"}
-                width={125}
-                height={120}
-                alt="icon"
-                className="md:block hidden"
-              />
-              <svg
-                width="42"
-                className="md:hidden"
-                height="41"
-                viewBox="0 0 42 41"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1864_1439)">
-                  <path
-                    d="M2.29578 40.9263C2.37467 40.9263 2.45632 40.9245 2.54068 40.921C3.95393 40.8628 5.38702 40.7496 6.77261 40.6402C7.37251 40.5929 7.97257 40.5454 8.57264 40.5021C10.1539 40.3878 10.7514 39.7248 10.6351 38.2128C10.6091 37.8755 10.5912 37.5397 10.574 37.2151C10.5698 37.1354 10.5656 37.0569 10.5614 36.9797H31.5133C31.5261 37.0456 31.5338 37.1124 31.536 37.1797V37.3294C31.5423 37.523 31.5338 37.7168 31.5104 37.9095C31.3488 38.9939 31.4438 39.6646 31.8179 40.0843C32.2669 40.5878 33.0754 40.7006 34.2344 40.7194C34.5213 40.7245 34.7409 40.7227 34.946 40.7145C35.4621 40.6941 35.9776 40.6708 36.4936 40.6476C37.5331 40.6009 38.6079 40.5526 39.6647 40.5277C41.0952 40.4943 41.7156 39.9176 41.7389 38.5997C41.773 36.6592 41.7841 34.7227 41.7921 32.9057C41.7978 31.6399 41.3311 31.1844 40.0102 31.1658C39.4603 31.1583 38.9064 31.1601 38.3196 31.1619C38.0976 31.1619 37.8692 31.1633 37.633 31.1635V10.592C37.7696 10.5829 37.9067 10.5738 38.0444 10.5649C38.4757 10.5367 38.9216 10.5074 39.3637 10.4696C40.6716 10.3569 41.4554 9.99608 41.5918 8.4898C41.7549 6.68555 41.7423 4.841 41.7298 3.05716L41.7284 2.87984C41.7291 2.48379 41.5831 2.10032 41.3162 1.79741C41.0493 1.4945 40.6789 1.29172 40.2706 1.22499C39.4602 1.07006 38.6332 1.00768 37.8073 1.03918C36.6863 1.06841 35.549 1.12932 34.4489 1.18842C33.7592 1.22532 33.0695 1.26221 32.3794 1.29209C31.2204 1.34205 30.8926 1.65927 30.8536 2.76784C30.8391 3.18318 30.8193 3.59838 30.7988 4.00541L30.7802 4.40065C27.0187 4.80882 12.0844 4.93453 9.81694 4.58155C9.80481 4.43461 9.7932 4.28687 9.78125 4.13814C9.7471 3.70924 9.71176 3.26598 9.6672 2.82598C9.5381 1.55038 9.09581 1.15886 7.77409 1.15037C6.13594 1.13976 4.35236 1.13944 2.16178 1.14924C1.55745 1.15185 1.15423 1.27984 0.893471 1.54989C0.625712 1.82744 0.524098 2.24246 0.57362 2.85504L0.586794 3.01616C0.628575 3.42794 0.647769 3.8415 0.644327 4.25518C0.620249 5.1409 0.585906 6.04147 0.552607 6.91233C0.524943 7.64408 0.496938 8.37584 0.474397 9.10792C0.458686 9.6191 0.569567 9.98465 0.813591 10.2261C1.05454 10.4643 1.42371 10.5814 1.94249 10.5837C2.43958 10.5837 2.94708 10.5492 3.48396 10.5104C3.68427 10.496 3.89177 10.481 4.10966 10.4673L3.65615 31.4422L3.6488 31.7759L3.22189 31.8288C2.72804 31.8895 2.19592 31.955 1.66466 32.0257C0.986898 32.1155 0.65717 32.49 0.625066 33.2046C0.534219 35.2703 0.420095 36.9666 0.267944 38.5434C0.180171 39.4507 0.315449 40.05 0.693522 40.4299C1.02771 40.7666 1.54066 40.9263 2.29578 40.9263ZM2.44402 8.34531L2.1682 3.14123H7.5287V7.93355L2.44402 8.34531ZM9.90649 6.89226C9.8959 6.76818 9.88574 6.64539 9.87606 6.52392H30.8097C30.8282 6.75494 30.8451 6.98547 30.862 7.21584C30.9079 7.83821 30.9554 8.48163 31.0317 9.112C31.182 10.3528 31.7535 10.8163 33.0686 10.7837C33.5799 10.7688 34.0913 10.7456 34.6328 10.7211C34.8265 10.7123 35.0244 10.7035 35.2267 10.6945C34.7872 18.6112 34.778 25.1633 35.1977 31.2832L34.5961 31.337C34.031 31.3878 33.4914 31.4363 32.9518 31.484C32.1653 31.553 31.7452 31.9677 31.7032 32.7168C31.6791 33.1491 31.6349 33.5868 31.5881 34.0504C31.571 34.2201 31.5539 34.3944 31.536 34.5749L10.4737 35.0848C10.4449 34.849 10.4184 34.6259 10.3928 34.4118C10.3274 33.8628 10.2711 33.3886 10.2023 32.9065C10.0542 31.8673 9.61223 31.4507 8.60608 31.4507C8.51057 31.4507 8.41002 31.4543 8.30449 31.4618C8.1409 31.473 7.9773 31.4793 7.81371 31.4856C7.62587 31.493 7.43962 31.5002 7.25314 31.5144C7.01868 31.5323 6.78748 31.5584 6.49462 31.5916C6.40241 31.6019 6.30415 31.613 6.1981 31.6242V10.2661C6.33472 10.2542 6.47578 10.2415 6.62128 10.2283C7.09634 10.1857 7.63513 10.137 8.16416 10.1012C9.41313 10.017 10.0096 9.39706 9.98813 8.20588C9.97993 7.76131 9.94254 7.31953 9.90633 6.89243L9.90649 6.89226ZM39.1291 8.13814L33.7059 8.35216L33.2011 3.1961H34.6883C36.113 3.1961 37.4913 3.19608 38.869 3.19706C39.3109 3.19706 39.4701 3.35314 39.4772 3.79167C39.501 5.25633 39.4914 6.69177 39.1289 8.13814H39.1291ZM2.40425 38.6001V33.8507L8.0224 33.5057V38.1433L2.40425 38.6001ZM33.5068 33.3122H39.6859L39.306 38.2166H33.771L33.5068 33.3122Z"
-                    fill="black"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1864_1439">
-                    <rect
-                      width="41.6667"
-                      height="40"
-                      fill="white"
-                      transform="translate(0.167969 0.949219)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-
-              <h5 className="text-sm md:text-2xl font-medium">You Provide</h5>
-              <p className="text-xs md:text-base">
-                Some details about your home and it’s current set up. It’s super
-                straight forward, nothing complex.
-              </p>
-            </IconCard>
-            <IconCard className="text-normal flex justify-center items-center flex-col gap-2 md:gap-5 px-12 md:py-12 py-6 text-center">
-              <Image
-                src={"/assets/lander/icons/solar-installation/icon-2.svg"}
-                width={125}
-                height={115}
-                alt="icon"
-                className="hidden md:block"
-              />
-              <svg
-                width="44"
-                height="41"
-                viewBox="0 0 44 41"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="md:hidden"
-              >
-                <path
-                  d="M38.5236 11.3723C38.2634 11.3163 37.9974 11.2912 37.7314 11.2977C37.2469 11.3089 36.7563 11.329 36.2823 11.3485C36.0405 11.3583 35.7987 11.3677 35.5571 11.377H35.5311L35.5002 10.8775C35.4711 10.4004 35.441 9.90688 35.4033 9.4203C35.3847 9.21115 35.3263 9.00754 35.2317 8.82061C35.1448 8.66094 35.0116 8.5321 34.8501 8.45141C34.6885 8.37072 34.5065 8.34213 34.3283 8.36944C34.1502 8.39676 33.9846 8.47866 33.8539 8.60418C33.7233 8.72967 33.6338 8.89269 33.5977 9.07123C33.5623 9.28399 33.5428 9.49914 33.5393 9.71486C33.5336 10.0602 33.5316 10.4057 33.5296 10.7511C33.5285 10.9816 33.5267 11.2119 33.5245 11.4422L33.485 11.4444C33.2659 11.4555 33.0469 11.466 32.8275 11.476C32.3847 11.4964 31.9268 11.5174 31.4746 11.549C31.062 11.5725 30.6512 11.6213 30.2445 11.6952C30.0184 11.729 29.8137 11.8489 29.6723 12.0305C29.5309 12.2121 29.4635 12.4415 29.4841 12.6718C29.4973 12.8863 29.5847 13.0895 29.7308 13.2457C29.8769 13.4019 30.0724 13.5013 30.2835 13.5266C30.5407 13.5636 30.8007 13.5759 31.06 13.5632C31.6379 13.5432 32.2143 13.5191 32.7914 13.495L33.4467 13.4678C33.4357 13.6313 33.4247 13.7948 33.4133 13.9582C33.3716 14.5652 33.3284 15.1927 33.3013 15.8133C33.2914 16.1201 33.3409 16.4259 33.4471 16.7135C33.5168 16.9044 33.6437 17.0684 33.8102 17.1827C33.9767 17.297 34.1744 17.3558 34.3756 17.3509C34.4041 17.3509 34.4328 17.3498 34.4619 17.3474C34.6688 17.3376 34.8677 17.2627 35.0305 17.1331C35.1934 17.0035 35.3121 16.8257 35.3702 16.6245C35.4251 16.4538 35.4565 16.2765 35.4639 16.0972C35.4838 15.5208 35.5 14.9438 35.5181 14.3671C35.5271 14.058 35.5362 13.7487 35.5455 13.4393H36.0824C36.4938 13.4393 36.9176 13.4393 37.3371 13.4309C37.7939 13.4389 38.2477 13.3532 38.671 13.179C38.8602 13.1072 39.0226 12.9771 39.1351 12.8071C39.2476 12.6372 39.3044 12.4359 39.2979 12.2315C39.2839 12.0209 39.1995 11.8212 39.0589 11.6652C38.9184 11.5092 38.7297 11.406 38.5236 11.3723Z"
-                  fill="black"
-                />
-                <path
-                  d="M12.5159 15.3027L25.3007 14.5376C25.3706 14.021 25.4441 13.5069 25.5095 12.9918C26.0832 8.47201 29.9649 5.24612 33.3576 4.75223C37.0796 4.2105 41.6249 5.50102 43.0679 10.0826C43.4892 11.3624 43.5706 12.7317 43.3039 14.0534C43.0206 15.4346 42.6105 16.7769 41.8526 17.976C40.8477 19.565 39.4631 20.6715 37.6271 21.0992C37.1188 21.2178 36.9122 21.4534 36.801 21.933C36.4203 23.5717 36.0464 25.2139 35.5911 26.8324C35.3291 27.7239 34.9912 28.5907 34.5811 29.4232C34.2978 30.0148 33.675 30.1438 33.0697 30.1538C32.4834 30.1633 31.896 30.1157 31.3094 30.1034C26.4599 30.0017 21.6101 29.9018 16.7604 29.8037C16.6103 29.8006 16.4599 29.8165 16.161 29.8304C16.5346 31.2108 16.8886 32.5182 17.2761 33.9504C17.6203 33.9504 17.9814 33.9527 18.3427 33.9504C23.225 33.9138 28.1073 33.8689 32.9897 33.8534C33.5714 33.86 34.1494 33.9487 34.7066 34.1169C34.951 34.1763 35.1686 34.3164 35.3255 34.5148C35.4824 34.7133 35.5693 34.959 35.5729 35.213C35.5763 35.4671 35.4961 35.7149 35.3446 35.9179C35.1933 36.1206 34.9795 36.2665 34.737 36.3328C34.1246 36.5053 33.5038 36.6455 32.877 36.7529C33.6866 38.4569 33.5937 39.5997 32.5742 40.3345C31.6975 40.9663 30.4667 40.9372 29.7391 40.2669C28.8162 39.4165 28.8343 38.201 29.832 36.6581H22.0659C22.5715 37.4499 23.1287 38.1485 22.7815 39.0296C22.6201 39.4618 22.3571 39.8477 22.0153 40.154C21.6005 40.4892 21.0815 40.6649 20.5508 40.6497C20.0201 40.6346 19.512 40.4295 19.1165 40.0711C18.2064 39.2596 18.1895 38.2766 19.0602 36.6106C18.2657 36.5325 17.4693 36.4795 16.6811 36.3692C15.9841 36.2715 15.5715 35.8916 15.3391 35.1533C14.8555 33.6163 14.1292 32.1524 13.7085 30.6011C12.2933 25.3703 10.9662 20.1151 9.61058 14.8678C8.94064 12.2742 8.26402 9.6819 7.63543 7.07788C7.6035 6.8816 7.5234 6.69653 7.40246 6.53965C7.28155 6.38279 7.12367 6.25916 6.94327 6.17998C5.76988 5.6252 4.59837 5.06666 3.42871 4.50447C2.76148 4.18228 2.08237 3.87751 1.44818 3.49706C1.13594 3.30259 0.879612 3.0286 0.704883 2.70252C0.624436 2.55067 0.58105 2.38159 0.578268 2.20933C0.575486 2.03708 0.613425 1.86666 0.688924 1.71222C0.764425 1.55779 0.875228 1.42384 1.01225 1.32151C1.14928 1.21918 1.30852 1.15139 1.47666 1.12388C1.80956 1.06548 2.15189 1.09822 2.46808 1.21868C4.43709 2.03001 6.39703 2.8636 8.34786 3.71949C9.23449 4.10981 9.84663 4.72007 9.635 5.82948C9.6288 5.98515 9.65771 6.14016 9.71965 6.28281C10.5947 9.14089 11.472 11.9983 12.3514 14.8549C12.3879 14.9707 12.4356 15.0839 12.5159 15.3027ZM34.3742 21.3429C34.0421 21.2819 33.7422 21.2316 33.4433 21.171C32.4776 20.9745 31.4916 20.845 30.5517 20.5602C28.7651 20.0189 27.2013 19.0886 26.213 17.422C25.906 16.9052 25.5537 16.7912 25.0154 16.806C21.8981 16.8919 18.7801 16.9483 15.6625 17.0228C14.7834 17.044 13.9049 17.0931 12.9076 17.1341C13.8261 20.6654 14.7153 24.0833 15.5751 27.388H32.5964C33.2032 25.3244 33.7731 23.3867 34.3742 21.3429ZM35.228 18.9014C37.7849 18.9014 39.4161 17.8543 40.369 15.483C40.5503 15.0199 40.7007 14.5449 40.819 14.0614C41.5675 11.1109 40.2386 8.4486 37.3826 7.52129C36.0518 7.08896 34.6142 6.94071 33.2113 6.81158C32.5982 6.77837 31.9911 6.94734 31.481 7.29317C29.0836 8.97353 27.6553 11.2132 27.7656 14.293C27.8068 15.4424 28.2158 16.3864 29.1264 17.0205C29.7986 17.5112 30.5458 17.8868 31.3382 18.1323C32.6083 18.4863 33.9289 18.6547 35.228 18.9014Z"
-                  fill="black"
-                />
-              </svg>
-
-              <h5 className="text-sm md:text-2xl font-medium">You Pick</h5>
-              <p className="text-xs md:text-base">
-                The package that you want from a range of fixed price options
-                and an installation date that suits you.
-              </p>
-            </IconCard>
-            <IconCard className="font-normal flex justify-center items-center flex-col gap-2 md:gap-5 px-12 md:py-12 py-6 text-center">
-              <Image
-                src={"/assets/lander/icons/solar-installation/icon-3.svg"}
-                width={62}
-                height={115}
-                alt="icon"
-                className="md:block hidden"
-              />
-              <svg
-                width="22"
-                height="41"
-                viewBox="0 0 22 41"
-                fill="none"
-                className="md:hidden"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1864_1452)">
-                  <path
-                    d="M21.6643 29.7624C21.4641 23.3463 21.2261 16.7967 20.937 9.73915C20.862 7.91046 20.7117 6.05552 20.5665 4.26175C20.5313 3.82831 20.4965 3.39484 20.4621 2.96128C20.3573 1.63341 19.6429 0.979147 18.2776 0.96341C18.2229 0.96177 18.1671 0.964364 18.112 0.966331L16.6621 0.992426C15.415 1.01428 14.1679 1.03767 12.9209 1.06259C12.5769 1.06242 12.2336 1.09497 11.8957 1.1598C11.0805 1.3362 10.8284 1.62471 10.7708 2.44618C10.7406 2.9822 10.7381 3.51939 10.7633 4.05567C10.907 8.37616 11.0538 12.6967 11.2082 17.236L11.3396 21.1029C11.3517 21.8529 11.3668 22.6421 11.3825 23.459C11.4209 25.4765 11.4607 27.5627 11.47 29.6947C11.4772 31.3298 11.4586 32.9932 11.4405 34.6018C11.427 35.8232 11.4129 37.0863 11.4102 38.329C11.4061 40.0945 12.0826 40.797 13.8229 40.8342C14.013 40.8383 14.2029 40.8403 14.3927 40.8401C15.4463 40.8401 16.4957 40.7826 17.514 40.7265C18.6679 40.6632 19.5973 40.5763 20.4393 40.4531C21.3462 40.3204 21.7036 39.8701 21.6732 38.8981L21.6718 38.8459C21.6392 37.8211 21.6066 36.7613 21.6108 35.7206C21.6137 34.9875 21.6308 34.2409 21.6472 33.519C21.6747 32.2875 21.7036 31.0142 21.6643 29.7624ZM13.6078 35.6091C13.7165 35.5919 13.8221 35.5763 13.9255 35.56C14.2471 35.5108 14.5508 35.4657 14.8495 35.3924C15.7054 35.1829 15.8852 34.6721 15.8853 34.2806C15.8853 33.876 15.7035 33.3598 14.8353 33.1986C14.5594 33.1472 14.2792 33.0854 13.9827 33.0198C13.8829 32.9978 13.7802 32.975 13.6737 32.9519V30.8372C13.7264 30.8316 13.7787 30.8263 13.8309 30.8208C14.064 30.8021 14.2957 30.7696 14.5249 30.7234L14.6762 30.6906C15.0006 30.6429 15.3135 30.5355 15.5992 30.3737C15.7507 30.2781 15.8721 30.1414 15.9494 29.9793C16.0267 29.8172 16.0567 29.6363 16.0359 29.4578C16.009 29.2539 15.926 29.0614 15.7963 28.9022C15.6665 28.7431 15.4952 28.6236 15.3015 28.557C14.9103 28.4237 14.5087 28.3236 14.1009 28.2575C13.956 28.2295 13.8086 28.2013 13.6593 28.1696V26.1381L13.9258 26.087C14.2287 26.0286 14.5412 25.9685 14.8542 25.9121C15.0771 25.8718 15.7556 25.7495 15.7936 25.0432C15.8335 24.2954 15.1261 24.1244 14.8599 24.0596C14.5381 23.9818 14.2112 23.9311 13.8655 23.8773C13.7538 23.8601 13.6399 23.8422 13.5231 23.8232V21.7611L13.5733 21.7557C13.7621 21.7386 13.9497 21.7109 14.1353 21.6722C14.1957 21.6588 14.2585 21.6468 14.3218 21.6347C14.5904 21.609 14.8474 21.5124 15.0671 21.3549C15.2963 21.1527 15.5965 20.6981 15.513 20.3639C15.4485 20.1747 15.3429 20.0022 15.204 19.859C15.0651 19.7159 14.8963 19.6054 14.7098 19.5359C14.3731 19.4455 14.025 19.4049 13.6767 19.4154C13.5694 19.4131 13.4599 19.4106 13.3484 19.4057V17.1301C13.4155 17.1219 13.4842 17.1137 13.5538 17.1059C13.8459 17.0718 14.1482 17.0365 14.4535 16.9834C15.1278 16.866 15.5071 16.4878 15.4678 15.9719C15.4189 15.3239 14.9313 15.1562 14.4613 15.0775C14.3743 15.0629 14.2876 15.0462 14.2005 15.0296C14.0667 15.0041 13.9328 14.9783 13.798 14.9598C13.6457 14.9385 13.493 14.9254 13.3161 14.9106L13.1922 14.8996V12.629L13.4007 12.5708C13.6751 12.4942 13.9721 12.4118 14.2675 12.3237C14.59 12.2278 15.3451 12.0034 15.2689 11.2001C15.198 10.4472 14.519 10.3542 14.0689 10.2927C13.8022 10.2563 13.5334 10.2413 13.2487 10.2255C13.1623 10.2205 13.0739 10.2155 12.9829 10.2091L12.8217 7.95308C12.9296 7.93669 13.0354 7.9211 13.1394 7.90569C13.4762 7.85651 13.7944 7.8088 14.1125 7.74864C15.0802 7.56536 15.178 6.99013 15.1499 6.66357C15.0838 5.88538 14.3847 5.76616 14.086 5.71518C13.9299 5.68879 13.7717 5.66964 13.6188 5.65128C13.5243 5.6398 13.4295 5.62833 13.3353 5.61521C13.1896 5.59488 13.044 5.57241 12.8679 5.54552L12.7121 5.52159L12.6047 3.55354L18.5408 3.35275C18.5915 4.41636 18.6426 5.47908 18.6943 6.54095C19.1938 16.8546 19.7103 27.5177 19.3859 38.0554L13.6082 38.2827L13.6078 35.6091Z"
-                    fill="black"
-                  />
-                  <path
-                    d="M0.737754 30.3521C0.779651 31.7222 0.893904 33.0891 1.08008 34.447C1.26853 35.8817 2.14184 36.9567 3.60529 37.556C4.12395 37.7747 4.67999 37.8898 5.24237 37.8948C6.15801 37.8988 7.03985 37.5471 7.70402 36.9134C8.80557 35.8821 9.42634 34.5827 9.45194 33.2553C9.4671 32.4634 9.42262 31.6603 9.37959 30.8839C9.35595 30.4562 9.33066 30.014 9.3173 29.5799C9.23774 27.1373 9.16224 24.6929 9.06981 21.7065L8.94397 17.647L8.91918 16.2078C8.88527 14.2743 8.83881 11.6265 8.80506 8.96957C8.80746 8.37565 8.6197 7.79672 8.26955 7.31842C7.89867 6.79859 7.54395 6.25155 7.20095 5.72254C7.01886 5.44172 6.83674 5.16106 6.65139 4.88254L6.34603 4.4235C5.86886 3.70498 5.37524 2.96188 4.87477 2.24057C4.47291 1.66188 4.05819 1.54796 3.78154 1.55714C3.50489 1.56632 3.1024 1.69745 2.73821 2.2886C2.53908 2.63685 2.37452 3.00398 2.24699 3.38467L2.19027 3.53844C1.68572 4.90385 1.16322 6.3158 0.681157 7.7158C0.507713 8.17249 0.409976 8.65468 0.391809 9.14319C0.378604 10.8281 0.39081 12.6134 0.431728 14.9316L0.456843 16.3502C0.53705 20.9391 0.620867 25.6848 0.737754 30.3521ZM3.14265 7.07172L3.48076 6.05088C3.64117 6.03875 3.799 6.01727 3.9524 5.99629C4.32442 5.94514 4.67589 5.89793 4.90168 6.01514C5.15322 6.14629 5.33676 6.45237 5.54966 6.80696C5.60183 6.89418 5.65498 6.9827 5.71089 7.07172H3.14265ZM5.78362 35.493C5.52555 35.5368 5.26121 35.5253 5.00782 35.4594C4.75444 35.3935 4.51773 35.2747 4.31315 35.1106C3.67948 34.5886 3.42698 33.8904 3.2545 32.9466L7.41448 32.5916C7.444 33.3865 7.23031 34.1716 6.80218 34.8406C6.68932 35.0168 6.53986 35.1663 6.36406 35.2789C6.18827 35.3916 5.99013 35.4647 5.78362 35.493ZM3.27794 30.2368L2.73852 9.76419H6.2295L6.88355 30.2368H3.27794Z"
-                    fill="black"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1864_1452">
-                    <rect
-                      width="21.519"
-                      height="40"
-                      fill="white"
-                      transform="translate(0.242188 0.949219)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-
-              <h5 className="text-sm md:text-2xl font-medium">We fit</h5>
-              <p className="text-xs md:text-base">
-                Your chosen products, on your chosen date, using verified
-                installers close to you.
-              </p>
-            </IconCard>
-          </div>
-        </div>
+        <FlippingCardSection />
         <div className="bg-[#F4F4F4] h-auto px-5 md:px-20 py-20 flex flex-col gap-5 md:gap-28 w-screen md:w-full">
           <h1 className="md:text-[3rem] text-2xl font-medium text-center leading-none">
             Seamless Paperwork and <br className="md:block hidden" />
@@ -727,7 +564,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-auto py-16 md:py-20 md:px-40 px-5">
+        <div
+          className="w-auto py-16 md:py-20 md:px-40 px-5"
+          id="installation-steps"
+        >
           <h1 className="md:text-[3rem] text-lg font-medium text-center leading-none mb-4 md:mb-20">
             Here&rsquo;s how your switch <br /> to solar would look like
           </h1>
@@ -966,35 +806,29 @@ export default function Home() {
         </div>
         {/* Blog section */}
         <SolarAdviceSection />
-        <div className="md:h-screen flex flex-col justify-center items-center gap-4 md:gap-20 text-center py-16">
-          <h1 className="md:text-5xl text-2xl">Get a system estimate today</h1>
-          <p className="md:text-2xl text-xs">
-            $0 down financing | 30% federal tax credit |{" "}
-            <br className="md:hidden" /> Local rebate up to 15 %
+
+        <div className="w-full bg-cover bg-center h-[50dvh] md:h-[100dvh] bg-[url('/assets/lander/banner/last-bg-mobile.png')] md:bg-[url('/assets/lander/banner/last-bg.jpg')] flex justify-center items-center flex-col gap-4 md:gap-10">
+          <h1 className="text-2xl md:text-5xl">Get a quote now</h1>
+          <p className="text-sm md:text-2xl text-center font-light">
+            Assured Prices | 30% Government <br className="md:hidden" /> Subsidy
+            | Trusted Quality
           </p>
-          <div className="flex justify-center gap-4 md:gap-16">
-            <button className="rounded-full px-4 py-2 md:px-20 md:py-4 bg-[#F4F4F4] text-sm md:hidden">
-              Enter your zip code
-            </button>
-            <button className="rounded-full px-4 py-2 md:px-20 md:py-4 bg-primary flex gap-2 text-sm">
-              <svg
-                width="25"
-                height="24"
-                viewBox="0 0 25 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.7515 2H8.99591C8.81643 2 8.72669 2 8.64746 2.02733C8.5774 2.05149 8.51358 2.09093 8.46064 2.14279C8.40076 2.20143 8.36063 2.2817 8.28036 2.44223L4.08036 10.8422C3.88868 11.2256 3.79284 11.4173 3.81587 11.5731C3.83597 11.7091 3.91122 11.8309 4.02393 11.9097C4.15299 12 4.3673 12 4.79591 12H11.0015L8.00148 22L20.1946 9.35531C20.6059 8.9287 20.8116 8.7154 20.8237 8.53288C20.8341 8.37446 20.7687 8.22049 20.6474 8.11803C20.5077 8 20.2113 8 19.6187 8H12.5015L14.7515 2Z"
-                  stroke="#212121"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              Get Estimate
-            </button>
-          </div>
+          <button className="rounded-full bg-primary px-4 py-2 md:px-10 md:py-4 md:text-lg text-sm flex gap-2 items-center font-light">
+            <svg
+              className="w-4 h-4 md:w-6 md:h-6"
+              viewBox="0 0 16 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.49968 1.73828H5.66264C5.54298 1.73828 5.48316 1.73828 5.43034 1.7565C5.38363 1.77261 5.34109 1.7989 5.30579 1.83348C5.26587 1.87257 5.23912 1.92608 5.18561 2.0331L2.38561 7.6331C2.25782 7.88867 2.19393 8.01646 2.20927 8.12033C2.22268 8.21104 2.27285 8.29222 2.34798 8.34477C2.43403 8.40495 2.5769 8.40495 2.86264 8.40495H6.99968L4.99968 15.0716L13.1284 6.64182C13.4027 6.35742 13.5398 6.21521 13.5478 6.09354C13.5548 5.98792 13.5112 5.88527 13.4303 5.81697C13.3371 5.73828 13.1396 5.73828 12.7445 5.73828H7.99968L9.49968 1.73828Z"
+                stroke="#212121"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Get Estimate
+          </button>
         </div>
       </div>
     </main>
