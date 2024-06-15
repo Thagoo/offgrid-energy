@@ -13,7 +13,9 @@ const Accordion = ({ header, content }: { header: any; content: any }) => {
         <div className="flex items-center gap-2 ">
           <span> {isOpen ? header?.iconAfter : header?.iconBefore}</span>
 
-          <span className="md:text-lg font-medium">{header?.title}</span>
+          <span className="md:text-lg font-medium text-sm">
+            {header?.title}
+          </span>
         </div>
         <span className="text-4xl">
           {isOpen ? (

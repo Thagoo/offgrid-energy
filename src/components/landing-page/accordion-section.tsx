@@ -1,5 +1,6 @@
 import React from "react";
 import Accordion from "../ui/accordion";
+import Image from "next/image";
 
 export default function AccordionSection() {
   return (
@@ -42,26 +43,9 @@ export default function AccordionSection() {
         }}
         content={
           <div className="pl-10">
-            <ul className="list-disc">
-              <li>
-                <span className="font-medium">Transparent Pricing:</span>
-                 We believe in upfront and honest pricing. No hidden fees or
-                surprises, just a clear breakdown of your solar investment.
-              </li>
-              <li>
-                <span className="font-medium">Honest Guidance:</span>
-                 Our solar experts will work with you to find the best system
-                for your needs and budget, not push for a one-size-fits-all
-                solution.
-              </li>
-              <li>
-                <span className="font-medium">
-                  Safe and Clean Installation:
-                </span>
-                 We prioritize safety and a meticulous process, ensuring your
-                system functions flawlessly without mess.
-              </li>
-            </ul>
+            We prioritize clarity and transperancy. Expect upfront pricing,
+            expert advice tailored to your needs, and a clean, safe installation
+            for a worry-free transition to solar power.
           </div>
         }
       />
@@ -117,8 +101,9 @@ export default function AccordionSection() {
         }}
         content={
           <div className="pl-10">
-            Enjoy a 30% subsidy from the Indian government on installation
-            costs!
+            Offgrid helps you secure a 30% subsidy on solar panels from the
+            Ministry of New and Renewable Energy, making solar energy more
+            affordable.
           </div>
         }
       />
@@ -134,14 +119,35 @@ export default function AccordionSection() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+                d="M9 9H15"
                 stroke="#212121"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
               <path
-                d="M12 6.75V12H17.25"
+                d="M9 12H15"
+                stroke="#212121"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 15H12"
+                stroke="#212121"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14.6897 20.25H4.5C4.30109 20.25 4.11032 20.171 3.96967 20.0303C3.82902 19.8897 3.75 19.6989 3.75 19.5V4.5C3.75 4.30109 3.82902 4.11032 3.96967 3.96967C4.11032 3.82902 4.30109 3.75 4.5 3.75H19.5C19.6989 3.75 19.8897 3.82902 20.0303 3.96967C20.171 4.11032 20.25 4.30109 20.25 4.5V14.6897C20.2499 14.8883 20.171 15.0788 20.0306 15.2194L15.2194 20.0306C15.0788 20.171 14.8883 20.2499 14.6897 20.25Z"
+                stroke="#212121"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20.1825 15H15V20.1825"
                 stroke="#212121"
                 stroke-width="2"
                 stroke-linecap="round"
@@ -150,24 +156,19 @@ export default function AccordionSection() {
             </svg>
           ),
           iconAfter: (
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12.0005 1.75H12C9.97275 1.75 7.99101 2.35115 6.30541 3.47744C4.61981 4.60372 3.30604 6.20455 2.53024 8.07749C1.75444 9.95044 1.55146 12.0114 1.94696 13.9997C2.34245 15.988 3.31867 17.8144 4.75216 19.2478C6.18565 20.6813 8.01202 21.6576 10.0003 22.053C11.9886 22.4485 14.0496 22.2456 15.9225 21.4698C17.7955 20.694 19.3963 19.3802 20.5226 17.6946C21.6489 16.009 22.25 14.0273 22.25 12V11.9995C22.2471 9.28202 21.1664 6.6767 19.2448 4.75517C17.3233 2.83364 14.718 1.75287 12.0005 1.75ZM12.25 11.25V11.75H12.75H17.25C17.3163 11.75 17.3799 11.7763 17.4268 11.8232C17.4737 11.8701 17.5 11.9337 17.5 12C17.5 12.0663 17.4737 12.1299 17.4268 12.1768C17.3799 12.2237 17.3163 12.25 17.25 12.25H12C11.9337 12.25 11.8701 12.2237 11.8232 12.1768C11.7763 12.1299 11.75 12.0663 11.75 12V6.75C11.75 6.6837 11.7763 6.62011 11.8232 6.57322C11.8701 6.52634 11.9337 6.5 12 6C12.0663 6.5 12.1299 6.52634 12.1768 6.57322C12.2237 6.62011 12.25 6.68369 12.25 6.75V11.25Z"
-                fill="#FFCB00"
-                stroke="#212121"
-              />
-            </svg>
+            <Image
+              src={"/assets/lander/banner/accordion-3-after.svg"}
+              width={24}
+              height={24}
+              alt="icon 2"
+            />
           ),
         }}
         content={
           <div className="pl-10">
-            Affordable with no-cost EMI. Clean energy, easy payments.
+            Spread the cost of your solar investment! We offer no-cost EMI
+            options, letting you pay in manageable installments without any
+            hidden interest fees.
           </div>
         }
       />

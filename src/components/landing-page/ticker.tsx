@@ -3,23 +3,23 @@ import Image from "next/image";
 
 export default function Ticker() {
   const brands = [
-    "panasonic",
-    "tata",
-    "canadian-solar",
-    "adani",
-    "havells",
-    "waaree",
-    "luminous",
+    "image-1",
+    "image-2",
+    "image-3",
+    "image-4",
+    "image-5",
+    "image-6",
+    "image-7",
   ];
 
   return (
-    <div className="md:w-full w-screen overflow-hidden py-2">
+    <div className="md:w-full w-screen overflow-hidden">
       <div className="ticker">
         {brands.concat(brands).map((brand, index) => (
           <Image
             key={index}
             alt="brands"
-            src={`/assets/lander/brands/${brand}.svg`}
+            src={`/assets/lander/brands/${brand}.webp`}
             width={100}
             height={100}
             className="inline-block md:mr-20 mr-8 h-auto w-[15%] md:w-[5%]"

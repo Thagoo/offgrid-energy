@@ -7,8 +7,15 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Offgird Enerygy",
-  description: "Offgrid Energy",
+  title: "Offgird Energy",
+  description: "Offgrid installs solar in an all new way.",
+  metadataBase: new URL("https://offgrid-website.vercel.app/"),
+  openGraph: {
+    images: "/assets/lander/offgrid-favicon.png",
+  },
+  icons: {
+    icon: "/assets/lander/offgrid-favicon.png",
+  },
 };
 
 export default function RootLayout({

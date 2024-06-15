@@ -432,7 +432,7 @@ const pillsOptions = [
     ),
   },
   {
-    text: "Govt, Subsidy",
+    text: "Govt. Subsidy",
     icon: (
       <svg
         className="md:w-8 md:h-8 w-4 h-4"
@@ -489,7 +489,7 @@ export default function Pills() {
           {pillsOptions.slice(0, 4).map((pill, i) => (
             <div
               key={i}
-              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+              className="flex items-center gap-2 px-4 md:px-[26px] py-2 rounded-full border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
             >
               {pill.icon} {pill.text}
             </div>
@@ -499,7 +499,7 @@ export default function Pills() {
           {pillsOptions.slice(4, 8).map((pill, i) => (
             <div
               key={i}
-              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+              className="flex items-center gap-2 px-4 md:px-[26px] py-2 rounded-full border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
             >
               {pill.icon} {pill.text}
             </div>
@@ -511,7 +511,7 @@ export default function Pills() {
             .map((pill, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+                className="flex items-center gap-2 px-4 md:px-[26px] py-2 rounded-full border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
               >
                 {pill.icon} {pill.text}
               </div>
@@ -520,12 +520,20 @@ export default function Pills() {
       </div>
 
       {/* mobile */}
-      <div className="flex md:hidden flex-col gap-2 md:gap-8">
-        <div className="flex gap-2 md:gap-16 flex-wrap justify-center">
+      <div className="grid grid-cols-2 gap-2 md:hidden">
+        {pillsOptions.map((pill, i) => (
+          <div
+            key={i}
+            className="flex items-center gap-2 px-4 md:px-[26px] py-2 rounded-full border-2 border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+          >
+            {pill.icon} {pill.text}
+          </div>
+        ))}
+        {/* <div className="flex gap-2 md:gap-16 flex-wrap justify-center">
           {pillsOptions.slice(0, 2).map((pill, i) => (
             <div
               key={i}
-              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl -2border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
             >
               {pill.icon} {pill.text}
             </div>
@@ -535,7 +543,7 @@ export default function Pills() {
           {pillsOptions.slice(2, 5).map((pill, i) => (
             <div
               key={i}
-              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl -2border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
             >
               {pill.icon} {pill.text}
             </div>
@@ -545,7 +553,7 @@ export default function Pills() {
           {pillsOptions.slice(5, 8).map((pill, i) => (
             <div
               key={i}
-              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl -2border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
             >
               {pill.icon} {pill.text}
             </div>
@@ -555,12 +563,12 @@ export default function Pills() {
           {pillsOptions.slice(8, 10).map((pill, i) => (
             <div
               key={i}
-              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl border border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
+              className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-3xl -2border-[#FFCB00] bg-[#FBF4D8] text-normal text-xs md:text-lg"
             >
               {pill.icon} {pill.text}
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   );

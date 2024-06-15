@@ -1,11 +1,9 @@
-"use client";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function SolarOnYourFingertips() {
   return (
     <>
-      <div className="h-auto w-full py-8 md:py-16 md:px-20 px-5 md:grid grid-cols-2 gap-3">
+      <div className="h-auto w-full md:pt-0 pt-16 py-8 md:py-16 md:grid grid-cols-2 gap-3 md:px-20">
         <div className="block md:py-40">
           <div className=" md:sticky md:top-40 text-2xl text-center md:text-left md:text-7xl  font-medium">
             {" "}
@@ -16,7 +14,7 @@ export default function SolarOnYourFingertips() {
           <div className="block px-4 py-6 md:pt-96 justify-start space-y-4 md:space-y-8">
             <div>
               <Image
-                src={"/assets/lander/solar-on-your-fingertips/image-1.png"}
+                src={"/assets/lander/solar-on-your-fingertips/image-1.webp"}
                 width={700}
                 height={700}
                 alt="Solar installer"
@@ -35,7 +33,7 @@ export default function SolarOnYourFingertips() {
           <div className="block px-4 py-6  justify-start space-y-4 md:space-y-8">
             <div>
               <Image
-                src={"/assets/lander/solar-on-your-fingertips/image-2.svg"}
+                src={"/assets/lander/solar-on-your-fingertips/image-2.webp"}
                 width={700}
                 height={700}
                 alt="Solar installer"

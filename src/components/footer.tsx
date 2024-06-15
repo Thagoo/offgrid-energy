@@ -4,15 +4,15 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <div className="bg-primary h-1/2 px-7 py-16 md:px-20 md:py-28 flex flex-col gap-20">
+      <div className="bg-primary h-1/2 px-7 py-10 md:px-20 md:py-20 flex flex-col gap-5 md:gap-20">
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
-            <button className="md:py-4 md:px-10 px-3 py-1 border border-black rounded-full mb-4 text-[10px] md:text-base text-nowrap">
-              Partner with us
-            </button>
             <h1 className=" text-[10px] md:text-base">About</h1>
             <h1 className=" text-[10px] md:text-base">FAQ</h1>
             <h1 className=" text-[10px] md:text-base">Blog</h1>
+            <button className="md:py-4 md:px-10 px-3 py-1 border border-black rounded-full mb-4 text-[10px] md:text-base text-nowrap">
+              Partner with us
+            </button>
           </div>
           <div className="flex flex-col gap-3">
             <h1 className=" text-[10px] md:text-base">Referrals</h1>
@@ -153,8 +153,7 @@ export default function Footer() {
         </div>
         <div className="self-center text-[10px] md:text-sm flex items-center gap-2">
           <svg
-            width="12"
-            height="13"
+            className="w-3 h-3 md:w-5 md:h-5"
             viewBox="0 0 12 13"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +165,6 @@ export default function Footer() {
           </svg>
           2024 Offgrid Energy{" "}
           <Link href={"#"} className="underline">
-            {" "}
             Privacy Policy | Terms & Conditions
           </Link>
         </div>

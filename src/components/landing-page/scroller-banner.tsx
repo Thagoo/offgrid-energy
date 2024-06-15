@@ -4,10 +4,12 @@ import { Link as LinkScroll } from "react-scroll";
 
 export default function ScrollerBanner() {
   return (
-    <div className="flex md:flex-row flex-col justify-between w-full text-center md:gap-16 gap-14 border-b-2 py-10">
-      <div className="md:px-16 px-7 flex flex-col gap-4 items-center">
-        <h1 className="text-2xl">Solar at the right price</h1>
-        <p className="text-sm">
+    <div className="flex flex-col px-5 md:grid md:grid-cols-3 text-center border-b-2 pb-5 md:pb-10 gap-10 md:gap-40  mt-4 md:mt-0">
+      <div className=" flex flex-col gap-4 items-center justify-between">
+        <h1 className="text-2xl font-medium">
+          Solar at the <br className="md:hidden" /> right price
+        </h1>
+        <p className="text-sm md:text-base">
           Don’t overpay for solar. Get the right product at the right price.
         </p>
         <LinkScroll
@@ -33,14 +35,16 @@ export default function ScrollerBanner() {
           </svg>
         </LinkScroll>
       </div>
-      <div className="md:px-2 px-7 flex flex-col gap-4 items-center">
-        <h1 className="text-2xl">Full service installation and paperwork</h1>
-        <p className="text-sm">
-          We take care of all paperwork and installation. All you have to count
-          is savings.
+      <div className="flex flex-col gap-4 items-center  justify-between">
+        <h1 className="text-2xl font-medium">
+          Full service installation and paperwork
+        </h1>
+        <p className="text-sm md:text-base">
+          We take care of all paperwork and installation. All you have to do is
+          count your savings.
         </p>
         <LinkScroll
-          to="solar-solutions"
+          to="paper-work"
           spy={true}
           smooth={true}
           className="rounded-full bg-primary w-8 h-8 justify-center items-center flex  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
@@ -62,11 +66,11 @@ export default function ScrollerBanner() {
           </svg>
         </LinkScroll>
       </div>
-      <div className="md:px-8 px-7 flex flex-col gap-4 items-center">
-        <h1 className="text-2xl">
+      <div className=" flex flex-col gap-4 items-center  justify-between">
+        <h1 className="text-2xl font-medium">
           High tech. <br /> Hassle free
         </h1>
-        <p className="text-sm">
+        <p className="text-sm md:text-base">
           Offgrid integrates with inverters and continuously monitors your
           systems remotely.
         </p>

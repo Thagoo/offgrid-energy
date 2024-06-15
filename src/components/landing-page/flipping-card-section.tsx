@@ -4,23 +4,23 @@ import React from "react";
 export default function FlippingCardSection() {
   return (
     <div
-      className="h-auto w-full flex flex-col gap-4 md:gap-28 py-16 md:py-28 md:px-20 px-5 cursor-pointer"
+      className="h-auto w-full flex flex-col gap-8 md:gap-28 py-16 md:py-28 md:px-20 px-5"
       id="solar-installation"
     >
-      <div className="flex flex-col gap-2 md:gap-3">
+      <div className="flex flex-col gap-3 md:gap-3">
         <h1 className="text-2xl md:text-[3rem] font-medium text-center leading-none">
           Solar installations <br />
           without salesmen.
         </h1>
-        <p className="text-[#868687] text-sm md:text-lg text-center font-light">
+        <p className="text-[#868687] text-sm md:text-lg text-center">
           Get a fixed price online with fast installation service.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center w-full gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full gap-5 md:gap-4">
         {/* Card One */}
         <FlipCard
           frontContent={
-            <div className=" flex flex-col gap-2 h-full">
+            <div className="flex flex-col gap-2 h-full cursor-pointer">
               <svg
                 width="56"
                 height="57"
@@ -33,7 +33,7 @@ export default function FlippingCardSection() {
                   fill="#FFCB00"
                 />
               </svg>
-              <h1 className="text-lg">
+              <h1 className="md:text-lg">
                 <span className="font-semibold">You provide </span>some details
                 about your home and it’s current set up.{" "}
               </h1>
@@ -45,15 +45,25 @@ export default function FlippingCardSection() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M24 3.23828C18.4514 3.30561 13.149 5.53971 9.2252 9.46348C5.30143 13.3872 3.06732 18.6896 3 24.2383C3.06732 29.7869 5.30143 35.0893 9.2252 39.0131C13.149 42.9368 18.4514 45.171 24 45.2383C29.5486 45.171 34.851 42.9368 38.7748 39.0131C42.6986 35.0893 44.9327 29.7869 45 24.2383C44.9327 18.6896 42.6986 13.3872 38.7748 9.46348C34.851 5.53971 29.5486 3.30561 24 3.23828ZM36 25.7383H25.5V36.2383H22.5V25.7383H12V22.7383H22.5V12.2383H25.5V22.7383H36V25.7383Z"
+                <rect
+                  y="0.40625"
+                  width="48"
+                  height="48"
+                  rx="24"
                   fill="#FFCB00"
+                />
+                <path
+                  d="M13.3345 26.1562C13.0082 25.5824 12.9222 24.9027 13.0952 24.2656C13.2681 23.6285 13.6861 23.0857 14.2578 22.7556C14.8295 22.4255 15.5086 22.3349 16.1468 22.5037C16.7851 22.6724 17.3306 23.0867 17.6645 23.6562L19.9995 27.4062V13.9062C19.9995 13.2432 20.2629 12.6073 20.7318 12.1385C21.2006 11.6696 21.8365 11.4062 22.4995 11.4062C23.1626 11.4062 23.7985 11.6696 24.2673 12.1385C24.7361 12.6073 24.9995 13.2432 24.9995 13.9062V20.9062C24.9995 20.2432 25.2629 19.6073 25.7318 19.1385C26.2006 18.6696 26.8365 18.4062 27.4995 18.4062C28.1626 18.4062 28.7985 18.6696 29.2673 19.1385C29.7361 19.6073 29.9995 20.2432 29.9995 20.9062V22.9062C29.9995 22.2432 30.2629 21.6073 30.7318 21.1385C31.2006 20.6696 31.8365 20.4062 32.4995 20.4062C33.1626 20.4062 33.7985 20.6696 34.2673 21.1385C34.7361 21.6073 34.9995 22.2432 34.9995 22.9062V27.4062C34.9995 28.7195 34.7409 30.0198 34.2383 31.2331C33.7358 32.4463 32.9992 33.5487 32.0706 34.4773C31.142 35.4059 30.0396 36.1425 28.8264 36.645C27.6131 37.1476 26.3127 37.4062 24.9995 37.4062C19.477 37.4062 18.0233 34.4062 13.3345 26.1562Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
               </svg>
             </div>
           }
           backContent={
-            <div className=" flex flex-col gap-2 h-full">
+            <div className=" flex flex-col gap-2 h-full cursor-pointer">
               <svg
                 width="25"
                 height="25"
@@ -66,7 +76,7 @@ export default function FlippingCardSection() {
                   fill="#FFCB00"
                 />
               </svg>
-              <h1 className="text-lg">
+              <h1 className="md:text-lg">
                 The package that you want from a range of fixed price options
                 and an installation date that suits you.
               </h1>
@@ -90,7 +100,7 @@ export default function FlippingCardSection() {
         {/* Card Two */}
         <FlipCard
           frontContent={
-            <div className=" flex flex-col gap-2 h-full">
+            <div className=" flex flex-col gap-2 h-full cursor-pointer">
               <svg
                 width="56"
                 height="57"
@@ -113,7 +123,7 @@ export default function FlippingCardSection() {
                 />
               </svg>
 
-              <h1 className="text-lg">
+              <h1 className="md:text-lg">
                 <span className="font-semibold">You pick</span> the package that
                 you want from a range of options.
               </h1>
@@ -125,15 +135,25 @@ export default function FlippingCardSection() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M24 3.23828C18.4514 3.30561 13.149 5.53971 9.2252 9.46348C5.30143 13.3872 3.06732 18.6896 3 24.2383C3.06732 29.7869 5.30143 35.0893 9.2252 39.0131C13.149 42.9368 18.4514 45.171 24 45.2383C29.5486 45.171 34.851 42.9368 38.7748 39.0131C42.6986 35.0893 44.9327 29.7869 45 24.2383C44.9327 18.6896 42.6986 13.3872 38.7748 9.46348C34.851 5.53971 29.5486 3.30561 24 3.23828ZM36 25.7383H25.5V36.2383H22.5V25.7383H12V22.7383H22.5V12.2383H25.5V22.7383H36V25.7383Z"
+                <rect
+                  y="0.40625"
+                  width="48"
+                  height="48"
+                  rx="24"
                   fill="#FFCB00"
+                />
+                <path
+                  d="M13.3345 26.1562C13.0082 25.5824 12.9222 24.9027 13.0952 24.2656C13.2681 23.6285 13.6861 23.0857 14.2578 22.7556C14.8295 22.4255 15.5086 22.3349 16.1468 22.5037C16.7851 22.6724 17.3306 23.0867 17.6645 23.6562L19.9995 27.4062V13.9062C19.9995 13.2432 20.2629 12.6073 20.7318 12.1385C21.2006 11.6696 21.8365 11.4062 22.4995 11.4062C23.1626 11.4062 23.7985 11.6696 24.2673 12.1385C24.7361 12.6073 24.9995 13.2432 24.9995 13.9062V20.9062C24.9995 20.2432 25.2629 19.6073 25.7318 19.1385C26.2006 18.6696 26.8365 18.4062 27.4995 18.4062C28.1626 18.4062 28.7985 18.6696 29.2673 19.1385C29.7361 19.6073 29.9995 20.2432 29.9995 20.9062V22.9062C29.9995 22.2432 30.2629 21.6073 30.7318 21.1385C31.2006 20.6696 31.8365 20.4062 32.4995 20.4062C33.1626 20.4062 33.7985 20.6696 34.2673 21.1385C34.7361 21.6073 34.9995 22.2432 34.9995 22.9062V27.4062C34.9995 28.7195 34.7409 30.0198 34.2383 31.2331C33.7358 32.4463 32.9992 33.5487 32.0706 34.4773C31.142 35.4059 30.0396 36.1425 28.8264 36.645C27.6131 37.1476 26.3127 37.4062 24.9995 37.4062C19.477 37.4062 18.0233 34.4062 13.3345 26.1562Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
               </svg>
             </div>
           }
           backContent={
-            <div className=" flex flex-col gap-2 h-full">
+            <div className=" flex flex-col gap-2 h-full cursor-pointer">
               <svg
                 width="25"
                 height="25"
@@ -146,7 +166,7 @@ export default function FlippingCardSection() {
                   fill="#FFCB00"
                 />
               </svg>
-              <h1 className="text-lg">
+              <h1 className="md:text-lg">
                 Your chosen products, on your chosen date, using verified
                 installers close to you.
               </h1>
@@ -170,7 +190,7 @@ export default function FlippingCardSection() {
         {/* Card three */}
         <FlipCard
           frontContent={
-            <div className=" flex flex-col gap-2 h-full">
+            <div className=" flex flex-col gap-2 h-full cursor-pointer">
               <svg
                 width="56"
                 height="57"
@@ -187,7 +207,7 @@ export default function FlippingCardSection() {
                 />
               </svg>
 
-              <h1 className="text-lg">
+              <h1 className="md:text-lg">
                 <span className="font-semibold">We fit </span> your chosen
                 products, on your chosen date, using verified installers close
                 to you.
@@ -200,15 +220,25 @@ export default function FlippingCardSection() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M24 3.23828C18.4514 3.30561 13.149 5.53971 9.2252 9.46348C5.30143 13.3872 3.06732 18.6896 3 24.2383C3.06732 29.7869 5.30143 35.0893 9.2252 39.0131C13.149 42.9368 18.4514 45.171 24 45.2383C29.5486 45.171 34.851 42.9368 38.7748 39.0131C42.6986 35.0893 44.9327 29.7869 45 24.2383C44.9327 18.6896 42.6986 13.3872 38.7748 9.46348C34.851 5.53971 29.5486 3.30561 24 3.23828ZM36 25.7383H25.5V36.2383H22.5V25.7383H12V22.7383H22.5V12.2383H25.5V22.7383H36V25.7383Z"
+                <rect
+                  y="0.40625"
+                  width="48"
+                  height="48"
+                  rx="24"
                   fill="#FFCB00"
+                />
+                <path
+                  d="M13.3345 26.1562C13.0082 25.5824 12.9222 24.9027 13.0952 24.2656C13.2681 23.6285 13.6861 23.0857 14.2578 22.7556C14.8295 22.4255 15.5086 22.3349 16.1468 22.5037C16.7851 22.6724 17.3306 23.0867 17.6645 23.6562L19.9995 27.4062V13.9062C19.9995 13.2432 20.2629 12.6073 20.7318 12.1385C21.2006 11.6696 21.8365 11.4062 22.4995 11.4062C23.1626 11.4062 23.7985 11.6696 24.2673 12.1385C24.7361 12.6073 24.9995 13.2432 24.9995 13.9062V20.9062C24.9995 20.2432 25.2629 19.6073 25.7318 19.1385C26.2006 18.6696 26.8365 18.4062 27.4995 18.4062C28.1626 18.4062 28.7985 18.6696 29.2673 19.1385C29.7361 19.6073 29.9995 20.2432 29.9995 20.9062V22.9062C29.9995 22.2432 30.2629 21.6073 30.7318 21.1385C31.2006 20.6696 31.8365 20.4062 32.4995 20.4062C33.1626 20.4062 33.7985 20.6696 34.2673 21.1385C34.7361 21.6073 34.9995 22.2432 34.9995 22.9062V27.4062C34.9995 28.7195 34.7409 30.0198 34.2383 31.2331C33.7358 32.4463 32.9992 33.5487 32.0706 34.4773C31.142 35.4059 30.0396 36.1425 28.8264 36.645C27.6131 37.1476 26.3127 37.4062 24.9995 37.4062C19.477 37.4062 18.0233 34.4062 13.3345 26.1562Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
               </svg>
             </div>
           }
           backContent={
-            <div className=" flex flex-col gap-2 h-full">
+            <div className=" flex flex-col gap-2 h-full cursor-pointer">
               <svg
                 width="25"
                 height="25"
@@ -221,7 +251,7 @@ export default function FlippingCardSection() {
                   fill="#FFCB00"
                 />
               </svg>
-              <h1 className="text-lg">
+              <h1 className="md:text-lg">
                 Some details about your home and it’s current set up. It’s super
                 straight forward, nothing complex.
               </h1>
@@ -262,16 +292,16 @@ const FlipCard = ({
   };
 
   return (
-    <div className="h-80 w-80 perspective" onClick={handleFlip}>
+    <div className="h-80 w-full perspective" onClick={handleFlip}>
       <div
         className={`relative w-full h-full transition-transform duration-700 ease-in-out transform-style-preserve-3d ${
           isFlipped ? "transform-rotate-y-180" : ""
         }`}
       >
-        <div className="absolute w-full h-full backface-hidden shadow-lg rounded-3xl py-12 px-10 bg-[#FBF4D8]">
+        <div className="absolute w-full h-full backface-hidden shadow-lg rounded-3xl py-8 px-10 bg-[#FBF4D8]">
           {frontContent}
         </div>
-        <div className="absolute w-full h-full backface-hidden shadow-lg rounded-3xl transform-rotate-y-180 py-12 px-10 bg-primary">
+        <div className="absolute w-full h-full backface-hidden shadow-lg rounded-3xl transform-rotate-y-180 py-8 px-10 bg-primary">
           {backContent}
         </div>
       </div>
