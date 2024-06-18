@@ -4,11 +4,11 @@ import React from "react";
 export default function FlippingCardSection() {
   return (
     <div
-      className="h-auto w-full flex flex-col gap-8 md:gap-28 py-16 md:py-28 md:px-20 px-5"
+      className="h-auto w-full flex flex-col gap-8 md:gap-16 py-16 md:py-28 md:px-20 px-5"
       id="solar-installation"
     >
       <div className="flex flex-col gap-3 md:gap-3">
-        <h1 className="text-2xl md:text-[3rem] font-medium text-center leading-none">
+        <h1 className="text-2xl md:text-[3rem] font-medium text-center leading-tight">
           Solar installations <br />
           without salesmen.
         </h1>
@@ -77,8 +77,8 @@ export default function FlippingCardSection() {
                 />
               </svg>
               <h1 className="md:text-lg">
-                The package that you want from a range of fixed price options
-                and an installation date that suits you.
+                Using our online quote generator, mark your home and provide a
+                few details.
               </h1>
               <div className="self-end mt-auto">
                 <svg
@@ -167,8 +167,8 @@ export default function FlippingCardSection() {
                 />
               </svg>
               <h1 className="md:text-lg">
-                Your chosen products, on your chosen date, using verified
-                installers close to you.
+                With the data you've provided we give you a fixed quote based on
+                different plans.
               </h1>
               <div className="self-end mt-auto">
                 <svg
@@ -209,8 +209,7 @@ export default function FlippingCardSection() {
 
               <h1 className="md:text-lg">
                 <span className="font-semibold">We fit </span> your chosen
-                products, on your chosen date, using verified installers close
-                to you.
+                products, on your chosen date.
               </h1>
               <svg
                 className="mt-auto self-end"
@@ -252,8 +251,8 @@ export default function FlippingCardSection() {
                 />
               </svg>
               <h1 className="md:text-lg">
-                Some details about your home and it’s current set up. It’s super
-                straight forward, nothing complex.
+                Your chosen products, on your chosen date, using verified
+                installers close to you.
               </h1>
               <div className="self-end mt-auto">
                 <svg
@@ -292,7 +291,7 @@ const FlipCard = ({
   };
 
   return (
-    <div className="h-80 w-full perspective" onClick={handleFlip}>
+    <div className="h-60 md:h-72 w-full perspective" onClick={handleFlip}>
       <div
         className={`relative w-full h-full transition-transform duration-700 ease-in-out transform-style-preserve-3d ${
           isFlipped ? "transform-rotate-y-180" : ""

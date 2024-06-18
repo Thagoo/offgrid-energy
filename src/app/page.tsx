@@ -96,15 +96,17 @@ export default function Home() {
           </div>
         </ScrollAppear>
         <ScrollAppear>
-          <div className="text-center md:h-screen h-[60vh] w-screen  md:w-full flex flex-col items-center justify-center gap-3 md:gap-4 bg-[#f0f0f0] bg-[url('/assets/lander/banner/bg-lines.svg')] md:px-20 px-5">
-            <h1 className="text-2xl md:text-5xl leading-none font-medium">
-              We&apos;re an <span className="text-gray-600">all inclusive</span>{" "}
-              <br />
-              solar platform
-            </h1>
-            <p className="text-[#868687] font-normal text-sm md:text-xl ">
-              Get solar panels, plus a lot more, for a lot less.
-            </p>
+          <div className="text-center md:h-screen h-[60vh] w-screen  md:w-full flex flex-col items-center justify-center gap-4 md:gap-16 bg-[#f0f0f0] bg-[url('/assets/lander/banner/bg-lines.svg')] md:px-20 px-5">
+            <div className="flex flex-col gap-3 md:gap-4">
+              <h1 className="text-2xl md:text-5xl leading-tight font-medium">
+                We&apos;re an{" "}
+                <span className="text-gray-600">all inclusive</span> <br />
+                solar platform
+              </h1>
+              <p className="text-[#868687] font-normal text-sm md:text-xl ">
+                Get solar panels, plus a lot more, for a lot less.
+              </p>
+            </div>
             <Pills />
           </div>
         </ScrollAppear>
@@ -112,7 +114,7 @@ export default function Home() {
           {/* desktop */}
           <div className="hidden md:flex h-1/2 flex-col md:flex-row py-36 gap-4 md:px-20 px-5 w-full md:justify-between ">
             <div className="flex flex-col gap-14 items-start border-r-[1px] pr-4 w-2/5">
-              <h1 className="font-medium md:text-5xl text-2xl">
+              <h1 className="font-medium md:text-5xl text-2xl leading-tight">
                 India&apos;s first solar platform.
               </h1>
               <p>
@@ -128,7 +130,7 @@ export default function Home() {
               <div className="flex gap-6 items-center">
                 <h1 className="font-medium text-6xl">100%</h1>
                 <div className="flex flex-col gap-2">
-                  <p className="text-2xl text-nowrap">
+                  <p className="text-2xl text-nowrap font-medium leading-tight">
                     Guaranteed quality and price.
                   </p>
                   <p>
@@ -144,12 +146,12 @@ export default function Home() {
           </div>
 
           {/* mobile */}
-          <div className="md:hidden h-1/2 flex flex-col items-center py-16 md:px-20 px-5 gap-6">
-            <div className="flex flex-col gap-4 items-center text-center px-8">
-              <h1 className="text-2xl md:text-5xl text-center font-medium">
+          <div className="md:hidden h-1/2 flex flex-col items-center py-16 md:px-20 px-7 gap-6">
+            <div className="flex flex-col gap-4 items-center text-center">
+              <h1 className="text-2xl md:text-5xl text-center font-medium leading-tight">
                 India&apos;s first <br /> solar platform.
               </h1>
-              <p className="text-sm text-start">
+              <p className="text-sm text-start font-normal">
                 Don&apos;t waste time with salesmen. Get all you need for solar
                 online. Just mark your roof and leave the rest to us.
               </p>
@@ -158,12 +160,14 @@ export default function Home() {
               <AccordionSection />
             </div>
 
-            <div className="flex flex-col gap-2 px-8 items-center">
+            <div className="flex flex-col gap-2 items-center">
               <div className="flex items-center gap-2">
                 <h1 className="font-medium text-5xl">100%</h1>
-                <h1 className="text-lg">Guaranteed quality and price.</h1>
+                <h1 className="text-lg font-medium leading-tight">
+                  Guaranteed <br /> quality and price.
+                </h1>
               </div>
-              <p className="text-sm">
+              <p className="text-sm font-normal">
                 No middleman involvement guarantee. Original products at
                 original cost is our promise.
               </p>
@@ -186,10 +190,10 @@ export default function Home() {
         </ScrollAppear>
         <ScrollAppear>
           <div
-            className="bg-[#F4F4F4] h-auto md:px-20 px-5 py-20 flex flex-col gap-5 md:gap-28 w-screen md:w-full"
+            className="bg-[#F4F4F4] h-auto md:px-20 px-5 py-20 flex flex-col gap-5 md:gap-16 w-screen md:w-full"
             id="paper-work"
           >
-            <h1 className="md:text-[3rem] text-2xl font-medium text-center leading-none">
+            <h1 className="md:text-[3rem] text-2xl font-medium text-center leading-tight">
               Seamless Paperwork and <br className="md:block hidden" />
               Unmatched Guarantees
             </h1>
@@ -325,7 +329,7 @@ export default function Home() {
 
         {/* yellow banner */}
         <ScrollAppear>
-          <div className="bg-[#FFCB00] md:h-screen h-auto w-full flex md:flex-row flex-col items-center md:px-20 px-5 md:py-0 py-16 justify-center gap-6 md:gap-28">
+          <div className="bg-[#FFCB00] md:h-screen h-auto w-full flex md:flex-row flex-col items-center md:px-20 px-7 md:py-0 py-16 justify-center gap-6 md:gap-28">
             <div className="w-1/2 flex justify-center items-center">
               <Image
                 src={"/assets/lander/icons/group-card.svg"}
@@ -335,7 +339,7 @@ export default function Home() {
               />
             </div>
             <div className="md:w-1/2 flex flex-col gap-5 md:gap-12">
-              <h1 className="text-2xl md:text-5xl font-medium">
+              <h1 className="text-2xl md:text-5xl font-medium leading-tight">
                 Your trusted partner throughout the life of your system
               </h1>
               <div className="space-y-2">
@@ -469,8 +473,8 @@ export default function Home() {
           <SolarOnYourFingertips />
         </ScrollAppear>
         <ScrollAppear>
-          <div className="flex flex-col md:px-20 px-5 py-16 md:gap-16 gap-4 bg-[#f0f0f0]">
-            <h1 className="text-2xl md:text-[3rem] font-medium text-center leading-none">
+          <div className="flex flex-col md:px-20 px-7 py-16 md:gap-16 gap-4 bg-[#f0f0f0]">
+            <h1 className="text-2xl md:text-[3rem] font-medium text-center leading-tight">
               Why choose Offgrid for your <br /> solar installation
             </h1>
             <div className="flex flex-col gap-10 md:gap-16 py-6 border-t border-t-[#d9d8d6]">
@@ -604,7 +608,7 @@ export default function Home() {
                       engineers. You&apos;re in safe hands.
                     </p>
                   </div>
-                  <div className="absolute bottom-[5%] left-[5%] md:bottom-[5%] md:left-[2%] text-white">
+                  <div className="flex flex-col absolute bottom-[5%] left-[5%] md:bottom-[5%] md:left-[2%] text-white">
                     <p className="text-xs md:text-base">
                       Are you a Solar Installer?
                     </p>
@@ -628,7 +632,7 @@ export default function Home() {
             className="w-full py-16 md:py-20 px-5 md:px-20 "
             id="installation-steps"
           >
-            <h1 className="md:text-[3rem] text-2xl font-medium text-center leading-none mb-4 md:mb-20 ">
+            <h1 className="md:text-[3rem] text-2xl font-medium text-center leading-tight ">
               Here&rsquo;s how your switch <br /> to solar would look like
             </h1>
 
@@ -636,7 +640,7 @@ export default function Home() {
 
             {/* step two */}
 
-            <section className="flex gap-5 relative pb-8 md:pb-40 mt-8">
+            <section className="flex gap-5 relative pb-8 md:pb-40 mt-8 md:mt-16">
               <span
                 className="absolute top-8 md:left-8 left-4 h-full w-0.5 bg-primary z-0"
                 aria-hidden="true"
@@ -651,7 +655,7 @@ export default function Home() {
                   </h1>
                 </span>
               </div>
-              <div className="flex flex-1 flex-col md:flex-row justify-between md:space-x-4 lg:mb-32 ">
+              <div className="flex flex-1 flex-col md:flex-row justify-between gap-6 md:space-x-4 lg:mb-32 ">
                 <div className="max-w-lg">
                   <p className="md:text-4xl text-lg leading-none font-medium">
                     Personalised quote.
@@ -711,7 +715,7 @@ export default function Home() {
                   </h1>
                 </span>
               </div>
-              <div className="flex flex-1 flex-col md:flex-row justify-between md:space-x-4 lg:mb-32 ">
+              <div className="flex flex-1 flex-col md:flex-row justify-between gap-6 md:space-x-4 lg:mb-32 ">
                 <div className="max-w-lg">
                   <p className="md:text-4xl text-lg leading-none font-medium">
                     Choose a package
@@ -769,7 +773,7 @@ export default function Home() {
                   </h1>
                 </span>
               </div>
-              <div className="flex flex-1 flex-col md:flex-row justify-between md:space-x-4 lg:mb-32 ">
+              <div className="flex flex-1 flex-col md:flex-row justify-between gap-6 md:space-x-4 lg:mb-32 ">
                 <div className="max-w-lg">
                   <p className="md:text-4xl text-lg leading-none font-medium">
                     Approval and Installation
@@ -835,7 +839,7 @@ export default function Home() {
                   </h1>
                 </span>
               </div>
-              <div className="flex flex-1 flex-col md:flex-row justify-between md:space-x-4 lg:mb-32 ">
+              <div className="flex flex-1 flex-col md:flex-row justify-between gap-6 md:space-x-4 lg:mb-32 ">
                 <div className="max-w-lg">
                   <p className="md:text-4xl text-lg leading-none font-medium">
                     Your power visualised

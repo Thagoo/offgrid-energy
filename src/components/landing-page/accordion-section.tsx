@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AccordionSection() {
   return (
-    <div className="w-full flex flex-col gap-6 px-3">
+    <div className="w-full flex flex-col gap-6 md:px-3">
       <Accordion
         header={{
           title: "Know before you buy",

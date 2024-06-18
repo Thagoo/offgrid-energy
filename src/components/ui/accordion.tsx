@@ -5,7 +5,7 @@ const Accordion = ({ header, content }: { header: any; content: any }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-[#f4f4f4] rounded-md">
+    <div className="bg-[#f4f4f4] rounded-md px-1 py-2">
       <button
         className="flex justify-between items-center w-full px-3 md:py-1 md:px-2 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
@@ -20,8 +20,8 @@ const Accordion = ({ header, content }: { header: any; content: any }) => {
         <span className="text-4xl">
           {isOpen ? (
             <svg
-              width="32"
-              height="32"
+              width="24"
+              height="24"
               className="animate-in fade-in duration-1000"
               viewBox="0 0 32 32"
               fill="none"
@@ -37,8 +37,8 @@ const Accordion = ({ header, content }: { header: any; content: any }) => {
             </svg>
           ) : (
             <svg
-              width="41"
-              height="40"
+              width="24"
+              height="24"
               className="animate-in fade-in duration-1000"
               viewBox="0 0 41 40"
               fill="none"

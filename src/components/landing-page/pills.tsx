@@ -484,7 +484,7 @@ export default function Pills() {
   return (
     <>
       {/* Desktop */}
-      <div className="hidden md:flex flex-col gap-2 md:gap-8">
+      <div className="hidden md:flex flex-col gap-2 md:gap-6">
         <div className="flex gap-3 md:gap-10 flex-wrap">
           {pillsOptions.slice(0, 4).map((pill, i) => (
             <div

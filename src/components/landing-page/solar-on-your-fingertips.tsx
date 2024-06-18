@@ -3,15 +3,15 @@ import Image from "next/image";
 export default function SolarOnYourFingertips() {
   return (
     <>
-      <div className="h-auto w-full md:pt-0 pt-16 py-8 md:py-16 md:grid grid-cols-2 gap-3 md:px-20">
+      <div className="h-auto w-full md:pt-0 pt-16 py-8 md:py-16 md:grid grid-cols-2 gap-3 px-7 md:px-20">
         <div className="block md:py-40">
           <div className=" md:sticky md:top-40 text-2xl text-center md:text-left md:text-7xl  font-medium">
             {" "}
             Solar on your finger tips
           </div>
         </div>
-        <div className="py-6 md:py-16 flex flex-col gap-y-4 md:gap-y-32 ">
-          <div className="block px-4 py-6 md:pt-96 justify-start space-y-4 md:space-y-8">
+        <div className="py-6 pt-2 md:py-16 flex flex-col gap-y-4 md:gap-y-32 ">
+          <div className="block py-6 md:pt-96 justify-start space-y-4 md:space-y-8">
             <div>
               <Image
                 src={"/assets/lander/solar-on-your-fingertips/image-1.webp"}
@@ -30,7 +30,7 @@ export default function SolarOnYourFingertips() {
               </p>
             </div>
           </div>
-          <div className="block px-4 py-6  justify-start space-y-4 md:space-y-8">
+          <div className="block py-6  justify-start space-y-4 md:space-y-8">
             <div>
               <Image
                 src={"/assets/lander/solar-on-your-fingertips/image-2.webp"}
@@ -49,7 +49,7 @@ export default function SolarOnYourFingertips() {
               </p>
             </div>
           </div>
-          <div className="block px-4 py-6  justify-start space-y-4 md:space-y-8">
+          <div className="block py-6  justify-start space-y-4 md:space-y-8">
             <div>
               <Image
                 src={"/assets/lander/solar-on-your-fingertips/image-3.svg"}
