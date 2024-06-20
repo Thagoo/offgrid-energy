@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Button from "../common/button";
+import Link from "next/link";
 
 const bulletPoints = [
   "100% Price Guaranteed.",
@@ -50,25 +51,27 @@ export default function DrawDemo() {
     // </div>
 
     <div className="bg-[url('/assets/lander/banner/draw-demo.webp')] rounded-3xl bg-cover bg-center bg-no-repeat w-full">
-      <div className=" flex flex-col justify-start items-start pl-5 pr-20 py-4 md:py-20 md:pl-14 md:pr-[30rem] gap-2 md:gap-8">
+      <div className=" flex flex-col justify-start items-start pl-5 pr-20 py-4 md:py-20 md:pl-14 md:pr-[30rem] gap-3 md:gap-8">
         <span className="text-primary text-[10px] md:text-lg bg-[#222323] rounded-full md:px-5 px-3 py-1">
           NEW
         </span>
 
         <div className="">
-          <h1 className="text-primary sm:text-xs">Considering Solar?</h1>
+          <h1 className="text-primary md:text-xs text-2xl">
+            Considering Solar?
+          </h1>
 
-          <h2 className="text-white text-[10px] md:text-4xl font-light">
+          <h2 className="text-white text-sm md:text-4xl font-light">
             Draw your own <br className="hidden md:block" />
             conclusions
           </h2>
         </div>
 
-        <ul className="text-white text-[10px] md:text-base space-y-0.5 md:space-y-2">
+        <ul className="text-white text-sm md:text-base space-y-0.5 md:space-y-2">
           {bulletPoints.map((item, i) => (
-            <li key={i} className="flex gap-2 md:gap-4 font-extralight">
+            <li key={i} className="flex gap-2 md:gap-4 font-light items-center">
               <svg
-                className="w-3 h-3 md:w-6 md:h-6"
+                className="w-4 h-4 md:w-6 md:h-6"
                 viewBox="0 0 25 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,9 +90,12 @@ export default function DrawDemo() {
           ))}
         </ul>
 
-        <button className="px-4 py-[6px] md:px-10 md:py-3 text-xs md:text-xl bg-primary rounded-3xl">
+        <Link
+          href={"https://quote.getoffgrid.energy"}
+          className="px-4 py-[6px] md:px-10 md:py-3 text-xs md:text-xl bg-primary rounded-3xl mt-1 md:mt-0"
+        >
           Draw Your Solar System {"->"}
-        </button>
+        </Link>
       </div>
     </div>
   );

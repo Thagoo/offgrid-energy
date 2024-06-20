@@ -35,7 +35,7 @@ export default function FlippingCardSection() {
               </svg>
               <h1 className="md:text-lg">
                 <span className="font-semibold">You provide </span>some details
-                about your home and it’s current set up.{" "}
+                about your home and it&apos;s current set up.{" "}
               </h1>
               <svg
                 className="mt-auto self-end"
@@ -167,8 +167,8 @@ export default function FlippingCardSection() {
                 />
               </svg>
               <h1 className="md:text-lg">
-                With the data you've provided we give you a fixed quote based on
-                different plans.
+                With the data you&apos;ve provided we give you a fixed quote
+                based on different plans.
               </h1>
               <div className="self-end mt-auto">
                 <svg

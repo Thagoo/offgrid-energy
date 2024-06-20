@@ -23,7 +23,7 @@ export default function Home() {
       <div className="flex flex-col items-center pt-16 md:pt-28">
         <ScrollAppear>
           <div className="flex flex-col items-center justify-center gap-7 md:gap-14 md:px-20 px-5">
-            <span className="flex items-center gap-1 bg-secondary px-4 py-2 md:py-2 md:px-4 rounded-3xl text-xs md:text-sm font-medium">
+            <span className="flex items-center gap-1 bg-[#dfdfdf] px-4 py-2 md:py-2 md:px-4 rounded-3xl text-xs md:text-sm font-medium">
               <svg
                 className="w-4 h-4 md:w-6 md:h-6"
                 viewBox="0 0 24 24"
@@ -72,16 +72,21 @@ export default function Home() {
                   Get a fixed price online. <br /> Offgrid installs solar in an
                   all new way.
                 </h2>
-                <Button className="hidden md:block text-sm md:text-lg font-medium py-2 px-4 md:px-6 md:py-3">
+                <Link
+                  href={"https://quote.getoffgrid.energy"}
+                  className="bg-primary font-medium rounded-full hidden md:block text-sm md:text-lg py-2 px-4 md:px-6 md:py-3"
+                >
                   {" "}
                   Get your quote now
-                </Button>
+                </Link>
               </div>
             </div>
-            <Button className="md:hidden text-sm md:text-lg font-medium py-2 px-4 md:px-6 md:py-3">
-              {" "}
+            <Link
+              href={"https://quote.getoffgrid.energy"}
+              className="bg-primary rounded-full md:hidden text-sm md:text-lg font-medium py-2 px-4 md:px-6 md:py-3"
+            >
               Get your quote now
-            </Button>
+            </Link>
 
             <ScrollerBanner />
           </div>
@@ -121,9 +126,12 @@ export default function Home() {
                 Don&apos;t waste time with salesmen. Get all you need for solar
                 online. Just mark your roof and leave the rest to us.
               </p>
-              <button className="rounded-full bg-primary px-10 py-4 md:text-lg font-medium">
+              <Link
+                href={"https://quote.getoffgrid.energy"}
+                className="rounded-full bg-primary px-10 py-4 md:text-lg font-medium"
+              >
                 Get Quote
-              </button>
+              </Link>
             </div>
 
             <div className="flex flex-col items-center gap-8 w-3/5">
@@ -151,7 +159,7 @@ export default function Home() {
               <h1 className="text-2xl md:text-5xl text-center font-medium leading-tight">
                 India&apos;s first <br /> solar platform.
               </h1>
-              <p className="text-sm text-start font-normal">
+              <p className="text-sm text-center">
                 Don&apos;t waste time with salesmen. Get all you need for solar
                 online. Just mark your roof and leave the rest to us.
               </p>
@@ -167,14 +175,17 @@ export default function Home() {
                   Guaranteed <br /> quality and price.
                 </h1>
               </div>
-              <p className="text-sm font-normal">
+              <p className="text-sm text-center">
                 No middleman involvement guarantee. Original products at
                 original cost is our promise.
               </p>
             </div>
-            <button className="rounded-full bg-primary px-4 py-2 text-sm font-medium">
+            <Link
+              href={"https://quote.getoffgrid.energy"}
+              className="rounded-full bg-primary px-4 py-2 text-sm font-medium"
+            >
               Get Quote
-            </button>
+            </Link>
           </div>
         </ScrollAppear>
         <ScrollAppear>
@@ -330,22 +341,23 @@ export default function Home() {
         {/* yellow banner */}
         <ScrollAppear>
           <div className="bg-[#FFCB00] md:h-screen h-auto w-full flex md:flex-row flex-col items-center md:px-20 px-7 md:py-0 py-16 justify-center gap-6 md:gap-28">
-            <div className="w-1/2 flex justify-center items-center">
+            <div className="md:w-1/2 flex flex-col justify-center items-center md:items-start">
               <Image
                 src={"/assets/lander/icons/group-card.svg"}
-                width={324}
-                height={324}
+                width={0}
+                height={0}
+                className="w-44 md:w-80 h-auto"
                 alt="logo"
               />
-            </div>
-            <div className="md:w-1/2 flex flex-col gap-5 md:gap-12">
-              <h1 className="text-2xl md:text-5xl font-medium leading-tight">
+              <h1 className="text-2xl md:text-5xl font-medium leading-tight text-center md:text-start">
                 Your trusted partner throughout the life of your system
               </h1>
-              <div className="space-y-2">
+            </div>
+            <div className="md:w-1/2 flex md:flex-col gap-4 md:gap-8 w-screen overflow-x-auto px-5 md:px-0 hide-scrollbar">
+              <div className="space-y-2 py-4 md:py-8 px-4 bg-white rounded-3xl min-w-[60vw] md:min-w-full">
                 <p className="text-sm md:text-xl flex gap-2 items-center">
                   <svg
-                    className="w-5 h-5 md:w-8 md:h-8"
+                    className="w-8 h-8"
                     viewBox="0 0 33 33"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -366,7 +378,7 @@ export default function Home() {
                     />
                   </svg>
 
-                  <span className="text-lg md:text-2xl font-medium">
+                  <span className="text-lg md:text-2xl font-medium leading-tight">
                     24/7 Active Monitoring
                   </span>
                 </p>
@@ -375,10 +387,10 @@ export default function Home() {
                   Our connected solar panels captures and analyses all data.
                 </p>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 py-4 md:py-8 px-4 bg-white rounded-3xl min-w-[60vw] md:min-w-full">
                 <p className="text-lg md:text-xl flex gap-2 items-center">
                   <svg
-                    className="w-5 h-5 md:w-8 md:h-8"
+                    className="w-8 h-8"
                     viewBox="0 0 33 33"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -424,10 +436,10 @@ export default function Home() {
                   worries.
                 </p>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 py-4 md:py-8 px-4 bg-white rounded-3xl min-w-[60vw] md:min-w-full">
                 <p className="text-sm md:text-xl flex gap-2 items-center">
                   <svg
-                    className="w-5 h-5 md:w-8 md:h-8"
+                    className="w-8 h-8"
                     viewBox="0 0 33 33"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -455,7 +467,7 @@ export default function Home() {
                     />
                   </svg>
 
-                  <span className="text-lg md:text-2xl font-medium">
+                  <span className="text-lg md:text-2xl font-medium leading-tight">
                     Virtual Solar Advisor
                   </span>
                 </p>
@@ -618,9 +630,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex justify-center items-center">
-                  <Button className="text-sm md:text-xl font-medium py-2 px-4 md:px-10 md:py-4">
+                  <Link
+                    href={"https://quote.getoffgrid.energy"}
+                    className="bg-primary rounded-full text-sm md:text-xl font-medium py-2 px-4 md:px-10 md:py-4"
+                  >
                     Get your quotation
-                  </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -890,7 +905,10 @@ export default function Home() {
               Assured Prices | 30% Government <br className="md:hidden" />{" "}
               Subsidy | Trusted Quality
             </p>
-            <button className="rounded-full bg-primary px-4 py-2 md:px-10 md:py-4 md:text-lg text-sm flex gap-2 items-center font-medium">
+            <Link
+              href={"https://quote.getoffgrid.energy"}
+              className="rounded-full bg-primary px-4 py-2 md:px-10 md:py-4 md:text-lg text-sm flex gap-2 items-center font-medium"
+            >
               <svg
                 className="w-4 h-4 md:w-6 md:h-6"
                 viewBox="0 0 16 17"
@@ -905,7 +923,7 @@ export default function Home() {
                 />
               </svg>
               Get Estimate
-            </button>
+            </Link>
           </div>
         </ScrollAppear>
       </div>

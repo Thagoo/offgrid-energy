@@ -49,7 +49,7 @@ export default function SolarAdviceSection() {
   );
 }
 
-function BlogCard({
+export function BlogCard({
   image,
   date,
   tag1,
