@@ -17,9 +17,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center pt-4">
-      <Navbar />
-
+    <main className="flex flex-col items-center flex-grow">
       <div className="flex flex-col items-center pt-16 md:pt-28">
         <ScrollAppear>
           <div className="flex flex-col items-center justify-center gap-7 md:gap-14 md:px-20 px-5">
@@ -117,7 +115,10 @@ export default function Home() {
         </ScrollAppear>
         <ScrollAppear>
           {/* desktop */}
-          <div className="hidden md:flex h-1/2 flex-col md:flex-row py-36 gap-4 md:px-20 px-5 w-full md:justify-between ">
+          <div
+            className="hidden md:flex h-1/2 flex-col md:flex-row py-36 gap-4 md:px-20 px-5 w-full md:justify-between "
+            id="features"
+          >
             <div className="flex flex-col gap-14 items-start border-r-[1px] pr-4 w-2/5">
               <h1 className="font-medium md:text-5xl text-2xl leading-tight">
                 India&apos;s first solar platform.
@@ -154,7 +155,10 @@ export default function Home() {
           </div>
 
           {/* mobile */}
-          <div className="md:hidden h-1/2 flex flex-col items-center py-16 md:px-20 px-7 gap-6">
+          <div
+            className="md:hidden h-1/2 flex flex-col items-center py-16 md:px-20 px-7 gap-6"
+            id="features"
+          >
             <div className="flex flex-col gap-4 items-center text-center">
               <h1 className="text-2xl md:text-5xl text-center font-medium leading-tight">
                 India&apos;s first <br /> solar platform.

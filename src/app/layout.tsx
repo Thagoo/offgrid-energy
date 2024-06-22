@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/components/footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Navbar from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,9 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {" "}
-        <GoogleAnalytics gaId="G-690LX5QP7M" />
+      <GoogleAnalytics gaId="G-690LX5QP7M" />
+      <body
+        className={`${inter.className} flex flex-col items-center min-h-dvh pt-4`}
+      >
+        <Navbar />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>

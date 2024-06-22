@@ -4,25 +4,39 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <div className="bg-primary h-1/2 px-7 py-10 md:px-20 md:py-20 flex flex-col gap-5 md:gap-20">
+      <div
+        className="bg-primary h-1/2 px-7 py-10 md:px-20 md:py-20 flex flex-col gap-5 md:gap-20 w-full"
+        id="footer"
+      >
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
             <Link
               href={"https://quote.getoffgrid.energy"}
-              className=" text-[10px] md:text-base"
+              className=" text-[10px] md:text-base hover:underline"
             >
               Quote Generator
             </Link>
-            <h1 className=" text-[10px] md:text-base">Blog</h1>
+            <Link
+              href={"/blogs"}
+              className=" text-[10px] md:text-base hover:underline"
+            >
+              Blog
+            </Link>
             <button className="md:mt-4 md:py-2 md:px-10 px-3 py-1 border border-black rounded-full mb-4 text-[10px] md:text-base text-nowrap">
               Partner with us
             </button>
           </div>
           <div className="flex flex-col gap-3">
-            <h1 className=" text-[10px] md:text-base">
+            <Link
+              href={"mailto:support@getoffgrid.energy"}
+              className=" text-[10px] md:text-base"
+            >
               support@getoffgrid.energy
-            </h1>
-            <h1 className="flex items-center gap-2  text-[10px] md:text-base">
+            </Link>
+            <Link
+              href={"tel:+919148248898"}
+              className="flex items-center gap-2  text-[10px] md:text-base"
+            >
               <svg
                 className="w-3 h-3 md:w-5 md:h-5"
                 viewBox="0 0 24 25"
@@ -35,7 +49,7 @@ export default function Footer() {
                 />
               </svg>
               (+91) 9148248898
-            </h1>
+            </Link>
           </div>
           <div className="flex flex-col justify-between gap-2">
             <svg
@@ -166,9 +180,16 @@ export default function Footer() {
             />
           </svg>
           2024 Offgrid Energy{" "}
-          <Link href={"#"} className="underline">
-            Privacy Policy | Terms & Conditions
-          </Link>
+          <div>
+            {" "}
+            <Link href={"/privacy-policy"} className="underline">
+              Privacy Policy
+            </Link>{" "}
+            |{" "}
+            <Link href={"/terms-and-conditions"} className="underline">
+              Terms & Conditions
+            </Link>
+          </div>
         </div>
       </div>
     </>

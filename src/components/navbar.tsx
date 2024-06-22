@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { Link as LinkScroll } from "react-scroll";
 
 //bg-gradient-to-r from-cyan-500 to-blue-500
 export default function Navbar() {
@@ -26,14 +27,16 @@ export default function Navbar() {
       {" "}
       <div className="px-4 md:px-4 py-2 md:py-2 flex justify-between items-center rounded-full shadow-xl fixed gap-8 z-50 border-[1px] border-white border-opacity-20 backdrop-blur-md backdrop-filter bg-opacity-20 blur-safari">
         <div className="flex gap-2 items-center">
-          <Image
-            src={"/assets/lander/offgrid-logo.svg"}
-            width={100}
-            height={100}
-            alt={"offgrid"}
-            loading="eager"
-            priority
-          ></Image>
+          <Link href={"/"}>
+            <Image
+              src={"/assets/lander/offgrid-logo.svg"}
+              width={100}
+              height={100}
+              alt={"offgrid"}
+              loading="eager"
+              priority
+            ></Image>
+          </Link>
         </div>
 
         <button
@@ -55,22 +58,26 @@ export default function Navbar() {
         </button>
 
         <div className="hidden md:flex gap-6 text-sm font-medium">
-          <Link href={"/features"} className="hover:underline">
-            Features
+          <Link href={"/#features"} className="hover:underline cursor-pointer">
+            features
           </Link>
-          <Link href={"/resources"} className="hover:underline">
+
+          <Link href={"/blogs"} className="hover:underline cursor-pointer">
             Resources
           </Link>
-          <Link href={"/financing"} className="hover:underline">
+          <Link href={"/#footer"} className="hover:underline cursor-pointer">
             Contact Us
           </Link>
         </div>
         <div className="hidden md:flex">
           <div className=" md:flex gap-8">
             {/* <button className="text-sm font-medium">Contact Us</button> */}
-            <button className="border border-[#ffcb00] px-4 py-2 rounded-3xl text-sm font-medium">
+            <Link
+              href={"https://quote.getoffgrid.energy"}
+              className="border border-[#ffcb00] px-4 py-2 rounded-3xl text-sm font-medium"
+            >
               Calculate Savings
-            </button>
+            </Link>
           </div>
           {/* <div>
             <ThemeToggle />
@@ -90,22 +97,29 @@ export default function Navbar() {
 
           <div className="px-6 py-6 md:py-5 flex flex-col justify-between items-center w-[90vw]  ">
             <div className="flex flex-col items-center gap-6 text-sm">
-              <Link href={"/features"} className="hover:underline">
-                Features
+              <Link
+                href={"/#features"}
+                className="hover:underline cursor-pointer"
+              >
+                features
               </Link>
-              <Link href={"/resources"} className="hover:underline">
+
+              <Link href={"/blogs"} className="hover:underline cursor-pointer">
                 Resources
               </Link>
-              <Link href={"/financing"} className="hover:underline">
-                Financing
-              </Link>
-              <Link href={"/financing"} className="hover:underline">
+              <Link
+                href={"/#footer"}
+                className="hover:underline cursor-pointer"
+              >
                 Contact Us
               </Link>
 
-              <button className="border border-[#ffcb00] px-3 py-2 rounded-3xl text-sm">
+              <Link
+                href={"https://quote.getoffgrid.energy"}
+                className="border border-[#ffcb00] px-3 py-2 rounded-3xl text-sm"
+              >
                 Calculate Savings
-              </button>
+              </Link>
             </div>
           </div>
         </div>
