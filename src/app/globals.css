@@ -141,3 +141,58 @@
 html {
   scroll-behavior: smooth;
 }
+
+.animated-gradient {
+  background: linear-gradient(141deg, #ffffff, #fadd20, #ffffff);
+  background-size: 600% 600%;
+
+  -webkit-animation: rotating-gradient 0s ease infinite;
+  -moz-animation: rotating-gradient 0s ease infinite;
+  -o-animation: rotating-gradient 0s ease infinite;
+  animation: rotating-gradient 0s ease infinite;
+}
+
+@-webkit-keyframes rotating-gradient {
+  0% {
+    background-position: 75% 0%;
+  }
+  50% {
+    background-position: 26% 100%;
+  }
+  100% {
+    background-position: 75% 0%;
+  }
+}
+@-moz-keyframes rotating-gradient {
+  0% {
+    background-position: 75% 0%;
+  }
+  50% {
+    background-position: 26% 100%;
+  }
+  100% {
+    background-position: 75% 0%;
+  }
+}
+@-o-keyframes rotating-gradient {
+  0% {
+    background-position: 75% 0%;
+  }
+  50% {
+    background-position: 26% 100%;
+  }
+  100% {
+    background-position: 75% 0%;
+  }
+}
+@keyframes rotating-gradient {
+  0% {
+    background-position: 75% 0%;
+  }
+  50% {
+    background-position: 26% 100%;
+  }
+  100% {
+    background-position: 75% 0%;
+  }
+}

@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <GoogleAnalytics gaId="G-690LX5QP7M" />
       <body
-        className={`${inter.className} flex flex-col items-center min-h-dvh pt-4`}
+        className={`${inter.className} flex flex-col items-center min-h-dvh`}
       >
         <Navbar />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>

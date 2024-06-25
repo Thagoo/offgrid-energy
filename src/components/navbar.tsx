@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <>
       {" "}
-      <div className="px-4 md:px-4 py-2 md:py-2 flex justify-between items-center rounded-full shadow-xl fixed gap-8 z-50 border-[1px] border-white border-opacity-20 backdrop-blur-md backdrop-filter bg-opacity-20 blur-safari">
+      <div className="px-4 md:px-4 py-2 md:py-2 flex justify-between items-center rounded-full shadow-xl fixed gap-8 z-50 border-[1px] border-white border-opacity-20 backdrop-blur-md backdrop-filter bg-opacity-20 blur-safari mt-4">
         <div className="flex gap-2 items-center">
           <Link href={"/"}>
             <Image

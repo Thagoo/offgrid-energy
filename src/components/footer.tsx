@@ -22,9 +22,12 @@ export default function Footer() {
             >
               Blog
             </Link>
-            <button className="md:mt-4 md:py-2 md:px-10 px-3 py-1 border border-black rounded-full mb-4 text-[10px] md:text-base text-nowrap">
+            <Link
+              href={"/partner-with-us"}
+              className="md:mt-4 md:py-2 md:px-10 px-3 py-1 border border-black rounded-full mb-4 text-[10px] md:text-base text-nowrap"
+            >
               Partner with us
-            </button>
+            </Link>
           </div>
           <div className="flex flex-col gap-3">
             <Link

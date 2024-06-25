@@ -13,13 +13,13 @@ export default function SolarAdviceSection() {
       className="w-full md:py-20 py-16 bg-[#f0f0f0] flex flex-col gap-4 md:gap-8"
       id="resources"
     >
-      <h1 className="text-3xl md:text-[3rem] font-medium text-center leading-none">
+      <h1 className="text-3xl md:text-[3rem] font-medium text-center leading-none w-full">
         Solar Advice
       </h1>
       <Draggable innerRef={journalRef} rootClass={"drag"}>
         <div
           ref={journalRef}
-          className="w-full flex overflow-x-auto overflow-y-hidden gap-4 md:gap-20 py-2 px-5 md:px-20 hide-scrollbar"
+          className="w-screen flex overflow-x-auto overflow-y-hidden gap-4 md:gap-20 py-2 px-5 md:px-20 hide-scrollbar"
         >
           {blogs.map((blog, i) => (
             <BlogCard
