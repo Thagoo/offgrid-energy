@@ -54,7 +54,7 @@ export default function Draggable({
       onMouseDown={handleDragStart}
       onMouseUp={handleDragEnd}
       onMouseMove={handleDrag}
-      className={rootClass + "flex overflow-x-scroll hide-scrollbar"}
+      className={rootClass + " flex overflow-x-scroll hide-scrollbar"}
     >
       {children}
     </div>

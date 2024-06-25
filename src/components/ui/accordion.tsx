@@ -11,13 +11,24 @@ const Accordion = ({ header, content }: { header: any; content: any }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex items-center gap-2 ">
-          <span> {isOpen ? header?.iconAfter : header?.iconBefore}</span>
+          <span className="animate-in fade-in duration-1000">
+            {" "}
+            {isOpen ? (
+              <span className="animate-in fade-in duration-1000">
+                {header?.iconAfter}
+              </span>
+            ) : (
+              <span className="animate-in fade-in duration-1000">
+                {header?.iconBefore}
+              </span>
+            )}
+          </span>
 
           <span className="md:text-lg font-medium text-sm">
             {header?.title}
           </span>
         </div>
-        <span className="text-4xl">
+        <span className="text-4xl ">
           {isOpen ? (
             <svg
               width="24"
@@ -53,7 +64,7 @@ const Accordion = ({ header, content }: { header: any; content: any }) => {
         </span>
       </button>
       <div
-        className={`transition-max-height duration-1000 ease-in-out overflow-hidden ${
+        className={`animate-in duration-1000 fade-in overflow-hidden ${
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >

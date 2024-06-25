@@ -1,6 +1,3 @@
-import { BlogCard } from "@/components/landing-page/solar-advice-section";
-import { blogs } from "@/lib/blogs";
-import { formatTitleToURL } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 
