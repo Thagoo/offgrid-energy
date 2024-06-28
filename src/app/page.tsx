@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center flex-grow ">
+    <main className="flex flex-col items-center flex-grow pt-4">
       <div className="flex flex-col items-center pt-16 md:pt-28">
         <ScrollAppear>
           <div className="flex flex-col items-center justify-center gap-7 md:gap-14 md:px-20 px-5">

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function TermsAndConditions() {
   return (
-    <div className="flex justify-center pt-4 ">
+    <div className="flex justify-center pt-4">
       <div className="flex flex-col py-16 md:py-28 md:px-28 px-5">
         <p className="md:hidden text-xs md:text-base ml-auto mb-4">
           <Link href={"/"} className="hover:underline">
