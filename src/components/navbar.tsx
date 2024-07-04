@@ -59,7 +59,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex gap-6 text-sm font-medium">
           <Link href={"/#features"} className="hover:underline cursor-pointer">
-            features
+            Features
           </Link>
 
           <Link href={"/blogs"} className="hover:underline cursor-pointer">
@@ -97,7 +97,7 @@ export default function Navbar() {
                 className="hover:underline cursor-pointer"
                 onClick={() => handleToggle()}
               >
-                features
+                Features
               </Link>
 
               <Link

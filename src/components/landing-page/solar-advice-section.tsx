@@ -19,7 +19,7 @@ export default function SolarAdviceSection() {
       <Draggable innerRef={journalRef} rootClass={"drag"}>
         <div
           ref={journalRef}
-          className="w-screen flex overflow-x-auto overflow-y-hidden gap-4 md:gap-20 py-2 px-5 md:px-20 hide-scrollbar"
+          className="w-screen flex overflow-x-auto overflow-y-hidden gap-4 md:gap-20 py-2 px-5 md:px-20 hide-scrollbar relative"
         >
           {blogs.map((blog, i) => (
             <BlogCard
@@ -32,7 +32,7 @@ export default function SolarAdviceSection() {
               url={`/blogs/${formatTitleToURL(blog.title)}`}
             />
           ))}
-          <div className="flex justify-start items-center max-h-[316px] text-nowrap">
+          <div className="flex justify-start items-center text-nowrap h-40 md:h-96">
             <Link href={"/blogs"} className="underline">
               Explore more
             </Link>
@@ -59,14 +59,16 @@ export function BlogCard({
   url: string;
 }) {
   return (
-    <div className="flex-shrink-0 flex flex-col gap-1 md:gap-4 md:w-[34rem]">
+    <div className="flex-shrink-0 flex flex-col gap-1 md:gap-4 md:w-[34rem] w-80">
       <Link href={url}>
         <Image
           src={image}
-          width={540}
-          height={416}
+          width={0}
+          height={0}
           alt="blog"
           loading="eager"
+          sizes="100vw"
+          className="h-auto md:w-[34rem] w-80"
         />
       </Link>
       <div className="flex items-center gap-2 w-full">
