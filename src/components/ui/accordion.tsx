@@ -10,30 +10,22 @@ const Accordion = ({ header, content }: { header: any; content: any }) => {
         className="flex justify-between items-center w-full px-3 md:py-1 md:px-2 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="flex items-center gap-2 ">
-          <span className="animate-in fade-in duration-1000">
-            {" "}
-            {isOpen ? (
-              <span className="animate-in fade-in duration-1000">
-                {header?.iconAfter}
-              </span>
-            ) : (
-              <span className="animate-in fade-in duration-1000">
-                {header?.iconBefore}
-              </span>
-            )}
-          </span>
-
+        <div className="flex items-center gap-2">
+          {" "}
+          {isOpen ? (
+            <span className="a0">{header?.iconAfter}</span>
+          ) : (
+            <span className="">{header?.iconBefore}</span>
+          )}
           <span className="md:text-lg font-medium text-sm">
             {header?.title}
           </span>
         </div>
-        <span className="text-4xl ">
+        <span className="text-4xl">
           {isOpen ? (
             <svg
               width="24"
               height="24"
-              className="animate-in fade-in duration-1000"
               viewBox="0 0 32 32"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +42,6 @@ const Accordion = ({ header, content }: { header: any; content: any }) => {
             <svg
               width="24"
               height="24"
-              className="animate-in fade-in duration-1000"
               viewBox="0 0 41 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +55,8 @@ const Accordion = ({ header, content }: { header: any; content: any }) => {
         </span>
       </button>
       <div
-        className={`animate-in duration-1000 fade-in overflow-hidden ${
-          isOpen ? "max-h-screen" : "max-h-0"
+        className={`animate-in ease-out duration-1000 fade-in overflow-hidden ${
+          isOpen ? "md:h-20 h-40" : "h-0 md:h-0"
         }`}
       >
         <div className="p-4">{content}</div>
