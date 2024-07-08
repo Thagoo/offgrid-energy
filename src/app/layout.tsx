@@ -10,14 +10,19 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Offgird Energy",
-  description: "Offgrid installs solar in an all new way.",
-  metadataBase: new URL("https://offgrid-website.vercel.app/"),
+  description:
+    "Bangalore's first ever solar platform. We provide trust, quality and right price. Get upto 30% subsidy on your installation only with Offgrid ",
+  metadataBase: new URL("https://getoffgrid.energy"),
   openGraph: {
-    images: "/assets/lander/offgrid-favicon.png",
+    images: "/assets/lander/icons/offgrid-logo.webp",
+    title: "Offgird Energy",
+    description:
+      "Bangalore's first ever solar platform. We provide trust, quality and right price. Get upto 30% subsidy on your installation only with Offgrid ",
   },
   icons: {
-    icon: "/assets/lander/offgrid-favicon.png",
+    icon: "/assets/lander/icons/offgrid-logo.webp",
   },
+  keywords: ["getoffgrid", "offgrid", "offgrid energy"],
 };
 
 export default function RootLayout({

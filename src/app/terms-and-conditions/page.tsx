@@ -3,15 +3,6 @@ import Link from "next/link";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Offgird Energy",
-  description: "Offgrid installs solar in an all new way.",
-  metadataBase: new URL("https://offgrid-website.vercel.app/"),
-  openGraph: {
-    images: "/assets/lander/offgrid-favicon.png",
-  },
-  icons: {
-    icon: "/assets/lander/offgrid-favicon.png",
-  },
   robots: {
     index: false,
     follow: false,

@@ -2,8 +2,23 @@ import { BlogCard } from "@/components/landing-page/solar-advice-section";
 import Navbar from "@/components/navbar";
 import { blogs } from "@/lib/blogs";
 import { formatTitleToURL } from "@/lib/utils";
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Offgird Energy",
+  description: "Explore the solar world and make the right choice with us.",
+  metadataBase: new URL("https://getoffgrid.energy"),
+  openGraph: {
+    images: "/assets/lander/offgrid-favicon.png",
+    title: "Blogs - Offgrid Energy",
+    description: "Explore the solar world and make the right choice with us.",
+  },
+  icons: {
+    icon: "/assets/lander/offgrid-favicon.png",
+  },
+};
 
 export default function Blogs() {
   return (
