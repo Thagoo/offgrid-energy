@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Offgrid Energy: Solar Panel Quote Generator
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Offgrid Energy** is a web application that allows users to generate solar panel quotes by drawing the area of their rooftops directly on Google Maps. This project aims to simplify the process of obtaining accurate solar panel installation quotes based on user-provided rooftop data.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screenshots
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![image](https://github.com/user-attachments/assets/841a2ae3-1e60-427d-a59f-00223fd0e5e6)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🚀 Features
 
-## Learn More
+- **Interactive Rooftop Mapping:** Users can draw on their rooftops using Google Maps to specify the area for solar panel installation.
+- **Accurate Quote Generation:** Based on the drawn area, the application calculates the required solar panel capacity and generates a quote.
+- **Responsive Design:** The application is fully responsive, ensuring a seamless experience across devices.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **[Next.js](https://nextjs.org/):** React framework for building fast and scalable web applications.
+- **[Google Maps API](https://developers.google.com/maps):** Used for interactive rooftop mapping and area selection.
+- **[Tailwind CSS](https://tailwindcss.com/):** Utility-first CSS framework for designing a responsive and modern user interface.
+- **[TypeScript](https://www.typescriptlang.org/):** Superset of JavaScript that adds static typing for improved code quality and developer experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📦 Installation
 
-## Deploy on Vercel
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/thagoo/offgrid-energy.git
+   cd offgrid-energy
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. **Set up environment variables:**
+
+   Create a `.env.local` file in the root directory and add your Google Maps API key:
+   ```env
+   NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## 💻 Usage
+
+1. **Draw on the Map:** Navigate to the map section and outline your rooftop area using the provided drawing tools.
+2. **Generate Quote:** After drawing, the application will calculate the necessary solar panel configuration and display an estimated quote.
+3. **Review & Adjust:** Users can refine the drawn area or input additional details to fine-tune the quote.
+
+## 🛡️ License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/offgrid-energy/issues) for existing issues or open a new one.
+
+## ✨ Acknowledgements
+
+- **Google Maps API** for providing the map and drawing tools.
+- **Next.js** for the powerful framework.
+- **Tailwind CSS** for the beautiful and responsive UI.
+
+## 📧 Contact
+
+If you have any questions or suggestions, feel free to reach out to [lohitgowda56@gmail.com](mailto:lohitgowda56@gmail.com).
+
+---
+
+Feel free to customize this README to fit your project's needs!
